@@ -1,0 +1,33 @@
+package com.axis.jgbbackend.model
+
+data class Breakdown(
+    val amount: String?=null,
+    val appScoreBand: AppScoreBand?=null,
+    val assetCategory: String?=null,
+    val base: String?=null,
+    val category: String?=null,
+    val channel: String?=null,
+    val cibilHit: String?=null,
+    val date: Date?=null,
+    val displayName: String?=null,
+    val feeType: String?=null,
+    val gst: String?=null,
+    val loan: Loan?=null,
+    val mScoreBand: MScoreBand?=null,
+    val maxTimeSpentDuringPrevious: String?=null,
+    val name: String?=null,
+    val noOfJourneyStarts: String?=null,
+    val percentage: String?=null,
+    val productCode: String?=null,
+    val promoId: String?=null,
+    val screenReachedPrevious: String?=null,
+    val segment: String?=null,
+    val serviceCharge: String?=null,
+    val source: String?=null,
+    val state: String?=null,
+    val status: String?=null,
+    val strategy: String?=null,
+    val tenure: Tenure?=null,
+    val uniqueId: String?=null,
+    val value: Int?=null
+)

@@ -1,0 +1,31 @@
+package com.axis.jgbbackend.model
+
+data class DemogDetails(
+    val accounts: List<AccountXX>,
+    val address: AddressX,
+    val caste: String,
+    val city: City,
+    val cmgRiskProfileScore: String,
+    val constitutionDescription: String,
+    val contact: ContactX,
+    val creditLimit: String,
+    val custId: String,
+    val dateOfBirth: String,
+    val debitLimit: String,
+    val deleteFlag: String,
+    val educationQualification: String,
+    val encryptedPan: EncryptedPanX,
+    val fatherName: String,
+    val gender: String,
+    val health: String,
+    val maritalStatus: String,
+    val mothersMaidenName: String,
+    val name: NameX,
+    val nationality: String,
+    val noOfDependent: Int,
+    val pan: String,
+    val passportNo: String,
+    val schemeType: String,
+    val stepStatus: String,
+    val uniqueIdentifier: String
+)
