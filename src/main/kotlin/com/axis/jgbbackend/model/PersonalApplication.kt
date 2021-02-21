@@ -7,8 +7,10 @@ data class PersonalApplication(
     val applicationReferenceId: String,
     val applicationDate: String? = null,
     val customerId: String? = null,
+    val customerType: String? = null,
     val state: String? = null,
     val productCode: String? = null,
+    val journeyCode: String? = null,
     val applicationStateLogs: List<ApplicationStateLog>? = null,
     val activeSavingsAccounts: ActiveSavingsAccounts? = null
 )
