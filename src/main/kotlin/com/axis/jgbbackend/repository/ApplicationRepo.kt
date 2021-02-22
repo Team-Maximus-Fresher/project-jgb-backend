@@ -7,5 +7,5 @@ import reactor.core.publisher.Mono
 
 interface ApplicationRepo: ReactiveMongoRepository<PersonalApplication, String> {
     @Query("{'customerId' : ?0}")
-    fun findByCustomerId(customerId: String): Mono<PersonalApplication>?
+    fun findByCustomerId(customerId: String): Mono<PersonalApplication>
 }
