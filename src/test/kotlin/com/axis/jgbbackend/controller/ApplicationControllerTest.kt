@@ -1,106 +1,99 @@
 package com.axis.jgbbackend.controller
 
-import com.axis.jgbbackend.model.ActiveSavingsAccounts
-import com.axis.jgbbackend.model.ApplicationStateLog
-import com.axis.jgbbackend.model.PersonalApplication
-import com.axis.jgbbackend.repository.ApplicationRepo
-import com.axis.jgbbackend.service.ApplicationService
-import org.junit.Before
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.junit.runner.RunWith
+import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.Mockito
-import org.mockito.Mockito.times
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
-import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.CommandLineRunner
+import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
 import org.springframework.boot.test.mock.mockito.MockBean
+import org.springframework.http.MediaType
+import org.springframework.test.context.junit.jupiter.SpringExtension
+import org.springframework.test.web.reactive.server.FluxExchangeResult
 import org.springframework.test.web.reactive.server.WebTestClient
-import org.springframework.web.reactive.function.BodyInserters
-import reactor.core.publisher.Mono
-import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringRunner
 import reactor.core.publisher.Flux
+import reactor.core.publisher.Mono
+import reactor.test.StepVerifier
+import java.util.*
+import java.util.function.Consumer
 
-
-//@RunWith(SpringRunner::class)
-@SpringBootTest
-class ApplicationControllerTest {
-
-
-   var client: WebTestClient? = null
-
+@ExtendWith(SpringExtension::class)
+@WebFluxTest(ProductController::class)
+class JUnit5WebFluxTestAnnotationTest {
     @Autowired
-    val service: ApplicationService? = null
-    var expectedList: MutableList<PersonalApplication>?=null
+    private val client: WebTestClient? = null
+    private var expectedList: List<Product>? = null
 
-    @Before
+    @MockBean
+    private val repository: ProductRepository? = null
+
+    @MockBean
+    private val commandLineRunner: CommandLineRunner? = null
+    @BeforeEach
     fun beforeEach() {
-
-        client = WebTestClient
-                .bindToController(ApplicationController())
-                .configureClient()
-                .baseUrl("/applications")
-                .build()
-        expectedList = service?.getAllPersonalLoanApplications()?.collectList()?.block() as MutableList<PersonalApplication>
-
+        expectedList = Arrays.asList<Product>(
+            Product("1", "Big Latte", 2.99)
+        )
     }
 
     @Test
-    fun getAllPersonalLoanApplicationsTest() {
+    fun testGetAllProducts() {
+        Mockito.`when`(repository.findAll()).thenReturn(Flux.fromIterable(expectedList!!))
         client
-                ?.get()
-                ?.uri("/")
-                ?.exchange()
-                ?.expectStatus()
-                ?.isOk
-                ?.expectBodyList(PersonalApplication::class.java)
-                ?.isEqualTo<WebTestClient.ListBodySpec<PersonalApplication>>(expectedList!!)
+            .get()
+            .uri("/products")
+            .exchange()
+            .expectStatus()
+            .isOk
+            .expectBodyList(Product::class.java)
+            .isEqualTo(expectedList)
     }
+
     @Test
-    fun getPersonalApplicationOfACustomerTest() {
-        val expectedProduct: PersonalApplication? = expectedList?.get(0)
+    fun testProductInvalidIdNotFound() {
+        val id = "aaa"
+        Mockito.`when`(repository.findById(id)).thenReturn(Mono.empty())
         client
-                ?.get()
-                ?.uri("/{customer_id}", expectedProduct?.customerId)
-                ?.exchange()
-                ?.expectStatus()
-                ?.isOk
-                ?.expectBody(PersonalApplication::class.java)
-                ?.isEqualTo<Nothing>(expectedProduct!!)
+            .get()
+            .uri("/products/{id}", id)
+            .exchange()
+            .expectStatus()
+            .isNotFound
     }
+
     @Test
-    fun savePersonalApplicationTest() {
-        val stateLog:MutableList<ApplicationStateLog> =ArrayList()
-        val savingsAccounts:ActiveSavingsAccounts?=null
-        var personalApplication=PersonalApplication("MLP000000000014",
-                "2021-02-13", "840000016",
-                "ETB", "COMPLETE", "PA", "PERSONAL","PERSONAL_ETB_PA",
-                stateLog, savingsAccounts)
+    fun testProductIdFound() {
+        val expectedProduct: Product = expectedList!![0]
+        Mockito.`when`(repository.findById(expectedProduct.getId())).thenReturn(Mono.just(expectedProduct))
         client
-                ?.post()
-                ?.uri("/")
-                ?.exchange()
-                ?.expectStatus()
-                ?.isOk
-                ?.expectBody(PersonalApplication::class.java)
-                ?.isEqualTo<Nothing>(personalApplication)
-
+            .get()
+            .uri("/products/{id}", expectedProduct.getId())
+            .exchange()
+            .expectStatus()
+            .isOk
+            .expectBody(Product::class.java)
+            .isEqualTo(expectedProduct)
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    @Test
+    fun testProductEvents() {
+        val expectedEvent = ProductEvent(0L, "Product Event")
+        val result: FluxExchangeResult<ProductEvent> = client!!.get().uri("/products/events")
+            .accept(MediaType.TEXT_EVENT_STREAM)
+            .exchange()
+            .expectStatus().isOk
+            .returnResult(ProductEvent::class.java)
+        StepVerifier.create(result.getResponseBody())
+            .expectNext(expectedEvent)
+            .expectNextCount(2)
+            .consumeNextWith(Consumer<T> { event: T ->
+                assertEquals(
+                    java.lang.Long.valueOf(3),
+                    event.getEventId()
+                )
+            })
+            .thenCancel()
+            .verify()
+    }
 }
-
-
-
-

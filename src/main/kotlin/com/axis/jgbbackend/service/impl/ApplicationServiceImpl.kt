@@ -10,21 +10,29 @@ import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
 @Service
-class ApplicationServiceImpl: ApplicationService {
+class ApplicationServiceImpl(applicationRepo: ApplicationRepo): ApplicationService {
 
-    @Autowired
     private var applicationRepo: ApplicationRepo? = null
+
+    init {
+        this.applicationRepo = applicationRepo
+    }
 
     override fun getAllPersonalLoanApplications(): Flux<PersonalApplication?>? {
         return applicationRepo?.findAll()
     }
 
-    override fun getPersonalApplicationOfACustomer(customer_id: String): Mono<ResponseEntity<PersonalApplication?>?>? {
-        return customer_id?.let {
-            applicationRepo?.findByCustomerId(it)
-                ?.map { personalApplication -> ResponseEntity.ok(personalApplication) }
-                ?.defaultIfEmpty(ResponseEntity.notFound().build())
-        }
+    override fun getApplicationOfACustomer(productCode: String, customerId: String): Mono<PersonalApplication>? {
+        return applicationRepo?.findByProductCodeAndCustomerId(productCode, customerId)
+        /*return applicationRepo?.findByProductCodeAndCustomerId(productCode, customerId)
+                ?.map { application -> ResponseEntity.ok(application) }
+                ?.defaultIfEmpty(ResponseEntity.notFound().build())*/
+    }
+
+    override fun getApplicationOfACustomerByApplicationReferenceId(applicationReferenceId: String): Mono<ResponseEntity<PersonalApplication?>?>? {
+        return applicationRepo?.findByApplicationReferenceId(applicationReferenceId)
+            ?.map { application -> ResponseEntity.ok(application) }
+            ?.defaultIfEmpty(ResponseEntity.notFound().build())
     }
 
     override fun savePersonalApplication(personalApplication: PersonalApplication?): Mono<PersonalApplication?>? {

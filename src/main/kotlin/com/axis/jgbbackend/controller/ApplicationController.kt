@@ -12,10 +12,13 @@ import reactor.core.publisher.Mono
 
 @RestController
 @RequestMapping("/applications")
-class ApplicationController {
+class ApplicationController(applicationService: ApplicationService) {
 
-    @Autowired
     private var applicationService: ApplicationService? = null
+
+    init {
+        this.applicationService = applicationService
+    }
 
     @ApiOperation(value = "Get all applications")
     @GetMapping
@@ -23,10 +26,19 @@ class ApplicationController {
         return applicationService?.getAllPersonalLoanApplications()
     }
 
-    @ApiOperation(value = "Get applications of a particular customer")
-    @GetMapping("/{customer_id}")
-    fun getPersonalApplicationOfACustomer(@PathVariable customer_id: String): Mono<ResponseEntity<PersonalApplication?>?>? {
-        return applicationService?.getPersonalApplicationOfACustomer(customer_id)
+    @ApiOperation(value = "Get applications of a particular customer by product code and customer id")
+    @GetMapping("/products/{productCode}/customers/{customerId}")
+    fun getApplicationOfACustomer(@PathVariable productCode: String, @PathVariable customerId: String): Mono<ResponseEntity<PersonalApplication?>?>? {
+        //return applicationService?.getApplicationOfACustomer(productCode, customerId)
+        return applicationService?.getApplicationOfACustomer(productCode, customerId)
+            ?.map { application -> ResponseEntity.ok(application) }
+            ?.defaultIfEmpty(ResponseEntity.notFound().build())
+    }
+
+    @ApiOperation(value = "Get applications of a particular customer by application reference id")
+    @GetMapping("/{applicationReferenceId}")
+    fun getApplicationOfACustomerByApplicationReferenceId(@PathVariable applicationReferenceId: String): Mono<ResponseEntity<PersonalApplication?>?>? {
+        return applicationService?.getApplicationOfACustomerByApplicationReferenceId(applicationReferenceId)
     }
 
     @PostMapping

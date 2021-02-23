@@ -9,6 +9,7 @@ import reactor.core.publisher.Mono
 
 interface ApplicationService {
     fun getAllPersonalLoanApplications(): Flux<PersonalApplication?>?
-    fun getPersonalApplicationOfACustomer(@PathVariable customer_id: String): Mono<ResponseEntity<PersonalApplication?>?>?
+    fun getApplicationOfACustomer(productCode: String, customerId: String): Mono<PersonalApplication>?
+    fun getApplicationOfACustomerByApplicationReferenceId(applicationReferenceId: String): Mono<ResponseEntity<PersonalApplication?>?>?
     fun savePersonalApplication(@RequestBody personalApplication: PersonalApplication?): Mono<PersonalApplication?>?
 }
