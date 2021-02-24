@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.4.3"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
+	id("jacoco")
 	kotlin("jvm") version "1.4.30"
 	kotlin("plugin.spring") version "1.4.30"
 }
@@ -26,11 +27,11 @@ dependencies {
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("io.springfox:springfox-swagger2:2.9.2")
 	implementation("io.springfox:springfox-swagger-ui:2.9.2")
-    //implementation("junit:junit:4.12")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
-	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.0.3")
+	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+	//testImplementation("org.junit.jupiter:junit-jupiter:5.6.1")
 }
 
 tasks.withType<KotlinCompile> {
