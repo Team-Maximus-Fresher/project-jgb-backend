@@ -1,22 +1,14 @@
 package com.axis.jgbbackend.controller
 
-import com.axis.jgbbackend.model.ApplicationStateLog
 import com.axis.jgbbackend.model.PersonalApplication
 import com.axis.jgbbackend.repository.ApplicationRepo
 import com.axis.jgbbackend.service.ApplicationService
-import com.axis.jgbbackend.service.impl.ApplicationServiceImpl
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.Mockito
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
-import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.mock.mockito.MockBean
-import org.springframework.context.annotation.Import
-import org.springframework.test.annotation.DirtiesContext
-import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.web.reactive.server.WebTestClient
 import reactor.core.publisher.Mono
 import java.util.*
@@ -37,7 +29,7 @@ class ApplicationControllerTest {
 
     @BeforeEach
     fun beforeEach() {
-        val stateLog:MutableList<ApplicationStateLog> = ArrayList()
+        val stateLog: MutableList<MutableMap<String, Any>> = mutableListOf()
         expectedList = Arrays.asList<PersonalApplication>(
             PersonalApplication("MLP000000000014",
                 "2021-02-13", "840000016",
@@ -46,7 +38,7 @@ class ApplicationControllerTest {
         )
     }
 
-    @Test
+    /*@Test
     fun testGetApplicationOfACustomer() {
         val expectedProduct: PersonalApplication = expectedList[0]
         println(expectedProduct)
@@ -60,7 +52,7 @@ class ApplicationControllerTest {
             .expectBody()
             .jsonPath("$.applicationReferenceId").isEqualTo("MLP000000000014")
             .jsonPath("$.productCode").isEqualTo("PERSONAL")
-    }
+    }*/
 
     @Test
     fun testGetApplicationOfACustomerByApplicationReferenceId() {
@@ -71,6 +63,21 @@ class ApplicationControllerTest {
             Mono.just(expectedProduct))
         client.get()
             .uri("/applications/{applicationReferenceId}/products/{productCode}", expectedProduct.applicationReferenceId, expectedProduct.productCode)
+            .exchange()
+            .expectStatus().isOk
+            .expectBody()
+            .jsonPath("$.applicationReferenceId").isEqualTo("MLP000000000014")
+            .jsonPath("$.productCode").isEqualTo("PERSONAL")
+    }
+
+    @Test
+    fun testGetFilteredApplicationOfACustomer() {
+        val expectedProduct: PersonalApplication = expectedList[0]
+        println(expectedProduct)
+        Mockito.`when`(service.getFilteredApplicationOfACustomer(expectedProduct.productCode, expectedProduct.customerId)).thenReturn(
+            expectedProduct)
+        client.get()
+            .uri("/applications/products/{productCode}/customers/{customerId}", expectedProduct.productCode, expectedProduct.customerId)
             .exchange()
             .expectStatus().isOk
             .expectBody()

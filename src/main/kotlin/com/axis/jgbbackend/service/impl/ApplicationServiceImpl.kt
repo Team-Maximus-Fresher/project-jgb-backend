@@ -13,6 +13,28 @@ class ApplicationServiceImpl(
     private val applicationRepo: ApplicationRepo
 ) : ApplicationService {
 
+    var filteredPlCompleteLogs: MutableList<String> = mutableListOf("PersonalOfferFetcher", "PersonalOfferLanding",
+        "PersonalPaSangamCheck", "PersonalLoanOfferRequest", "Sanction", "OTPValidation", "KnockOff", "FinnoneAppIdTask", "DisbursementTask")
+
+    override fun getFilteredApplicationOfACustomer(productCode: String, customerId: String): PersonalApplication? {
+        var personalApplication: Mono<PersonalApplication> = getApplicationOfACustomer(productCode, customerId)
+        var application = personalApplication.block()
+        var stepsToBeDisplayed: MutableList<MutableMap<String, Any>> = mutableListOf()
+        for(filteredLog in filteredPlCompleteLogs) {
+            if(application != null) {
+                for(log in application.applicationStateLogs) {
+                    if(log.containsValue(filteredLog)) {
+                        stepsToBeDisplayed.add(log)
+                        break
+                    }
+                }
+            }
+        }
+        application?.applicationStateLogs?.clear()
+        application?.applicationStateLogs?.addAll(stepsToBeDisplayed)
+        return application
+    }
+
 
     override fun getApplicationOfACustomer(productCode: String, customerId: String): Mono<PersonalApplication> {
         return applicationRepo.findByProductCodeAndCustomerId(productCode, customerId)

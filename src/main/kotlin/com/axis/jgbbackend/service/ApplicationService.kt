@@ -8,6 +8,7 @@ import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
 interface ApplicationService {
+    fun getFilteredApplicationOfACustomer(productCode: String, customerId: String): PersonalApplication?
     fun getApplicationOfACustomer(productCode: String, customerId: String): Mono<PersonalApplication>
     fun getApplicationOfACustomerByApplicationReferenceIdAndProductCode(applicationReferenceId: String, productCode: String): Mono<PersonalApplication>
 }
