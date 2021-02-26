@@ -21,7 +21,7 @@ import org.springframework.test.web.reactive.server.WebTestClient
 import reactor.core.publisher.Mono
 import java.util.*
 
-//@Import(ApplicationServiceImpl::class)
+
 @WebFluxTest(ApplicationController::class)
 class ApplicationControllerTest {
     private lateinit var expectedList: List<PersonalApplication>
@@ -64,7 +64,6 @@ class ApplicationControllerTest {
 
     @Test
     fun testGetApplicationOfACustomerByApplicationReferenceId() {
-        // personalApplication: PersonalApplication = PersonalApplication.builder().id(1).city("delhi").age(23).name("ABC").build()
         val expectedProduct: PersonalApplication = expectedList[0]
         println(expectedProduct.applicationReferenceId)
         Mockito.`when`(service.getApplicationOfACustomerByApplicationReferenceIdAndProductCode(expectedProduct.applicationReferenceId, expectedProduct.productCode)).thenReturn(
@@ -78,18 +77,5 @@ class ApplicationControllerTest {
             .jsonPath("$.productCode").isEqualTo("PERSONAL")
     }
 
-    /*@Test
-    fun testGetApplicationOfACustomerByApplicationReferenceId() {
-        val expectedProduct: PersonalApplication = expectedList!![0]
-        println(expectedProduct.applicationReferenceId)
-        Mockito.`when`(service.getApplicationOfACustomerByApplicationReferenceId(expectedProduct.applicationReferenceId!!)).thenReturn(Mono.just(expectedProduct))
-        client
-            .get()
-            .uri("/applications/{applicationReferenceId}", expectedProduct.applicationReferenceId)
-            .exchange()
-            .expectStatus()
-            .isOk
-            .expectBody(PersonalApplication::class.java)
-            .isEqualTo(expectedProduct)
-    }*/
+
 }
