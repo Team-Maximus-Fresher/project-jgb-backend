@@ -27,7 +27,12 @@ dependencies {
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("io.springfox:springfox-swagger2:2.9.2")
 	implementation("io.springfox:springfox-swagger-ui:2.9.2")
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
+	implementation("org.apache.velocity:velocity:1.7")
+	implementation("org.apache.velocity:velocity-tools:2.0")
+// https://mvnrepository.com/artifact/org.json/json
+	implementation("org.json:json:20201115")
+
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.0")

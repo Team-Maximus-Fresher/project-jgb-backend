@@ -1,0 +1,4 @@
+#set($req.loanAmount=$app.output.loanAmount)
+#set($req.loanPurpose=$app.output.loanPurpose)
+#set($req.status=$app.status)
+#set($req.pan=$app.output.pan)

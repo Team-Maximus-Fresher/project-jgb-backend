@@ -1,0 +1,4 @@
+{
+    "loanAmount":" application.loanAmount"
+    "loanPurpose": "application.loanPurpose"
+}
