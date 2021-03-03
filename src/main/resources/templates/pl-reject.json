@@ -1,0 +1,14 @@
+{
+  "applicationReferenceId": "[(*{props.applicationReferenceId})]",
+  "customerId": "[(*{props.customerId})]",
+  "productCode": "[(*{props.productCode})]",
+  "journeyCode": "[(*{props.journeyCode})]",
+  "log": "[(*{props.applicationStateLogs[0]._id})]",
+[#th:block th:if="${props.applicationStateLogs[0]._id == 'DedupeCheck'}"]
+  "status": "[(*{props.applicationStateLogs[0].status})]",
+[/th:block]
+[#th:block th:each="log: ${props.applicationStateLogs}"]
+  "log": "[(${log._id})]"
+[/th:block]
+  "state": "REJECT"
+}
