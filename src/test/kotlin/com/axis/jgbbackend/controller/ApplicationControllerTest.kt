@@ -36,7 +36,7 @@ class ApplicationControllerTest {
             expectedProduct.customerId.toString()
         )).thenReturn(ResponseEntity.ok().body(expectedProduct.toString()))
         client.get()
-            .uri("/applications/products/{productCode}/customers/{customerId}", expectedProduct.productCode, expectedProduct.customerId)
+            .uri("/products/{productCode}/customers/{customerId}/applications", expectedProduct.productCode, expectedProduct.customerId)
             .exchange()
             .expectStatus().isOk
 
@@ -52,7 +52,7 @@ class ApplicationControllerTest {
         )).thenReturn(ResponseEntity.ok().body(expectedProduct.toString())
         )
         client.get()
-            .uri("/applications/{applicationReferenceId}/products/{productCode}", expectedProduct.applicationReferenceId, expectedProduct.productCode)
+            .uri("products/{productCode}/applications/{applicationReferenceId}", expectedProduct.applicationReferenceId, expectedProduct.productCode)
             .exchange()
             .expectStatus().isOk
 
@@ -68,7 +68,7 @@ class ApplicationControllerTest {
         )
 
         client.get()
-            .uri("/applications/{applicationReferenceId}/products/{productCode}", "123", "123")
+            .uri("products/{productCode}/applications/{applicationReferenceId}", "123", "123")
             .exchange()
             .expectStatus().isNotFound
 

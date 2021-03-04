@@ -17,6 +17,9 @@ class MappingTemplate(
         val context = Context()
         val dbObject = application
         context.setVariable("props", dbObject)
-        return ResponseEntity.ok().body(templateEngine.process("pl-complete", context))
+        var application = templateEngine.process("pl-complete", context)
+        application.replace("[\n\r]+", "\n")
+        application.replace("\n[ \t]*\n", "\n")
+        return ResponseEntity.ok().body(application)
     }
 }
