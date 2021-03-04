@@ -21,8 +21,8 @@ class ThymeleafEngineConfiguration {
         val templateResolver = ClassLoaderTemplateResolver()
         templateResolver.prefix = "/templates/"
         templateResolver.suffix = ".json"
-        templateResolver.templateMode = TemplateMode.TEXT
-        templateResolver.characterEncoding = "UTF8"
+        //templateResolver.templateMode = TemplateMode.TEXT
+        //templateResolver.characterEncoding = "UTF8"
         //templateResolver.checkExistence = true
         //templateResolver.isCacheable = true
         //templateResolver.cacheTTLMs = cacheTimeoutTTL?.toLong() ?: 60000

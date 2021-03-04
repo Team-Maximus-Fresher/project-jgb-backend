@@ -34,7 +34,7 @@ class ApplicationControllerTest {
         val expectedProduct: PersonalApplication = personalApplication
         Mockito.`when`(service.getApplicationOfByProductCodeAndCustomerId(expectedProduct.productCode.toString(),
             expectedProduct.customerId.toString()
-        )).thenReturn(ResponseEntity.ok().body(expectedProduct.toString()))
+        )).thenReturn()
         client.get()
             .uri("/products/{productCode}/customers/{customerId}/applications", expectedProduct.productCode, expectedProduct.customerId)
             .exchange()

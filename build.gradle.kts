@@ -30,6 +30,8 @@ dependencies {
 	implementation("org.thymeleaf:thymeleaf:3.0.11.RELEASE")
 	implementation("org.thymeleaf:thymeleaf-spring5:3.0.11.RELEASE")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf:2.4.3")
+	// https://mvnrepository.com/artifact/org.json/json-simple
+	implementation("org.json:json:20201115")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")

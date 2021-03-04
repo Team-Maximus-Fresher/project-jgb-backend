@@ -6,9 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 
 @Document("personalApplication")
 data class PersonalApplication(
-    @Id
-    @NotNull
-    val applicationReferenceId: String,
+    val applicationReferenceId: String? = null,
     val activeSavingsAccounts: MutableMap<*,*>? = null,
     val applicationDate: String? = null,
     val applicationStateLogs: List<MutableMap<*,*>>? = null,

@@ -13,13 +13,10 @@ class MappingTemplate(
     @Autowired
     private var templateEngine: SpringWebFluxTemplateEngine
 ) {
-    fun filterData(application: PersonalApplication): ResponseEntity<String> {
+    fun filterData(application: PersonalApplication): String {
         val context = Context()
         val dbObject = application
         context.setVariable("props", dbObject)
-        var application = templateEngine.process("pl-complete", context)
-        application.replace("[\n\r]+", "\n")
-        application.replace("\n[ \t]*\n", "\n")
-        return ResponseEntity.ok().body(application)
+        return templateEngine.process("pl-complete", context).toString()
     }
 }
