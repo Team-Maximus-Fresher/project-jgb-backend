@@ -8,6 +8,6 @@ import reactor.core.publisher.Mono
 import springfox.documentation.spring.web.json.Json
 
 interface ApplicationService {
-    fun getApplicationOfByProductCodeAndCustomerId(productCode: String, customerId: String): Flux<String>
-    fun getApplicationByApplicationReferenceIdAndProductCode(applicationReferenceId: String, productCode: String): Mono<String>
+    fun getApplicationOfByProductCodeAndCustomerId(productCode: String, customerId: String): Mono<MutableList<Json>>
+    fun getApplicationByApplicationReferenceIdAndProductCode(productCode: String, applicationReferenceId: String): Mono<Json>
 }

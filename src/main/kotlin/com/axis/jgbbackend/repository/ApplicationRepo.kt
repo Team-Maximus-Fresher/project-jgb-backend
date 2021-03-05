@@ -13,6 +13,6 @@ interface ApplicationRepo: ReactiveMongoRepository<PersonalApplication, String> 
     @Query("{'productCode' : ?0, 'customerId' : ?1}")
     fun findByProductCodeAndCustomerId(productCode: String, customerId: String): Flux<PersonalApplication>
 
-    @Query("{'applicationReferenceId' : ?0, 'productCode' : ?1}")
-    fun findByApplicationIdAndProductCode(applicationReferenceId: String, productCode: String): Mono<PersonalApplication>
+    @Query("{'productCode' : ?0, 'applicationReferenceId' : ?1}")
+    fun findByApplicationIdAndProductCode(productCode: String, applicationReferenceId: String): Mono<PersonalApplication>
 }

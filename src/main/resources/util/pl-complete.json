@@ -1,0 +1,1532 @@
+{
+  "selectedLoanDetails" : {
+    "uniqueIdentifier" : "684819d3-412b-4a4b-bc91-57e865dba994",
+    "stepStatus" : "FINISHED",
+    "loanAmount" : 600000,
+    "pan" : "HFDPG0016X",
+    "encryptedPan" : {
+      "isEncrypted" : true,
+      "value" : "erPrDbfgXQR0Whe/WN3WzQ=="
+    },
+    "loanPurpose" : "Education",
+    "optedForWhatsApp" : true
+  },
+  "selectedMailingAddress" : {
+    "uniqueIdentifier" : "e11b2efa-8a56-4c0b-8e98-ff0b35bc0bd9",
+    "stepStatus" : "FINISHED",
+    "addressLineOne" : "1st Floor",
+    "addressLineTwo" : "M-123",
+    "addressLineThree" : "Housing Board",
+    "addressLineFour" : "Sastrinagar",
+    "addressLineFive" : "Yarwada",
+    "pinCode" : 400003,
+    "city" : "MUMBAI",
+    "state" : "MAHARASHTRA",
+    "country" : "India",
+    "kycNeeded" : false,
+    "customerVerified" : false,
+    "knownAddress" : false
+  },
+  "mailingAddressPincodeMapping" : {
+    "uniqueIdentifier" : "f67d242e-9558-4986-b199-0f53764603d4",
+    "stepStatus" : "FINISHED",
+    "cityUniqueId" : "20",
+    "finoneCityId" : "20",
+    "finoneCityName" : "MUMBAI",
+    "tier" : "",
+    "cityIdGaadiDotCom" : "",
+    "cityNameGaadiDotCom" : "",
+    "finoneStateId" : "28",
+    "finoneStateName" : "MAHARASHTRA",
+    "finoneCountryCode" : "1",
+    "finoneCountryName" : "INDIA",
+    "finOneASCName" : "GOREGAON RAC",
+    "finOneRACCode" : "GO647",
+    "finoneBranchId" : "70",
+    "finoneStateIdForAppIdCreation" : "28",
+    "finoneRegion" : "WEST",
+    "finoneRefferCode" : "1111",
+    "finoneRefferGroup" : "1",
+    "finoneSmCode" : "88406",
+    "finoneDSACode" : "11183",
+    "finoneDmeCode" : "88407"
+  },
+  "sangamResult" : {
+    "uniqueIdentifier" : "d4f28bf7-27ba-420a-aa44-2950dde8a803",
+    "stepStatus" : "FINISHED",
+    "status" : "AUTO_APPROVED",
+    "check" : "SANGAM",
+    "data" : {
+      "decision" : "AA",
+      "loanAmount" : 600000,
+      "ltv" : 70.0,
+      "validityDate" : "2021-03-14T00:00:00.000Z",
+      "tenure" : 60.0,
+      "cibilHit" : "Hit",
+      "appScoreBand" : 386
+    }
+  },
+  "loanParameters" : {
+    "uniqueIdentifier" : "e156fb83-23e1-49bc-a7f1-553438f1d04a",
+    "stepStatus" : "FINISHED",
+    "tenure" : {
+      "min" : 12.0,
+      "max" : 60.0,
+      "step" : 3,
+      "unit" : "month",
+      "unitShortLabel" : "M",
+      "unitFullLabel" : "Months",
+      "conversionFactor" : "1"
+    },
+    "loanAmount" : {
+      "min" : "50000",
+      "step" : "5000"
+    }
+  },
+  "loanOffer" : {
+    "uniqueIdentifier" : "317379e6-779e-4011-ad24-359a96e82441",
+    "stepStatus" : "FINISHED",
+    "details" : {
+      "loanAmount" : 600000,
+      "tenure" : 60,
+      "emi" : 14039,
+      "interestRate" : 14.25,
+      "tenureLabel" : "Months",
+      "plrRate" : 11.25
+    },
+    "breakdown" : [
+      {
+        "displayName" : "Processing Fee",
+        "name" : "processing_fee",
+        "value" : 14160
+      },
+      {
+        "displayName" : "Stamp Duty",
+        "name" : "stamp_duty",
+        "value" : 610
+      },
+      {
+        "date" : {
+          "start" : "",
+          "end" : ""
+        },
+        "loan" : {
+          "min" : 0,
+          "max" : 4000000
+        },
+        "cibilHit" : "ANY",
+        "screenReachedPrevious" : "",
+        "displayName" : "Part Payment Charges",
+        "assetCategory" : "",
+        "maxTimeSpentDuringPrevious" : "",
+        "channel" : "",
+        "appScoreBand" : {
+          "min" : "",
+          "max" : ""
+        },
+        "gst" : "",
+        "source" : "",
+        "serviceCharge" : "",
+        "segment" : "ANY",
+        "percentage" : "0",
+        "promoId" : "ANY",
+        "state" : "ANY",
+        "tenure" : {
+          "min" : 3,
+          "max" : 60
+        },
+        "amount" : "",
+        "feeType" : "Part Payment Charges",
+        "noOfJourneyStarts" : "",
+        "mScoreBand" : {
+          "min" : "",
+          "max" : ""
+        },
+        "productCode" : "PERSONAL",
+        "name" : "part_payment_charges",
+        "category" : "ANY",
+        "strategy" : "info",
+        "uniqueId" : "82",
+        "status" : "ANY",
+        "base" : ""
+      },
+      {
+        "date" : {
+          "start" : "",
+          "end" : ""
+        },
+        "loan" : {
+          "min" : 0,
+          "max" : 4000000
+        },
+        "cibilHit" : "ANY",
+        "screenReachedPrevious" : "",
+        "displayName" : "Early Closure Charges",
+        "assetCategory" : "",
+        "maxTimeSpentDuringPrevious" : "",
+        "channel" : "",
+        "appScoreBand" : {
+          "min" : "",
+          "max" : ""
+        },
+        "gst" : "",
+        "source" : "",
+        "serviceCharge" : "",
+        "segment" : "ANY",
+        "percentage" : "0",
+        "promoId" : "ANY",
+        "state" : "ANY",
+        "tenure" : {
+          "min" : 3,
+          "max" : 60
+        },
+        "amount" : "",
+        "feeType" : "Early Closure Charges",
+        "noOfJourneyStarts" : "",
+        "mScoreBand" : {
+          "min" : "",
+          "max" : ""
+        },
+        "productCode" : "PERSONAL",
+        "name" : "early_closure_charges",
+        "category" : "ANY",
+        "strategy" : "info",
+        "uniqueId" : "83",
+        "status" : "ANY",
+        "base" : ""
+      },
+      {
+        "displayName" : "Net Disbursal",
+        "name" : "netDisbursal",
+        "value" : 585230
+      }
+    ]
+  },
+  "updatedEmailAddress" : {
+    "uniqueIdentifier" : "2cc9753e-49d1-404a-9234-a816d6a1a96c",
+    "stepStatus" : "FINISHED",
+    "value" : "EzIwU2HXlFWgfsmVRLhtdqKb7KFRjgvJJDolhodhYKw="
+  },
+  "maxServiceableEMI" : {
+    "uniqueIdentifier" : "a1ca40da-c410-4304-b3dd-7f4aa2a56778",
+    "stepStatus" : "FINISHED",
+    "value" : 14038.8379202987
+  },
+  "kycResponse" : {
+    "uniqueIdentifier" : "93fef774-9001-428f-bdd2-e407dfc7b378",
+    "stepStatus" : "FINISHED",
+    "kycNeeded" : false
+  },
+  "incomeDetails" : {
+    "uniqueIdentifier" : "2062e294-0ed3-4858-a56c-c9bdde5161e7",
+    "stepStatus" : "FINISHED",
+    "netIncomeAmount" : 100000,
+    "unit" : "MONTH"
+  },
+  "activeSavingsAccounts" : {
+    "uniqueIdentifier" : "2fcae65c-9ecd-4746-acf1-5aab5a74d1f5",
+    "stepStatus" : "FINISHED",
+    "accounts" : [
+      {
+        "accountNumber" : "1730100000016",
+        "accountStatus" : "A",
+        "accountFreezeType" : "",
+        "crmRiskScore" : "",
+        "cmgRiskProfileScore" : "",
+        "branchName" : "PALANPUR [GJ]",
+        "accType" : "SBEZY",
+        "solId" : "256",
+        "accountOwnership" : "M",
+        "accountOpeningDate" : "2014-01-30 00:00:00"
+      },
+      {
+        "accountNumber" : "003000000400004",
+        "accountStatus" : "A",
+        "accountFreezeType" : "notNu",
+        "crmRiskScore" : "",
+        "cmgRiskProfileScore" : "",
+        "branchName" : "CHARNI ROAD MUM MH",
+        "accType" : "SBMIN",
+        "solId" : "2939",
+        "accountOwnership" : "M",
+        "accountOpeningDate" : "2016-01-03 00:00:00"
+      },
+      {
+        "accountNumber" : "914010003839667",
+        "accountStatus" : "A",
+        "accountFreezeType" : "",
+        "crmRiskScore" : "",
+        "cmgRiskProfileScore" : "",
+        "branchName" : "CHARNI ROAD MUM MH",
+        "accType" : "SAPPR",
+        "solId" : "2939",
+        "accountOwnership" : "M",
+        "accountOpeningDate" : "2018-09-01 00:00:00"
+      },
+      {
+        "accountNumber" : "914010003839669",
+        "accountStatus" : "A",
+        "accountFreezeType" : "",
+        "crmRiskScore" : "",
+        "cmgRiskProfileScore" : "",
+        "branchName" : "CHARNI ROAD MUM MH",
+        "accType" : "PBSTF",
+        "solId" : "2941",
+        "accountOwnership" : "M",
+        "accountOpeningDate" : "2017-04-02 00:00:00"
+      },
+      {
+        "accountNumber" : "914010003839670",
+        "accountStatus" : "A",
+        "accountFreezeType" : "",
+        "crmRiskScore" : "",
+        "cmgRiskProfileScore" : "",
+        "branchName" : "CHARNI ROAD MUM MH",
+        "accType" : "WSSTF",
+        "solId" : "2942",
+        "accountOwnership" : "M",
+        "accountOpeningDate" : "2019-01-01 00:00:00"
+      }
+    ]
+  },
+  "otpValidation" : {
+    "uniqueIdentifier" : "d7701408-8562-4574-8111-820958927b26",
+    "stepStatus" : "FINISHED",
+    "status" : true,
+    "createdAt" : "2021-02-13T11:13:07.178199"
+  },
+  "hunterResult" : {
+    "uniqueIdentifier" : "c4fbf5cd-f01b-4bdf-8371-2c717b4d58e9",
+    "stepStatus" : "FINISHED",
+    "status" : "NO_MATCH",
+    "check" : "HUNTER",
+    "data" : {
+      "requestIdentifier" : "MUMBAI_MLP_6027B3F058C43A1661E06A2F"
+    }
+  },
+  "disbursementDetails" : {
+    "uniqueIdentifier" : "224ec04c-ae6c-4089-a3ac-813db8f12b75",
+    "stepStatus" : "FINISHED",
+    "details" : {
+      "accountNumber" : "1730100000016",
+      "disbursedAmount" : "585230",
+      "disbursementDate" : "2021-02-13",
+      "transactionId" : "defaultTransaction"
+    }
+  },
+  "preApprovedOffer" : {
+    "uniqueIdentifier" : "565431f5-dcdb-4727-97aa-97cae5691971",
+    "stepStatus" : "FINISHED",
+    "preApprovedAmount" : 600000,
+    "accountNumber" : "1730100000016",
+    "knockoffFlag" : false,
+    "accountType" : "FIXED",
+    "salaryInput" : 100000.0,
+    "schemeId" : 6788,
+    "promoId" : 1634,
+    "solID" : "037",
+    "mScore" : 18,
+    "cibilHit" : "Hit"
+  },
+  "preferredDisbursementAccount" : {
+    "uniqueIdentifier" : "3ca81c0e-38ea-4a67-a1cd-86a7bc3cae3f",
+    "stepStatus" : "FINISHED",
+    "accountNumber" : "1730100000016",
+    "accountStatus" : "A",
+    "accountFreezeType" : "",
+    "crmRiskScore" : "",
+    "cmgRiskProfileScore" : "",
+    "branchName" : "PALANPUR [GJ]",
+    "accType" : "SBEZY",
+    "solId" : "256",
+    "accountOwnership" : "M",
+    "accountOpeningDate" : "2014-01-30 00:00:00"
+  },
+  "repaymentData" : {
+    "uniqueIdentifier" : "3741b05c-77eb-4229-8bc3-832100e9ad4d",
+    "stepStatus" : "FINISHED",
+    "emiStartDate" : "2021-03-05"
+  },
+  "knockOff" : {
+    "uniqueIdentifier" : "42d0c257-31ed-470e-a855-60520471ee2b",
+    "stepStatus" : "FINISHED",
+    "status" : "Success"
+  },
+  "finnoneAppId" : {
+    "uniqueIdentifier" : "0d374202-9250-4c0b-ab97-1fbe539d0846",
+    "stepStatus" : "FINISHED",
+    "appId" : "3116142"
+  },
+  "termAndConditionPdf" : {
+    "uniqueIdentifier" : "5fe5f6c4-12b4-4bcb-996c-341fb0dfda08",
+    "stepStatus" : "FINISHED",
+    "documentId" : "6027b45c5140b855030f0d5d",
+    "createdOn" : "2021-02-13T11:13:32.708Z"
+  },
+  "insurancePremium" : {
+    "uniqueIdentifier" : "b02095e8-6ad8-4730-bc4a-431999d0d498",
+    "stepStatus" : "FINISHED",
+    "basicPremium" : 3845.0,
+    "totalPremium" : 4538
+  },
+  "insuranceDetails" : {
+    "uniqueIdentifier" : "e1f0936a-0b74-4456-8e7c-056865ea7047",
+    "stepStatus" : "FINISHED",
+    "opted" : false
+  },
+  "fraudDetails" : {
+    "uniqueIdentifier" : "a8b02923-dae3-4fb8-a0fe-8ae96b7508b4",
+    "stepStatus" : "FINISHED",
+    "fraudPresent" : false,
+    "fraudIndicators" : []
+  },
+  "personalWhatsAppOptIn" : {
+    "uniqueIdentifier" : "0e4e591a-954b-479b-853a-4b4ccc425041",
+    "stepStatus" : "FINISHED",
+    "status" : "SUCCESS"
+  },
+  "submissionTime" : "2021-02-13T11:13:07.180758",
+  "applicationStateLogs" : [
+    {
+      "_id" : "DedupeCheck",
+      "status" : "FINISHED",
+      "output" : {
+        "status" : "New"
+      },
+      "stepExecutionTimeInMillis" : "151",
+      "timestamp" : "2021-02-13T11:12:14.943291Z"
+    },
+    {
+      "_id" : "DemogFetcherWithNSDLValidation",
+      "status" : "FINISHED",
+      "output" : {
+        "custId" : "840000016",
+        "gender" : "M",
+        "dateOfBirth" : "1973-01-16",
+        "pan" : "HFDPG0016X",
+        "name" : {
+          "displayName" : "Rajdeep",
+          "title" : "MR",
+          "firstName" : "Rajdeep",
+          "middleName" : "Kumar",
+          "lastName" : "Bist"
+        },
+        "contact" : {
+          "email" : "user840000016@test.com",
+          "mobileNumber" : "9910000016"
+        },
+        "address" : {
+          "addressLineOne" : "1st Floor",
+          "addressLineTwo" : "M-123",
+          "addressLineThree" : "Housing Board",
+          "addressLineFour" : "Sastrinagar",
+          "addressLineFive" : "Yarwada",
+          "pinCode" : 400003,
+          "city" : "MUMBAI",
+          "country" : "India",
+          "state" : "MAHARASHTRA"
+        },
+        "city" : {
+          "uniqueId" : "20",
+          "displayName" : "MUMBAI"
+        },
+        "noOfDependent" : 2,
+        "educationQualification" : "BE CSE",
+        "health" : "HC01",
+        "fatherName" : "Raj",
+        "mothersMaidenName" : "Simran",
+        "maritalStatus" : "Y",
+        "nationality" : "Indian",
+        "schemeType" : "SBA",
+        "caste" : "caste",
+        "deleteFlag" : "N",
+        "creditLimit" : "2398409",
+        "debitLimit" : "342098",
+        "passportNo" : "F0000000",
+        "accounts" : [
+          {
+            "accountNumber" : "003000000400004",
+            "accountStatus" : "ACTIVE",
+            "accountFreezeType" : "",
+            "crmRiskScore" : "2",
+            "cmgRiskProfileScore" : "2",
+            "branchName" : "CHARNI ROAD MUM MH",
+            "accType" : "SAPPR",
+            "solId" : "2939",
+            "accountOwnership" : "M",
+            "accountOpeningDate" : "2016-01-04 00:00:00"
+          },
+          {
+            "accountNumber" : "914010003839667",
+            "accountStatus" : "ACTIVE",
+            "accountFreezeType" : "",
+            "crmRiskScore" : "2",
+            "cmgRiskProfileScore" : "2",
+            "branchName" : "CHARNI ROAD MUM MH",
+            "accType" : "SAPPR",
+            "solId" : "2939",
+            "accountOwnership" : "M",
+            "accountOpeningDate" : "2017-08-04 00:00:00"
+          }
+        ],
+        "encryptedPan" : {
+          "isEncrypted" : true,
+          "value" : "erPrDbfgXQR0Whe/WN3WzQ=="
+        },
+        "cmgRiskProfileScore" : "1",
+        "constitutionDescription" : "RESIDENT INDIAN"
+      },
+      "stepExecutionTimeInMillis" : "282",
+      "timestamp" : "2021-02-13T11:12:15.226346Z"
+    },
+    {
+      "_id" : "PersonalOfferFetcher",
+      "status" : "FINISHED",
+      "output" : {
+        "preApprovedAmount" : 600000,
+        "accountNumber" : "1730100000016",
+        "knockoffFlag" : false,
+        "accountType" : "FIXED",
+        "salaryInput" : 100000.0,
+        "schemeId" : 6788,
+        "promoId" : 1634,
+        "solID" : "037",
+        "mScore" : 18,
+        "cibilHit" : "Hit"
+      },
+      "stepExecutionTimeInMillis" : "246",
+      "timestamp" : "2021-02-13T11:12:15.474106Z"
+    },
+    {
+      "_id" : "ActiveSavingsAccountFetcherStep",
+      "status" : "FINISHED",
+      "output" : {
+        "accounts" : [
+          {
+            "accountNumber" : "1730100000016",
+            "accountStatus" : "A",
+            "accountFreezeType" : "",
+            "crmRiskScore" : "",
+            "cmgRiskProfileScore" : "",
+            "branchName" : "PALANPUR [GJ]",
+            "accType" : "SBEZY",
+            "solId" : "256",
+            "accountOwnership" : "M",
+            "accountOpeningDate" : "2014-01-30 00:00:00"
+          },
+          {
+            "accountNumber" : "003000000400004",
+            "accountStatus" : "A",
+            "accountFreezeType" : "notNu",
+            "crmRiskScore" : "",
+            "cmgRiskProfileScore" : "",
+            "branchName" : "CHARNI ROAD MUM MH",
+            "accType" : "SBMIN",
+            "solId" : "2939",
+            "accountOwnership" : "M",
+            "accountOpeningDate" : "2016-01-03 00:00:00"
+          },
+          {
+            "accountNumber" : "914010003839667",
+            "accountStatus" : "A",
+            "accountFreezeType" : "",
+            "crmRiskScore" : "",
+            "cmgRiskProfileScore" : "",
+            "branchName" : "CHARNI ROAD MUM MH",
+            "accType" : "SAPPR",
+            "solId" : "2939",
+            "accountOwnership" : "M",
+            "accountOpeningDate" : "2018-09-01 00:00:00"
+          },
+          {
+            "accountNumber" : "914010003839669",
+            "accountStatus" : "A",
+            "accountFreezeType" : "",
+            "crmRiskScore" : "",
+            "cmgRiskProfileScore" : "",
+            "branchName" : "CHARNI ROAD MUM MH",
+            "accType" : "PBSTF",
+            "solId" : "2941",
+            "accountOwnership" : "M",
+            "accountOpeningDate" : "2017-04-02 00:00:00"
+          },
+          {
+            "accountNumber" : "914010003839670",
+            "accountStatus" : "A",
+            "accountFreezeType" : "",
+            "crmRiskScore" : "",
+            "cmgRiskProfileScore" : "",
+            "branchName" : "CHARNI ROAD MUM MH",
+            "accType" : "WSSTF",
+            "solId" : "2942",
+            "accountOwnership" : "M",
+            "accountOpeningDate" : "2019-01-01 00:00:00"
+          }
+        ]
+      },
+      "stepExecutionTimeInMillis" : "108",
+      "timestamp" : "2021-02-13T11:12:15.584105Z"
+    },
+    {
+      "_id" : "KYCCheckWithValidation",
+      "status" : "FINISHED",
+      "output" : {
+        "kycNeeded" : false
+      },
+      "stepExecutionTimeInMillis" : "227",
+      "timestamp" : "2021-02-13T11:12:15.872256Z"
+    },
+    {
+      "_id" : "FilterUKycNonCompliantUser",
+      "status" : "SKIPPED",
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "Undefined",
+      "timestamp" : "2021-02-13T11:12:15.979009Z"
+    },
+    {
+      "_id" : "BIUOfferIncomeDetails",
+      "status" : "FINISHED",
+      "output" : {
+        "netIncomeAmount" : 100000,
+        "unit" : "MONTH"
+      },
+      "stepExecutionTimeInMillis" : "21",
+      "timestamp" : "2021-02-13T11:12:16.098717Z"
+    },
+    {
+      "_id" : "SetPreferredDisbursementAccount",
+      "status" : "FINISHED",
+      "output" : {
+        "accountNumber" : "1730100000016",
+        "accountStatus" : "A",
+        "accountFreezeType" : "",
+        "crmRiskScore" : "",
+        "cmgRiskProfileScore" : "",
+        "branchName" : "PALANPUR [GJ]",
+        "accType" : "SBEZY",
+        "solId" : "256",
+        "accountOwnership" : "M",
+        "accountOpeningDate" : "2014-01-30 00:00:00"
+      },
+      "stepExecutionTimeInMillis" : "22",
+      "timestamp" : "2021-02-13T11:12:16.224577Z"
+    },
+    {
+      "_id" : "EmailAddressFetcher",
+      "status" : "FINISHED",
+      "output" : {
+        "value" : "user840000016@test.com"
+      },
+      "stepExecutionTimeInMillis" : "9",
+      "timestamp" : "2021-02-13T11:12:16.231991Z"
+    },
+    {
+      "_id" : "PersonalOfferLanding",
+      "status" : "FINISHED",
+      "input" : {
+        "loanAmount" : 600000,
+        "optedForWhatsApp" : true,
+        "loanPurpose" : "Education"
+      },
+      "output" : {
+        "loanAmount" : 600000,
+        "pan" : "HFDPG0016X",
+        "encryptedPan" : {
+          "isEncrypted" : true,
+          "value" : "erPrDbfgXQR0Whe/WN3WzQ=="
+        },
+        "loanPurpose" : "Education",
+        "optedForWhatsApp" : true
+      },
+      "stepExecutionTimeInMillis" : "184",
+      "timestamp" : "2021-02-13T11:12:40.004721Z"
+    },
+    {
+      "_id" : "PersonalWhatsAppOptIn",
+      "status" : "FINISHED",
+      "output" : {
+        "status" : "SUCCESS"
+      },
+      "stepExecutionTimeInMillis" : "203",
+      "timestamp" : "2021-02-13T11:12:40.326754Z"
+    },
+    {
+      "_id" : "EKycEligibility",
+      "status" : "SKIPPED",
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "Undefined",
+      "timestamp" : "2021-02-13T11:12:40.423818Z"
+    },
+    {
+      "_id" : "ExistingLoanAccountCheck",
+      "status" : "SKIPPED",
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "Undefined",
+      "timestamp" : "2021-02-13T11:12:40.547663Z"
+    },
+    {
+      "_id" : "ChooseOffer",
+      "status" : "SKIPPED",
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "Undefined",
+      "timestamp" : "2021-02-13T11:12:40.658745Z"
+    },
+    {
+      "_id" : "LoanParameter",
+      "status" : "FINISHED",
+      "output" : {
+        "tenure" : {
+          "min" : 12.0,
+          "max" : 60.0,
+          "step" : 3,
+          "unit" : "month",
+          "unitShortLabel" : "M",
+          "unitFullLabel" : "Months",
+          "conversionFactor" : "1"
+        },
+        "loanAmount" : {
+          "min" : "50000",
+          "step" : "5000"
+        }
+      },
+      "stepExecutionTimeInMillis" : "49",
+      "timestamp" : "2021-02-13T11:12:40.804417Z"
+    },
+    {
+      "_id" : "DemogAddressSelection",
+      "status" : "FINISHED",
+      "output" : {
+        "addressLineOne" : "1st Floor",
+        "addressLineTwo" : "M-123",
+        "addressLineThree" : "Housing Board",
+        "addressLineFour" : "Sastrinagar",
+        "addressLineFive" : "Yarwada",
+        "pinCode" : 400003,
+        "city" : "MUMBAI",
+        "state" : "MAHARASHTRA",
+        "country" : "India",
+        "kycNeeded" : false,
+        "customerVerified" : false,
+        "knownAddress" : false
+      },
+      "stepExecutionTimeInMillis" : "11",
+      "timestamp" : "2021-02-13T11:12:40.805869Z"
+    },
+    {
+      "_id" : "MailingAddressPincodeMappingBeforeSangamCall",
+      "status" : "FINISHED",
+      "output" : {
+        "cityUniqueId" : "20",
+        "finoneCityId" : "20",
+        "finoneCityName" : "MUMBAI",
+        "tier" : "",
+        "cityIdGaadiDotCom" : "",
+        "cityNameGaadiDotCom" : "",
+        "finoneStateId" : "28",
+        "finoneStateName" : "MAHARASHTRA",
+        "finoneCountryCode" : "1",
+        "finoneCountryName" : "INDIA",
+        "finOneASCName" : "GOREGAON RAC",
+        "finOneRACCode" : "GO647",
+        "finoneBranchId" : "70",
+        "finoneStateIdForAppIdCreation" : "28",
+        "finoneRegion" : "WEST",
+        "finoneRefferCode" : "1111",
+        "finoneRefferGroup" : "1",
+        "finoneSmCode" : "88406",
+        "finoneDSACode" : "11183",
+        "finoneDmeCode" : "88407"
+      },
+      "stepExecutionTimeInMillis" : "43",
+      "timestamp" : "2021-02-13T11:12:41.020047Z"
+    },
+    {
+      "_id" : "PersonalPaSangamCheck",
+      "status" : "FINISHED",
+      "output" : {
+        "status" : "AUTO_APPROVED",
+        "check" : "SANGAM",
+        "data" : {
+          "decision" : "AA",
+          "loanAmount" : 600000,
+          "ltv" : 70.0,
+          "validityDate" : "2021-03-14T00:00:00.000Z",
+          "tenure" : 60.0,
+          "cibilHit" : "Hit",
+          "appScoreBand" : 386
+        }
+      },
+      "stepExecutionTimeInMillis" : "1776",
+      "timestamp" : "2021-02-13T11:12:42.937027Z"
+    },
+    {
+      "_id" : "PersonalMaxServiceableEMI",
+      "status" : "FINISHED",
+      "output" : {
+        "value" : 14038.8379202987
+      },
+      "stepExecutionTimeInMillis" : "273",
+      "timestamp" : "2021-02-13T11:12:43.325335Z"
+    },
+    {
+      "_id" : "PersonalLoanOfferRequest",
+      "status" : "FINISHED",
+      "input" : {
+        "details" : {
+          "loanAmount" : 600000,
+          "tenure" : 60,
+          "emi" : 14039,
+          "interestRate" : 14.25,
+          "tenureLabel" : "Months"
+        },
+        "breakdown" : [
+          {
+            "name" : "processing_fee",
+            "displayName" : "Processing Fee",
+            "value" : 14160
+          },
+          {
+            "name" : "stamp_duty",
+            "displayName" : "Stamp Duty",
+            "value" : 610
+          },
+          {
+            "name" : "part_payment_charges",
+            "displayName" : "Part Payment Charges",
+            "date" : {
+              "start" : "",
+              "end" : ""
+            },
+            "loan" : {
+              "min" : 0,
+              "max" : 4000000
+            },
+            "cibilHit" : "ANY",
+            "screenReachedPrevious" : "",
+            "assetCategory" : "",
+            "maxTimeSpentDuringPrevious" : "",
+            "channel" : "",
+            "appScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "gst" : "",
+            "source" : "",
+            "serviceCharge" : "",
+            "segment" : "ANY",
+            "percentage" : "0",
+            "promoId" : "ANY",
+            "state" : "ANY",
+            "tenure" : {
+              "min" : 3,
+              "max" : 60
+            },
+            "amount" : "",
+            "feeType" : "Part Payment Charges",
+            "noOfJourneyStarts" : "",
+            "mScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "productCode" : "PERSONAL",
+            "category" : "ANY",
+            "uniqueId" : "82",
+            "status" : "ANY",
+            "base" : "",
+            "strategy" : "info"
+          },
+          {
+            "name" : "early_closure_charges",
+            "displayName" : "Early Closure Charges",
+            "date" : {
+              "start" : "",
+              "end" : ""
+            },
+            "loan" : {
+              "min" : 0,
+              "max" : 4000000
+            },
+            "cibilHit" : "ANY",
+            "screenReachedPrevious" : "",
+            "assetCategory" : "",
+            "maxTimeSpentDuringPrevious" : "",
+            "channel" : "",
+            "appScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "gst" : "",
+            "source" : "",
+            "serviceCharge" : "",
+            "segment" : "ANY",
+            "percentage" : "0",
+            "promoId" : "ANY",
+            "state" : "ANY",
+            "tenure" : {
+              "min" : 3,
+              "max" : 60
+            },
+            "amount" : "",
+            "feeType" : "Early Closure Charges",
+            "noOfJourneyStarts" : "",
+            "mScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "productCode" : "PERSONAL",
+            "category" : "ANY",
+            "uniqueId" : "83",
+            "status" : "ANY",
+            "base" : "",
+            "strategy" : "info"
+          },
+          {
+            "name" : "netDisbursal",
+            "displayName" : "Net Disbursal",
+            "value" : 585230
+          }
+        ]
+      },
+      "output" : {
+        "details" : {
+          "loanAmount" : 600000,
+          "tenure" : 60,
+          "emi" : 14039,
+          "interestRate" : 14.25,
+          "tenureLabel" : "Months",
+          "plrRate" : 11.25
+        },
+        "breakdown" : [
+          {
+            "displayName" : "Processing Fee",
+            "name" : "processing_fee",
+            "value" : 14160
+          },
+          {
+            "displayName" : "Stamp Duty",
+            "name" : "stamp_duty",
+            "value" : 610
+          },
+          {
+            "date" : {
+              "start" : "",
+              "end" : ""
+            },
+            "loan" : {
+              "min" : 0,
+              "max" : 4000000
+            },
+            "cibilHit" : "ANY",
+            "screenReachedPrevious" : "",
+            "displayName" : "Part Payment Charges",
+            "assetCategory" : "",
+            "maxTimeSpentDuringPrevious" : "",
+            "channel" : "",
+            "appScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "gst" : "",
+            "source" : "",
+            "serviceCharge" : "",
+            "segment" : "ANY",
+            "percentage" : "0",
+            "promoId" : "ANY",
+            "state" : "ANY",
+            "tenure" : {
+              "min" : 3,
+              "max" : 60
+            },
+            "amount" : "",
+            "feeType" : "Part Payment Charges",
+            "noOfJourneyStarts" : "",
+            "mScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "productCode" : "PERSONAL",
+            "name" : "part_payment_charges",
+            "category" : "ANY",
+            "strategy" : "info",
+            "uniqueId" : "82",
+            "status" : "ANY",
+            "base" : ""
+          },
+          {
+            "date" : {
+              "start" : "",
+              "end" : ""
+            },
+            "loan" : {
+              "min" : 0,
+              "max" : 4000000
+            },
+            "cibilHit" : "ANY",
+            "screenReachedPrevious" : "",
+            "displayName" : "Early Closure Charges",
+            "assetCategory" : "",
+            "maxTimeSpentDuringPrevious" : "",
+            "channel" : "",
+            "appScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "gst" : "",
+            "source" : "",
+            "serviceCharge" : "",
+            "segment" : "ANY",
+            "percentage" : "0",
+            "promoId" : "ANY",
+            "state" : "ANY",
+            "tenure" : {
+              "min" : 3,
+              "max" : 60
+            },
+            "amount" : "",
+            "feeType" : "Early Closure Charges",
+            "noOfJourneyStarts" : "",
+            "mScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "productCode" : "PERSONAL",
+            "name" : "early_closure_charges",
+            "category" : "ANY",
+            "strategy" : "info",
+            "uniqueId" : "83",
+            "status" : "ANY",
+            "base" : ""
+          },
+          {
+            "displayName" : "Net Disbursal",
+            "name" : "netDisbursal",
+            "value" : 585230
+          }
+        ]
+      },
+      "stepExecutionTimeInMillis" : "591",
+      "timestamp" : "2021-02-13T11:12:46.535035Z"
+    },
+    {
+      "_id" : "FetchInsurancePremium",
+      "status" : "FINISHED",
+      "output" : {
+        "basicPremium" : 3845.0,
+        "totalPremium" : 4538
+      },
+      "stepExecutionTimeInMillis" : "937",
+      "timestamp" : "2021-02-13T11:12:47.598940Z"
+    },
+    {
+      "_id" : "InsuranceDetails",
+      "status" : "FINISHED",
+      "input" : {
+        "opted" : false,
+        "nominee" : null
+      },
+      "output" : {
+        "opted" : false
+      },
+      "stepExecutionTimeInMillis" : "31",
+      "timestamp" : "2021-02-13T11:12:50.124301Z"
+    },
+    {
+      "_id" : "ValidateInsuranceDetails",
+      "status" : "FINISHED",
+      "output" : {
+        "opted" : false
+      },
+      "stepExecutionTimeInMillis" : "22",
+      "timestamp" : "2021-02-13T11:12:50.238605Z"
+    },
+    {
+      "_id" : "UpdateLoanOfferWithInsurance",
+      "status" : "FINISHED",
+      "output" : {
+        "details" : {
+          "loanAmount" : 600000,
+          "tenure" : 60,
+          "emi" : 14039,
+          "interestRate" : 14.25,
+          "tenureLabel" : "Months",
+          "plrRate" : 11.25
+        },
+        "breakdown" : [
+          {
+            "displayName" : "Processing Fee",
+            "name" : "processing_fee",
+            "value" : 14160
+          },
+          {
+            "displayName" : "Stamp Duty",
+            "name" : "stamp_duty",
+            "value" : 610
+          },
+          {
+            "date" : {
+              "start" : "",
+              "end" : ""
+            },
+            "loan" : {
+              "min" : 0,
+              "max" : 4000000
+            },
+            "cibilHit" : "ANY",
+            "screenReachedPrevious" : "",
+            "displayName" : "Part Payment Charges",
+            "assetCategory" : "",
+            "maxTimeSpentDuringPrevious" : "",
+            "channel" : "",
+            "appScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "gst" : "",
+            "source" : "",
+            "serviceCharge" : "",
+            "segment" : "ANY",
+            "percentage" : "0",
+            "promoId" : "ANY",
+            "state" : "ANY",
+            "tenure" : {
+              "min" : 3,
+              "max" : 60
+            },
+            "amount" : "",
+            "feeType" : "Part Payment Charges",
+            "noOfJourneyStarts" : "",
+            "mScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "productCode" : "PERSONAL",
+            "name" : "part_payment_charges",
+            "category" : "ANY",
+            "strategy" : "info",
+            "uniqueId" : "82",
+            "status" : "ANY",
+            "base" : ""
+          },
+          {
+            "date" : {
+              "start" : "",
+              "end" : ""
+            },
+            "loan" : {
+              "min" : 0,
+              "max" : 4000000
+            },
+            "cibilHit" : "ANY",
+            "screenReachedPrevious" : "",
+            "displayName" : "Early Closure Charges",
+            "assetCategory" : "",
+            "maxTimeSpentDuringPrevious" : "",
+            "channel" : "",
+            "appScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "gst" : "",
+            "source" : "",
+            "serviceCharge" : "",
+            "segment" : "ANY",
+            "percentage" : "0",
+            "promoId" : "ANY",
+            "state" : "ANY",
+            "tenure" : {
+              "min" : 3,
+              "max" : 60
+            },
+            "amount" : "",
+            "feeType" : "Early Closure Charges",
+            "noOfJourneyStarts" : "",
+            "mScoreBand" : {
+              "min" : "",
+              "max" : ""
+            },
+            "productCode" : "PERSONAL",
+            "name" : "early_closure_charges",
+            "category" : "ANY",
+            "strategy" : "info",
+            "uniqueId" : "83",
+            "status" : "ANY",
+            "base" : ""
+          },
+          {
+            "displayName" : "Net Disbursal",
+            "name" : "netDisbursal",
+            "value" : 585230
+          }
+        ]
+      },
+      "stepExecutionTimeInMillis" : "73",
+      "timestamp" : "2021-02-13T11:12:50.399745Z"
+    },
+    {
+      "_id" : "Sanction",
+      "status" : "FINISHED",
+      "input" : {},
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "9",
+      "timestamp" : "2021-02-13T11:12:56.280547Z"
+    },
+    {
+      "_id" : "OTPValidation",
+      "status" : "FINISHED",
+      "input" : {
+        "otp" : "123456",
+        "token" : "soThWAi/IX7SQBZBQfJZwgAQWNvmJt+BuKJjRrLgoVGbjil6EVH+4EB4RT4TlApwp7eFYRUxfjkxuDCAXBYl8pf0CN+++s5+C3IbO2v91eU24EiIPsQRE5ELHoWPo5jXAZvhDbEzbN5y8bGvp/6d/HuOQvC+1RDIuSSqdvsGs44P0StUJdLZBGCebyjUvllS2X0ZhH4c6QURN37wwFIysjGTYytuXFCitT5n8W+5aFh94tfmxCvRzOg6UzK2TN74HqV9+v2DxDZarboLDfC4YS9nFIx5rjm3A61znjMs4HYBm+ENsTNs3nLxsa+n/p38Lza3mW587c1WVj1cPrhxtCjaJaJPjTYihVAF4zBGugO0aaDr2nQNk16lDXiJWK5lrbepV/J/Hyxt2IogPwwCwezHiiSSrWEVIDP57W4bzSrlI0v2hqNS+gfoxFwc7uMu1Rde2hEtWmGbuCqIGjrlLwHKtCxc2L4aoTdgrVSB1mwpv/MtUyoYQT+hNOYrK0TRD5BRDOeEanBcwRFAoi+P6RSBMMH5WWk1F7Tnpe7rntz0tZkElLZK8s8+2RxDmHfDycSM56USSIbDFhk2f6XvBqjv4YwlP6sPZYa57IqBwEIhfhjroA71iIfzbe4s+iSg5LvOzv3/L3E6HyUo2roiShNIzlbz/iZC4roz0dWvbPkzUAztfZqo9+UzjrghpZTB.ugKbfDmd4x3POvk2JswJ9wN1yaZ0XvN6oSeu9V8MXIvZzWOoNt4hKqnuSRzJmvSBE1kC77yXbWghFGH/a1nWuXkFWd1ZbNoJ5x10tmBbwVo2406vDxklNJ9bnEwD5t7jEkdG/RJn1Kw/ffcn0xwoeXY8Da2XQHCyerc3lzQ+fGsoHjh6uoD0RKM3lCfYhu5y0cbHSCSefcHdQ2JLbKQcWX6UUXQqDEy2U2/E+LWKE/JQVEeUGJFsYmjivX4F5sS9FKY1ZHF1xytKxxi2P07aABqpVpO03i60ExIQXeSROQqKqkM/SbZR8KiyNDOhIjy1xKh3ck/fyHk6lfkIfxJpkw=="
+      },
+      "output" : {
+        "status" : true,
+        "createdAt" : "2021-02-13T11:13:07.178199"
+      },
+      "stepExecutionTimeInMillis" : "206",
+      "timestamp" : "2021-02-13T11:13:07.180620Z"
+    },
+    {
+      "_id" : "FinalFetchPreApprovedOffer",
+      "status" : "FINISHED",
+      "output" : {
+        "preApprovedAmount" : 600000,
+        "accountNumber" : "1730100000016",
+        "knockoffFlag" : false,
+        "accountType" : "FIXED",
+        "salaryInput" : 100000.0,
+        "schemeId" : 6788,
+        "promoId" : 1634,
+        "solID" : "037",
+        "mScore" : 18,
+        "cibilHit" : "Hit"
+      },
+      "stepExecutionTimeInMillis" : "311",
+      "timestamp" : "2021-02-13T11:13:07.562421Z"
+    },
+    {
+      "_id" : "KnockOff",
+      "status" : "FINISHED",
+      "output" : {
+        "status" : "Success"
+      },
+      "stepExecutionTimeInMillis" : "322",
+      "timestamp" : "2021-02-13T11:13:08.001153Z"
+    },
+    {
+      "_id" : "FinalDedupeCheck",
+      "status" : "FINISHED",
+      "output" : {
+        "status" : "New"
+      },
+      "stepExecutionTimeInMillis" : "183",
+      "timestamp" : "2021-02-13T11:13:08.276429Z"
+    },
+    {
+      "_id" : "FraudCheck",
+      "status" : "TRIGGERED",
+      "stepExecutionTimeInMillis" : "11",
+      "timestamp" : "2021-02-13T11:13:08.413301Z"
+    },
+    {
+      "_id" : "HunterCheck",
+      "status" : "TRIGGERED",
+      "stepExecutionTimeInMillis" : "10",
+      "timestamp" : "2021-02-13T11:13:08.510922Z"
+    },
+    {
+      "_id" : "FraudCheck",
+      "status" : "FINISHED",
+      "input" : {
+        "fraudPresent" : false,
+        "fraudIndicators" : []
+      },
+      "output" : {
+        "fraudPresent" : false,
+        "fraudIndicators" : []
+      },
+      "stepExecutionTimeInMillis" : "30",
+      "timestamp" : "2021-02-13T11:13:09.741618Z"
+    },
+    {
+      "_id" : "HunterCheck",
+      "status" : "FINISHED",
+      "input" : {
+        "status" : "NO_MATCH",
+        "check" : "HUNTER",
+        "data" : {
+          "requestIdentifier" : "MUMBAI_MLP_6027B3F058C43A1661E06A2F"
+        }
+      },
+      "output" : {
+        "status" : "NO_MATCH",
+        "check" : "HUNTER",
+        "data" : {
+          "requestIdentifier" : "MUMBAI_MLP_6027B3F058C43A1661E06A2F"
+        }
+      },
+      "stepExecutionTimeInMillis" : "29",
+      "timestamp" : "2021-02-13T11:13:19.593802Z"
+    },
+    {
+      "_id" : "EMIStartDateCalculator",
+      "status" : "FINISHED",
+      "output" : {
+        "emiStartDate" : "2021-03-05"
+      },
+      "stepExecutionTimeInMillis" : "7",
+      "timestamp" : "2021-02-13T11:13:19.695423Z"
+    },
+    {
+      "_id" : "ExistingLoanAccountCheckAfterOtp",
+      "status" : "SKIPPED",
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "Undefined",
+      "timestamp" : "2021-02-13T11:13:19.826150Z"
+    },
+    {
+      "_id" : "ModifyDisbursalAmount",
+      "status" : "SKIPPED",
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "Undefined",
+      "timestamp" : "2021-02-13T11:13:19.902868Z"
+    },
+    {
+      "_id" : "ReconfirmIfJourneyIsConsolidated",
+      "status" : "SKIPPED",
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "Undefined",
+      "timestamp" : "2021-02-13T11:13:19.981672Z"
+    },
+    {
+      "_id" : "FinnoneAppIdTask",
+      "status" : "TRIGGERED",
+      "stepExecutionTimeInMillis" : "7",
+      "timestamp" : "2021-02-13T11:13:20.051862Z"
+    },
+    {
+      "_id" : "ApplicationProcessing",
+      "status" : "TERMINATED",
+      "output" : {
+        "terminationStepId" : "ApplicationProcessing",
+        "_class" : "com.axis.lending.framework.abstractions.AsyncTerminateProcess"
+      },
+      "stepExecutionTimeInMillis" : "7",
+      "timestamp" : "2021-02-13T11:13:20.110704Z"
+    },
+    {
+      "_id" : "FinnoneAppIdTask",
+      "status" : "FINISHED",
+      "input" : {
+        "appId" : "3116142"
+      },
+      "output" : {
+        "appId" : "3116142"
+      },
+      "stepExecutionTimeInMillis" : "22",
+      "timestamp" : "2021-02-13T11:13:21.117325Z"
+    },
+    {
+      "_id" : "DisbursementTask",
+      "status" : "TRIGGERED",
+      "stepExecutionTimeInMillis" : "9",
+      "timestamp" : "2021-02-13T11:13:21.197178Z"
+    },
+    {
+      "_id" : "ApplicationProcessing",
+      "status" : "FINISHED",
+      "output" : {
+        "terminationStepId" : "ApplicationProcessing"
+      },
+      "stepExecutionTimeInMillis" : "7",
+      "timestamp" : "2021-02-13T11:13:21.293729Z"
+    },
+    {
+      "_id" : "DisbursementTask",
+      "status" : "FINISHED",
+      "input" : {
+        "accountNumber" : "1730100000016",
+        "disbursedAmount" : "585230",
+        "disbursementDate" : "2021-02-13",
+        "transactionId" : "defaultTransaction"
+      },
+      "output" : {
+        "details" : {
+          "accountNumber" : "1730100000016",
+          "disbursedAmount" : "585230",
+          "disbursementDate" : "2021-02-13",
+          "transactionId" : "defaultTransaction"
+        }
+      },
+      "stepExecutionTimeInMillis" : "28",
+      "timestamp" : "2021-02-13T11:13:31.774730Z"
+    },
+    {
+      "_id" : "generateTermAndConditionAfterDisbursement",
+      "status" : "FINISHED",
+      "output" : {
+        "documentId" : "6027b45c5140b855030f0d5d",
+        "createdOn" : "2021-02-13T11:13:32.708Z"
+      },
+      "stepExecutionTimeInMillis" : "957",
+      "timestamp" : "2021-02-13T11:13:32.809968Z"
+    },
+    {
+      "_id" : "KycUpdate",
+      "status" : "SKIPPED",
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "Undefined",
+      "timestamp" : "2021-02-13T11:13:32.849819Z"
+    },
+    {
+      "_id" : "PolicyIssuanceTask",
+      "status" : "SKIPPED",
+      "output" : {
+        "_class" : "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis" : "Undefined",
+      "timestamp" : "2021-02-13T11:13:33.006428Z"
+    }
+  ],
+  "channelAttribution" : {
+    "channel" : "OUTBOUND",
+    "employeeCode" : "111",
+    "branchCode" : "",
+    "ascCode" : "",
+    "dealerCode" : "",
+    "dseCode" : "",
+    "dsaCode" : "",
+    "lastUpdatedTimestamp" : "2021-02-13T11:12:26.919458Z",
+    "frozen" : false
+  },
+  "source" : {
+    "initial" : "WEB",
+    "latest" : "WEB"
+  },
+  "cibilCheckConsent" : {
+    "capturedDate" : "2021-02-13",
+    "consentExpiryDate" : "2021-03-15"
+  },
+  "demogDetails" : {
+    "uniqueIdentifier" : "b645847e-2f28-4e48-a6d8-f848065df4f5",
+    "stepStatus" : "FINISHED",
+    "custId" : "840000016",
+    "gender" : "M",
+    "dateOfBirth" : "1973-01-16",
+    "pan" : "HFDPG0016X",
+    "name" : {
+      "displayName" : "Rajdeep",
+      "title" : "MR",
+      "firstName" : "Rajdeep",
+      "middleName" : "Kumar",
+      "lastName" : "Bist"
+    },
+    "contact" : {
+      "email" : "EzIwU2HXlFWgfsmVRLhtdqKb7KFRjgvJJDolhodhYKw=",
+      "mobileNumber" : "A0VUxUA3uZRqdF8DDKwT3w=="
+    },
+    "address" : {
+      "addressLineOne" : "1st Floor",
+      "addressLineTwo" : "M-123",
+      "addressLineThree" : "Housing Board",
+      "addressLineFour" : "Sastrinagar",
+      "addressLineFive" : "Yarwada",
+      "pinCode" : 400003,
+      "city" : "MUMBAI",
+      "country" : "India",
+      "state" : "MAHARASHTRA"
+    },
+    "city" : {
+      "uniqueId" : "20",
+      "displayName" : "MUMBAI"
+    },
+    "noOfDependent" : 2,
+    "educationQualification" : "BE CSE",
+    "health" : "HC01",
+    "fatherName" : "Raj",
+    "mothersMaidenName" : "Simran",
+    "maritalStatus" : "Y",
+    "nationality" : "Indian",
+    "schemeType" : "SBA",
+    "caste" : "caste",
+    "deleteFlag" : "N",
+    "creditLimit" : "2398409",
+    "debitLimit" : "342098",
+    "passportNo" : "F0000000",
+    "accounts" : [
+      {
+        "accountNumber" : "003000000400004",
+        "accountStatus" : "ACTIVE",
+        "accountFreezeType" : "",
+        "crmRiskScore" : "2",
+        "cmgRiskProfileScore" : "2",
+        "branchName" : "CHARNI ROAD MUM MH",
+        "accType" : "SAPPR",
+        "solId" : "2939",
+        "accountOwnership" : "M",
+        "accountOpeningDate" : "2016-01-04 00:00:00"
+      },
+      {
+        "accountNumber" : "914010003839667",
+        "accountStatus" : "ACTIVE",
+        "accountFreezeType" : "",
+        "crmRiskScore" : "2",
+        "cmgRiskProfileScore" : "2",
+        "branchName" : "CHARNI ROAD MUM MH",
+        "accType" : "SAPPR",
+        "solId" : "2939",
+        "accountOwnership" : "M",
+        "accountOpeningDate" : "2017-08-04 00:00:00"
+      }
+    ],
+    "encryptedPan" : {
+      "isEncrypted" : true,
+      "value" : "erPrDbfgXQR0Whe/WN3WzQ=="
+    },
+    "cmgRiskProfileScore" : "1",
+    "constitutionDescription" : "RESIDENT INDIAN"
+  },
+  "customerEditable" : {
+    "status" : true
+  },
+  "feedback" : {
+    "stars" : 4,
+    "feedbackText" : "ok"
+  },
+  "applicationReferenceId" : "MLP000000000014",
+  "customerId" : "840000016",
+  "customerType" : "ETB",
+  "productCode" : "PERSONAL",
+  "journeyCode" : "PERSONAL_ETB_PA",
+  "offerType" : "PA",
+  "applicationDate" : "2021-02-13",
+  "state" : "COMPLETE",
+  "metaData" : {
+    "demogData" : {},
+    "loginMethod" : "CUSTOMER_ID",
+    "remoteAddress" : "mockedHost"
+  },
+  "utmParams" : {},
+  "gtmParams" : {
+    "alreadyDisbursed" : true
+  },
+  "mlpCustomerIdentifier" : {
+    "customerId" : "840000016"
+  }
+}

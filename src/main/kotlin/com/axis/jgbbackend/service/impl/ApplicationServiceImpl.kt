@@ -24,20 +24,19 @@ class ApplicationServiceImpl(
     override fun getApplicationOfByProductCodeAndCustomerId(
         productCode: String,
         customerId: String
-    ): Flux<String> {
+    ): Mono<MutableList<Json>> {
         return applicationRepo.findByProductCodeAndCustomerId(productCode, customerId).map {
             mappingTemplate.filterData(it)
-        }
+        }.collectList().switchIfEmpty(Mono.error(NoSuchElementException("Application not found")))
     }
 
     override fun getApplicationByApplicationReferenceIdAndProductCode(
-        applicationReferenceId: String,
-        productCode: String
-    ): Mono<String> {
-        return applicationRepo.findByApplicationIdAndProductCode(applicationReferenceId, productCode)
+        productCode: String,
+        applicationReferenceId: String
+    ): Mono<Json> {
+        return applicationRepo.findByApplicationIdAndProductCode(productCode, applicationReferenceId)
             .map {
                 mappingTemplate.filterData(it)
             }.switchIfEmpty(Mono.error(NoSuchElementException("Application not found")))
-        //return applications.map { application -> mappingTemplate.filterData(application) }.collectList()
     }
 }

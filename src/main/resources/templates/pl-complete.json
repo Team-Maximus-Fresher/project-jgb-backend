@@ -9,55 +9,55 @@
             "id": "PersonalOfferFetcher",
             "status": [# th:block th:text="${props.preApprovedOffer.stepStatus} ?: 'null'"][/],
             "preApprovedAmount": [# th:block th:text="${props.preApprovedOffer.preApprovedAmount} ?: 'null'"][/]
-        },
+        }
       [/]
       [# th:block th:if="${props.selectedLoanDetails != null}"]
-        {
+        ,{
             "id": "PersonalOfferLanding",
             "status": [# th:block th:text="${props.selectedLoanDetails.stepStatus} ?: 'null'"][/],
             "loanAmount": [# th:block th:text="${props.selectedLoanDetails.loanAmount} ?: 'null'"][/],
             "loanPurpose": [# th:block th:text="${props.selectedLoanDetails.loanPurpose} ?: 'null'"][/]
-        },
+        }
       [/]
       [# th:block th:if="${props.sangamResult != null}"]
-         {
+         ,{
             "id": "PersonalPaSangamCheck",
             "status": [# th:block th:text="${props.sangamResult.stepStatus} ?: 'null'"][/],
             "loanAmount": [# th:block th:text="${props.sangamResult.data.loanAmount} ?: 'null'"][/],
             "validityDate": [# th:block th:text="${props.sangamResult.data.validityDate} ?: 'null'"][/],
             "tenure": [# th:block th:text="${props.sangamResult.data.tenure} ?: 'null'"][/]
-        },
+        }
       [/]
       [# th:block th:if="${props.loanOffer != null}"]
-         {
+         ,{
             "id": "PersonalLoanOfferRequest",
             "status": [# th:block th:text="${props.loanOffer.stepStatus} ?: 'null'"][/],
             "tenure": [# th:block th:text="${props.loanOffer.details.tenure} ?: 'null'"][/],
             "emi": [# th:block th:text="${props.loanOffer.details.emi} ?: 'null'"][/],
             "interestRate": [# th:block th:text="${props.loanOffer.details.interestRate} ?: 'null'"][/]
-        },
+        }
       [/]
       [# th:block th:if="${props.otpValidation != null}"]
-         {
+         ,{
                 "id": "OTPValidation",
                 "status": [# th:block th:text="${props.otpValidation.stepStatus} ?: 'null'"][/]
-            },
+            }
       [/]
       [# th:block th:if="${props.knockOff != null}"]
-         {
+         ,{
             "id": "KnockOff",
             "status": [# th:block th:text="${props.knockOff.stepStatus} ?: 'null'"][/]
-        },
+        }
       [/]
       [# th:block th:if="${props.finnoneAppId != null}"]
-         {
+         ,{
             "id": "FinnoneAppIdTask",
             "status": [# th:block th:text="${props.finnoneAppId.stepStatus} ?: 'null'"][/],
             "appId": [# th:block th:text="${props.finnoneAppId.appId} ?: 'null'"][/]
-        },
+        }
       [/]
       [# th:block th:if="${props.disbursementDetails != null}"]
-         {
+         ,{
             "id": "DisbursementTask",
             "status": [# th:block th:text="${props.disbursementDetails.stepStatus} ?: 'null'"][/],
             "accountNumber": [# th:block th:text="${props.disbursementDetails.details.accountNumber} ?: 'null'"][/],
