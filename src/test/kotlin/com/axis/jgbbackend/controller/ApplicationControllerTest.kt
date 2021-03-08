@@ -2,47 +2,32 @@ package com.axis.jgbbackend.controller
 
 import com.axis.jgbbackend.model.PersonalApplication
 import com.axis.jgbbackend.service.ApplicationService
+import com.fasterxml.jackson.databind.ObjectMapper
+import org.json.JSONObject
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito
 import org.mockito.Mockito.times
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
 import org.springframework.boot.test.mock.mockito.MockBean
-import org.springframework.core.io.ResourceLoader
 import org.springframework.test.web.reactive.server.WebTestClient
-import reactor.core.publisher.Flux
+import org.springframework.util.ResourceUtils
 import reactor.core.publisher.Mono
+import springfox.documentation.spring.web.json.Json
+import java.io.File
+import java.nio.file.Files
 
 
 @WebFluxTest(ApplicationController::class)
-class ApplicationControllerTest(
-    @Autowired
-    var resourceLoader: ResourceLoader
-) {
+class ApplicationControllerTest {
 
-    var personalApplication: PersonalApplication = PersonalApplication("MLP000000000014",null,
-        "2021-02-13", null,null,null,null,"840000016",
-        "ETB",null,null,null,null,null,null,null,null,null,null,"PERSONAL_ETB_PA",null,
-        null,null,null,null,null,null,null,"PA",null,null,null,null,"PERSONAL",null,null,null,null,null,
-        "COMPLETE", null, null, null, null)
+    val plCompleteFile: File = ResourceUtils.getFile("src/main/resources/test-files/pl-complete.json")
+    val plCompleteContent = String(Files.readAllBytes(plCompleteFile.toPath()))
+    val mapper: ObjectMapper = ObjectMapper()
+    val personalApplication: PersonalApplication = mapper.readValue(plCompleteContent, PersonalApplication::class.java)
 
-    val output = "{\n" +
-            "  \"applicationReferenceId\": \"MLP000000000014\",\n" +
-            "  \"customerId\": \"840000016\",\n" +
-            "  \"productCode\": \"PERSONAL\",\n" +
-            "  \"journeyCode\": \"PERSONAL_ETB_PA\",\n" +
-            "  \"applicationStateLogs\": [\n" +
-            "      \n" +
-            "      \n" +
-            "      \n" +
-            "      \n" +
-            "      \n" +
-            "      \n" +
-            "      \n" +
-            "      \n" +
-            "  ],\n" +
-            "  \"state\": \"COMPLETE\"\n" +
-            "}"
+    val plCompleteOutputFile: File = ResourceUtils.getFile("src/main/resources/test-files/pl-complete-output.json")
+    val plCompleteOutputContent = String(Files.readAllBytes(plCompleteOutputFile.toPath()))
 
     @Autowired
     lateinit var client: WebTestClient
@@ -55,49 +40,32 @@ class ApplicationControllerTest(
         val expectedProduct: PersonalApplication = personalApplication
         Mockito.`when`(service.getApplicationOfByProductCodeAndCustomerId(expectedProduct.productCode.toString(),
             expectedProduct.customerId.toString()
-        )).thenReturn(Mono.just(listOf(output)))
+        )).thenReturn(Mono.just(mutableListOf(Json(plCompleteOutputContent))))
         client.get()
             .uri("/v1/loan-application/products/{productCode}/customers/{customerId}/applications", expectedProduct.productCode, expectedProduct.customerId)
             .exchange()
             .expectStatus()
-            .isOk
-            .expectBodyList(String::class.java)
-            .isEqualTo<WebTestClient.ListBodySpec<String>>(listOf(output))
+            .isOk()
+            .expectBodyList(JSONObject::class.java)
+            .hasSize(1)
 
-
-        //Mockito.verify(service, times(1)).getApplicationOfByProductCodeAndCustomerId(expectedProduct.productCode.toString(), expectedProduct.customerId.toString())
+        Mockito.verify(service, times(1)).getApplicationOfByProductCodeAndCustomerId(expectedProduct.productCode.toString(), expectedProduct.customerId.toString())
     }
 
     @Test
     fun testGetApplicationByApplicationReferenceIdAndProductCode() {
         val expectedProduct: PersonalApplication = personalApplication
-        println(expectedProduct.applicationReferenceId)
+        val requiredOutput = Json(plCompleteOutputContent)
         Mockito.`when`(service.getApplicationByApplicationReferenceIdAndProductCode(expectedProduct.productCode.toString(), expectedProduct.applicationReferenceId.toString()
-        )).thenReturn(Mono.just(output))
+        )).thenReturn(Mono.just(requiredOutput))
         client.get()
             .uri("/v1/loan-application/products/{productCode}/applications/{applicationReferenceId}", expectedProduct.productCode.toString(), expectedProduct.applicationReferenceId.toString())
             .exchange()
             .expectStatus()
             .isOk()
-            .expectBody(String::class.java)
-            .isEqualTo<Nothing>(output)
+            .expectBody()
+            .json(plCompleteOutputContent)
 
-        //Mockito.verify(service, times(1)).getApplicationByApplicationReferenceIdAndProductCode(expectedProduct.productCode.toString(), expectedProduct.applicationReferenceId.toString())
+        //.json(jacksonObjectMapper().writeValueAsString(output))
     }
-
-    /*@Test
-    fun testGetApplicationByApplicationReferenceIdAndProductCodeNotFound() {
-        val expectedProduct: PersonalApplication = personalApplication
-        println(expectedProduct.applicationReferenceId)
-        Mockito.`when`(service.getApplicationByApplicationReferenceIdAndProductCode("123", "123"))
-            .thenReturn(ResponseEntity.status(HttpStatus.NOT_FOUND).body("No application(s) found.")
-        )
-
-        client.get()
-            .uri("products/{productCode}/applications/{applicationReferenceId}", "123", "123")
-            .exchange()
-            .expectStatus().isNotFound
-
-        Mockito.verify(service, times(1)).getApplicationByApplicationReferenceIdAndProductCode("123", "123")
-    }*/
 }

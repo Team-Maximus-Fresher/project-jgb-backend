@@ -2,7 +2,6 @@ package com.axis.jgbbackend.controller
 
 import com.axis.jgbbackend.service.ApplicationService
 import io.swagger.annotations.ApiOperation
-import org.json.JSONObject
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 import reactor.core.publisher.Mono

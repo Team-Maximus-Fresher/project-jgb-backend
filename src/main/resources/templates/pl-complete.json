@@ -12,7 +12,8 @@
         }
       [/]
       [# th:block th:if="${props.selectedLoanDetails != null}"]
-        ,{
+        [# th:block th:if="${props.preApprovedOffer != null}"],[/]
+        {
             "id": "PersonalOfferLanding",
             "status": [# th:block th:text="${props.selectedLoanDetails.stepStatus} ?: 'null'"][/],
             "loanAmount": [# th:block th:text="${props.selectedLoanDetails.loanAmount} ?: 'null'"][/],
@@ -20,7 +21,8 @@
         }
       [/]
       [# th:block th:if="${props.sangamResult != null}"]
-         ,{
+          [# th:block th:if="${props.preApprovedOffer != null || props.selectedLoanDetails != null}"],[/]
+         {
             "id": "PersonalPaSangamCheck",
             "status": [# th:block th:text="${props.sangamResult.stepStatus} ?: 'null'"][/],
             "loanAmount": [# th:block th:text="${props.sangamResult.data.loanAmount} ?: 'null'"][/],
@@ -29,7 +31,8 @@
         }
       [/]
       [# th:block th:if="${props.loanOffer != null}"]
-         ,{
+      [# th:block th:if="${props.preApprovedOffer != null || props.selectedLoanDetails != null || props.sangamResult != null}"],[/]
+         {
             "id": "PersonalLoanOfferRequest",
             "status": [# th:block th:text="${props.loanOffer.stepStatus} ?: 'null'"][/],
             "tenure": [# th:block th:text="${props.loanOffer.details.tenure} ?: 'null'"][/],
@@ -38,32 +41,36 @@
         }
       [/]
       [# th:block th:if="${props.otpValidation != null}"]
-         ,{
+          [# th:block th:if="${props.preApprovedOffer != null || props.selectedLoanDetails != null || props.sangamResult != null || props.loanOffer != null}"],[/]
+          {
                 "id": "OTPValidation",
                 "status": [# th:block th:text="${props.otpValidation.stepStatus} ?: 'null'"][/]
-            }
+          }
       [/]
       [# th:block th:if="${props.knockOff != null}"]
-         ,{
+        [# th:block th:if="${props.preApprovedOffer != null || props.selectedLoanDetails != null || props.sangamResult != null || props.loanOffer != null || props.otpValidation != null}"],[/]
+         {
             "id": "KnockOff",
             "status": [# th:block th:text="${props.knockOff.stepStatus} ?: 'null'"][/]
-        }
+         }
       [/]
       [# th:block th:if="${props.finnoneAppId != null}"]
-         ,{
+        [# th:block th:if="${props.preApprovedOffer != null || props.selectedLoanDetails != null || props.sangamResult != null || props.loanOffer != null || props.otpValidation != null || props.knockOff != null}"],[/]
+         {
             "id": "FinnoneAppIdTask",
             "status": [# th:block th:text="${props.finnoneAppId.stepStatus} ?: 'null'"][/],
             "appId": [# th:block th:text="${props.finnoneAppId.appId} ?: 'null'"][/]
-        }
+         }
       [/]
       [# th:block th:if="${props.disbursementDetails != null}"]
-         ,{
+[# th:block th:if="${props.preApprovedOffer != null || props.selectedLoanDetails != null || props.sangamResult != null || props.loanOffer != null || props.otpValidation != null || props.knockOff != null || props.finnoneAppId != null}"],[/]
+         {
             "id": "DisbursementTask",
             "status": [# th:block th:text="${props.disbursementDetails.stepStatus} ?: 'null'"][/],
             "accountNumber": [# th:block th:text="${props.disbursementDetails.details.accountNumber} ?: 'null'"][/],
             "disbursedAmount": [# th:block th:text="${props.disbursementDetails.details.disbursedAmount} ?: 'null'"][/],
             "disbursementDate": [# th:block th:text="${props.disbursementDetails.details.disbursementDate} ?: 'null'"][/]
-        }
+         }
       [/]
   ],
   "state": [# th:block th:text="${props.state} ?: 'not found'"][/]

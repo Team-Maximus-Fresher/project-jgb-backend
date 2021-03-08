@@ -1,0 +1,53 @@
+{
+  "applicationReferenceId": "MLP000000000014",
+  "customerId": "840000016",
+  "productCode": "PERSONAL",
+  "journeyCode": "PERSONAL_ETB_PA",
+  "applicationStateLogs": [{
+    "id": "PersonalOfferFetcher",
+    "status": "FINISHED",
+    "preApprovedAmount": 600000
+  },
+    {
+      "id": "PersonalOfferLanding",
+      "status": "FINISHED",
+      "loanAmount": 600000,
+      "loanPurpose": "Education"
+    },
+    {
+      "id": "PersonalPaSangamCheck",
+      "status": "FINISHED",
+      "loanAmount": 600000,
+      "validityDate": "2021-03-14T00:00:00.000Z",
+      "tenure": 60
+    },
+    {
+      "id": "PersonalLoanOfferRequest",
+      "status": "FINISHED",
+      "tenure": 60,
+      "emi": 14039,
+      "interestRate": 14.25
+    },
+    {
+      "id": "OTPValidation",
+      "status": "FINISHED"
+    },
+    {
+      "id": "KnockOff",
+      "status": "FINISHED"
+    },
+    {
+      "id": "FinnoneAppIdTask",
+      "status": "FINISHED",
+      "appId": "3116142"
+    },
+    {
+      "id": "DisbursementTask",
+      "status": "FINISHED",
+      "accountNumber": "1730100000016",
+      "disbursedAmount": "585230",
+      "disbursementDate": "2021-02-13"
+    }
+  ],
+  "state": "COMPLETE"
+}

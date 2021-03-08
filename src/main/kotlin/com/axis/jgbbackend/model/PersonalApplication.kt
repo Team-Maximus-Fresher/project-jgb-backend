@@ -1,7 +1,5 @@
 package com.axis.jgbbackend.model
 
-import org.jetbrains.annotations.NotNull
-import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
 @Document("personalApplication")

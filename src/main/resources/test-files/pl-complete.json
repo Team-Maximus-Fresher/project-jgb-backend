@@ -580,7 +580,6 @@
       "_id" : "FilterUKycNonCompliantUser",
       "status" : "SKIPPED",
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "Undefined",
       "timestamp" : "2021-02-13T11:12:15.979009Z"
@@ -656,7 +655,6 @@
       "_id" : "EKycEligibility",
       "status" : "SKIPPED",
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "Undefined",
       "timestamp" : "2021-02-13T11:12:40.423818Z"
@@ -665,7 +663,6 @@
       "_id" : "ExistingLoanAccountCheck",
       "status" : "SKIPPED",
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "Undefined",
       "timestamp" : "2021-02-13T11:12:40.547663Z"
@@ -674,7 +671,6 @@
       "_id" : "ChooseOffer",
       "status" : "SKIPPED",
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "Undefined",
       "timestamp" : "2021-02-13T11:12:40.658745Z"
@@ -1175,7 +1171,6 @@
       "status" : "FINISHED",
       "input" : {},
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "9",
       "timestamp" : "2021-02-13T11:12:56.280547Z"
@@ -1289,7 +1284,6 @@
       "_id" : "ExistingLoanAccountCheckAfterOtp",
       "status" : "SKIPPED",
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "Undefined",
       "timestamp" : "2021-02-13T11:13:19.826150Z"
@@ -1298,7 +1292,6 @@
       "_id" : "ModifyDisbursalAmount",
       "status" : "SKIPPED",
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "Undefined",
       "timestamp" : "2021-02-13T11:13:19.902868Z"
@@ -1307,7 +1300,6 @@
       "_id" : "ReconfirmIfJourneyIsConsolidated",
       "status" : "SKIPPED",
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "Undefined",
       "timestamp" : "2021-02-13T11:13:19.981672Z"
@@ -1322,8 +1314,7 @@
       "_id" : "ApplicationProcessing",
       "status" : "TERMINATED",
       "output" : {
-        "terminationStepId" : "ApplicationProcessing",
-        "_class" : "com.axis.lending.framework.abstractions.AsyncTerminateProcess"
+        "terminationStepId" : "ApplicationProcessing"
       },
       "stepExecutionTimeInMillis" : "7",
       "timestamp" : "2021-02-13T11:13:20.110704Z"
@@ -1389,7 +1380,6 @@
       "_id" : "KycUpdate",
       "status" : "SKIPPED",
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "Undefined",
       "timestamp" : "2021-02-13T11:13:32.849819Z"
@@ -1398,7 +1388,6 @@
       "_id" : "PolicyIssuanceTask",
       "status" : "SKIPPED",
       "output" : {
-        "_class" : "com.axis.lending.framework.abstractions.NullObject"
       },
       "stepExecutionTimeInMillis" : "Undefined",
       "timestamp" : "2021-02-13T11:13:33.006428Z"

@@ -1,5 +1,6 @@
 package com.axis.jgbbackend.service. impl
 
+import com.axis.jgbbackend.exception.ApplicationNotFoundException
 import com.axis.jgbbackend.repository.ApplicationRepo
 import com.axis.jgbbackend.service.ApplicationService
 import com.axis.jgbbackend.util.MappingTemplate
@@ -27,7 +28,7 @@ class ApplicationServiceImpl(
     ): Mono<MutableList<Json>> {
         return applicationRepo.findByProductCodeAndCustomerId(productCode, customerId).map {
             mappingTemplate.filterData(it)
-        }.collectList().switchIfEmpty(Mono.error(NoSuchElementException("Application not found")))
+        }.switchIfEmpty(Mono.error(ApplicationNotFoundException())).collectList()
     }
 
     override fun getApplicationByApplicationReferenceIdAndProductCode(
@@ -37,6 +38,6 @@ class ApplicationServiceImpl(
         return applicationRepo.findByApplicationIdAndProductCode(productCode, applicationReferenceId)
             .map {
                 mappingTemplate.filterData(it)
-            }.switchIfEmpty(Mono.error(NoSuchElementException("Application not found")))
+            }.switchIfEmpty(Mono.error(ApplicationNotFoundException()))
     }
 }

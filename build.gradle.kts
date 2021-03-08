@@ -34,10 +34,13 @@ dependencies {
 	implementation("org.json:json:20201115")
 	// https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path
 	implementation("com.jayway.jsonpath:json-path:2.5.0")
+	// https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+	implementation("com.googlecode.json-simple:json-simple:1.1.1")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+	testImplementation("io.mockk:mockk:1.9.3")
 	//testImplementation("org.junit.jupiter:junit-jupiter:5.6.1")
 }
 
