@@ -10,8 +10,11 @@ import reactor.core.publisher.Mono
 
 @Repository
 interface ApplicationRepo: ReactiveMongoRepository<PersonalApplication, String> {
-    @Query("{'productCode' : ?0, 'customerId' : ?1}")
+    @Query("{'productCode' : ?0, 'mlpCustomerIdentifier.customerId' : ?1}")
     fun findByProductCodeAndCustomerId(productCode: String, customerId: String): Flux<PersonalApplication>
+
+    @Query("{'productCode' : ?0, 'mlpCustomerIdentifier.mobileNumber' : ?1}")
+    fun findByProductCodeAndMobileNumber(productCode: String, mobileNumber: String): Flux<PersonalApplication>
 
     @Query("{'productCode' : ?0, 'applicationReferenceId' : ?1}")
     fun findByApplicationIdAndProductCode(productCode: String, applicationReferenceId: String): Mono<PersonalApplication>

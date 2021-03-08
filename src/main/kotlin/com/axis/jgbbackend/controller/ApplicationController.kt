@@ -20,7 +20,13 @@ class ApplicationController(
         return applicationService.getApplicationOfByProductCodeAndCustomerId(productCode, customerId)
     }
 
-    @ApiOperation(value = "Get applications of a particular customer by application reference id")
+    @ApiOperation(value = "Get applications of a particular customer by product code and mobile number")
+    @GetMapping("/products/{productCode}/customers/mobileNumber/{mobileNumber}/applications")
+    fun getApplicationOfByProductCodeAndMobileNumber(@PathVariable productCode: String, @PathVariable mobileNumber: String): Mono<MutableList<Json>> {
+        return applicationService.getApplicationOfByProductCodeAndMobileNumber(productCode, mobileNumber)
+    }
+
+    @ApiOperation(value = "Get applications of a particular customer by application reference id and product code")
     @GetMapping("products/{productCode}/applications/{applicationReferenceId}")
     fun getApplicationByApplicationReferenceIdAndProductCode(@PathVariable productCode: String, @PathVariable applicationReferenceId: String): Mono<Json> {
         return applicationService.getApplicationByApplicationReferenceIdAndProductCode(productCode, applicationReferenceId)

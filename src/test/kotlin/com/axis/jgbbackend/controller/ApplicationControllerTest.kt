@@ -1,8 +1,10 @@
 package com.axis.jgbbackend.controller
 
+import com.axis.jgbbackend.exception.ApplicationNotFoundException
 import com.axis.jgbbackend.model.PersonalApplication
 import com.axis.jgbbackend.service.ApplicationService
 import com.fasterxml.jackson.databind.ObjectMapper
+import io.mockk.every
 import org.json.JSONObject
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito
@@ -13,6 +15,7 @@ import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.test.web.reactive.server.WebTestClient
 import org.springframework.util.ResourceUtils
 import reactor.core.publisher.Mono
+import reactor.test.StepVerifier
 import springfox.documentation.spring.web.json.Json
 import java.io.File
 import java.nio.file.Files
@@ -67,5 +70,20 @@ class ApplicationControllerTest {
             .json(plCompleteOutputContent)
 
         //.json(jacksonObjectMapper().writeValueAsString(output))
+    }
+
+    @Test
+    fun testGetApplicationByApplicationReferenceIdAndProductCodeNotFound() {
+        every { service.getApplicationByApplicationReferenceIdAndProductCode("PERSONAL", "MLP0001")} returns Mono.empty()
+
+        val applications = service.getApplicationByApplicationReferenceIdAndProductCode(
+            productCode = "PERSONAL",
+            applicationReferenceId = "MLP0001"
+        )
+
+        StepVerifier
+            .create(applications)
+            .expectError(ApplicationNotFoundException::class.java)
+            .verify()
     }
 }
