@@ -1,6 +1,6 @@
 package com.axis.jgbbackend.util
 
-import com.axis.jgbbackend.model.PersonalApplication
+import com.axis.jgbbackend.model.CustomerApplication
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import org.thymeleaf.context.Context
@@ -13,10 +13,12 @@ class MappingTemplate(
     @Autowired
     private var templateEngine: SpringWebFluxTemplateEngine
 ) {
-    fun filterData(application: PersonalApplication): Json {
+    fun filterData(application: CustomerApplication): Json {
         val context = Context()
         val dbObject = application
         context.setVariable("props", dbObject)
-        return Json(templateEngine.process("pl-complete", context).toString())
+        if(application.productCode == "PERSONAL")
+         return Json(templateEngine.process("pl-personal", context).toString())
+        return Json(templateEngine.process("pl-auto", context).toString())
     }
 }

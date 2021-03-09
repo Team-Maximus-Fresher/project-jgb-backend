@@ -1,0 +1,40 @@
+{
+  "applicationReferenceId": "MLP000000007571",
+  "mobileNumber": "9910009914",
+  "productCode": "PERSONAL",
+  "journeyCode": "PERSONAL_NTB",
+  "applicationDate": "2021-03-05",
+  "applicationStateLogs": [
+    {
+      "id": "PersonalPaSangamCheck",
+      "status": "FINISHED",
+      "loanAmount": 50000,
+      "validityDate": "2021-04-03T00:00:00.000Z",
+      "tenure": 60
+    },
+    {
+      "id": "PersonalLoanOfferRequest",
+      "status": "FINISHED",
+      "tenure": 60,
+      "emi": 1137,
+      "interestRate": 12.989999771118164
+    },
+    {
+      "id": "OTPValidation",
+      "status": "FINISHED"
+    },
+    {
+      "id": "FinnoneAppIdTask",
+      "status": "FINISHED",
+      "appId": "3116142"
+    },
+    {
+      "id": "DisbursementTask",
+      "status": "FINISHED",
+      "accountNumber": "24501291011743",
+      "disbursedAmount": "49005",
+      "disbursementDate": "2021-03-05"
+    }
+  ],
+  "state": "COMPLETE"
+}

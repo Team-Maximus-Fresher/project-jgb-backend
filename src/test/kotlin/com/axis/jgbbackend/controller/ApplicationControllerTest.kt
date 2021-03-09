@@ -1,10 +1,8 @@
 package com.axis.jgbbackend.controller
 
-import com.axis.jgbbackend.exception.ApplicationNotFoundException
 import com.axis.jgbbackend.model.PersonalApplication
 import com.axis.jgbbackend.service.ApplicationService
 import com.fasterxml.jackson.databind.ObjectMapper
-import io.mockk.every
 import org.json.JSONObject
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito
@@ -15,7 +13,6 @@ import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.test.web.reactive.server.WebTestClient
 import org.springframework.util.ResourceUtils
 import reactor.core.publisher.Mono
-import reactor.test.StepVerifier
 import springfox.documentation.spring.web.json.Json
 import java.io.File
 import java.nio.file.Files
@@ -24,13 +21,20 @@ import java.nio.file.Files
 @WebFluxTest(ApplicationController::class)
 class ApplicationControllerTest {
 
-    val plCompleteFile: File = ResourceUtils.getFile("src/main/resources/test-files/pl-complete.json")
+    val plCompleteFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-personal.json")
     val plCompleteContent = String(Files.readAllBytes(plCompleteFile.toPath()))
     val mapper: ObjectMapper = ObjectMapper()
     val personalApplication: PersonalApplication = mapper.readValue(plCompleteContent, PersonalApplication::class.java)
 
-    val plCompleteOutputFile: File = ResourceUtils.getFile("src/main/resources/test-files/pl-complete-output.json")
+    val plCompleteOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-output.json")
     val plCompleteOutputContent = String(Files.readAllBytes(plCompleteOutputFile.toPath()))
+
+    val plCompleteMobileLoginFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-complete-mobile.json")
+    val plCompleteMobileLoginContent = String(Files.readAllBytes(plCompleteMobileLoginFile.toPath()))
+    val personalApplication1: PersonalApplication = mapper.readValue(plCompleteMobileLoginContent, PersonalApplication::class.java)
+
+    val plCompleteMobileLoginOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-mobile-output.json")
+    val plCompleteMobileLoginOutputContent = String(Files.readAllBytes(plCompleteMobileLoginOutputFile.toPath()))
 
     @Autowired
     lateinit var client: WebTestClient
@@ -68,22 +72,23 @@ class ApplicationControllerTest {
             .isOk()
             .expectBody()
             .json(plCompleteOutputContent)
-
         //.json(jacksonObjectMapper().writeValueAsString(output))
     }
 
     @Test
-    fun testGetApplicationByApplicationReferenceIdAndProductCodeNotFound() {
-        every { service.getApplicationByApplicationReferenceIdAndProductCode("PERSONAL", "MLP0001")} returns Mono.empty()
+    fun testGetApplicationOfByProductCodeAndMobileNumber() {
+        val expectedProduct: PersonalApplication = personalApplication1
+        Mockito.`when`(service.getApplicationOfByProductCodeAndMobileNumber(expectedProduct.productCode.toString(),
+            expectedProduct.mlpCustomerIdentifier?.get("mobileNumber").toString()
+        )).thenReturn(Mono.just(mutableListOf(Json(plCompleteMobileLoginOutputContent))))
+        client.get()
+            .uri("/v1/loan-application/products/{productCode}/customers/mobileNumber/{mobileNumber}/applications", expectedProduct.productCode, expectedProduct.mlpCustomerIdentifier?.getValue("mobileNumber").toString())
+            .exchange()
+            .expectStatus()
+            .isOk()
+            .expectBodyList(JSONObject::class.java)
+            .hasSize(1)
 
-        val applications = service.getApplicationByApplicationReferenceIdAndProductCode(
-            productCode = "PERSONAL",
-            applicationReferenceId = "MLP0001"
-        )
-
-        StepVerifier
-            .create(applications)
-            .expectError(ApplicationNotFoundException::class.java)
-            .verify()
+        Mockito.verify(service, times(1)).getApplicationOfByProductCodeAndMobileNumber(expectedProduct.productCode.toString(), expectedProduct.mlpCustomerIdentifier?.getValue("mobileNumber").toString())
     }
 }

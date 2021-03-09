@@ -2,7 +2,7 @@
 package com.axis.jgbbackend.service
 
 import com.axis.jgbbackend.model.PersonalApplication
-import com.axis.jgbbackend.repository.ApplicationRepo
+import com.axis.jgbbackend.repository.PersonalApplicationRepo
 import com.axis.jgbbackend.service.impl.ApplicationServiceImpl
 import com.axis.jgbbackend.util.MappingTemplate
 import org.junit.jupiter.api.Test
@@ -40,7 +40,7 @@ class ApplicationServiceTest
     lateinit var applicationService: ApplicationServiceImpl
 
     @MockBean
-    lateinit var applicationRepo: ApplicationRepo
+    lateinit var applicationRepo: PersonalApplicationRepo
 
     @MockBean
     lateinit var mappingTemplate: MappingTemplate

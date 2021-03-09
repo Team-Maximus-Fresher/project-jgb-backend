@@ -30,7 +30,8 @@
 [# th:block th:if="${props.preApprovedOffer != null || props.selectedLoanDetails != null}"],[/]
 {
 "id": "PersonalPaSangamCheck",
-"status": [# th:block th:text="${props.sangamResult.stepStatus} ?: 'null'"][/],
+"status": [# th:block th:text="${props.sangamResult.status} ?: 'null'"][/],
+"decision": [# th:block th:text="${props.sangamResult.data.decision} ?: 'null'"][/],
 "loanAmount": [# th:block th:text="${props.sangamResult.data.loanAmount} ?: 'null'"][/],
 "validityDate": [# th:block th:text="${props.sangamResult.data.validityDate} ?: 'null'"][/],
 "tenure": [# th:block th:text="${props.sangamResult.data.tenure} ?: 'null'"][/]
@@ -44,6 +45,30 @@
 "tenure": [# th:block th:text="${props.loanOffer.details.tenure} ?: 'null'"][/],
 "emi": [# th:block th:text="${props.loanOffer.details.emi} ?: 'null'"][/],
 "interestRate": [# th:block th:text="${props.loanOffer.details.interestRate} ?: 'null'"][/]
+[# th:block th:if="${props.loanOffer.breakdown != null}"]
+,"breakdown": [
+[# th:block th:if="${props.loanOffer.breakdown[0].value != null}"]
+{"displayName": [# th:block th:text="${props.loanOffer.breakdown[0].displayName} ?: 'null'"][/],
+"value": [# th:block th:text="${props.loanOffer.breakdown[0].value} ?: 'null'"][/]}
+[/]
+[# th:block th:if="${props.loanOffer.breakdown[1].value != null}"]
+,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[1].displayName} ?: 'null'"][/],
+"value": [# th:block th:text="${props.loanOffer.breakdown[1].value} ?: 'null'"][/]}
+[/]
+[# th:block th:if="${props.loanOffer.breakdown[2].value != null}"]
+,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[2].displayName} ?: 'null'"][/],
+"value": [# th:block th:text="${props.loanOffer.breakdown[2].value} ?: 'null'"][/]}
+[/]
+[# th:block th:if="${props.loanOffer.breakdown[3].value != null}"]
+,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[3].displayName} ?: 'null'"][/],
+"value": [# th:block th:text="${props.loanOffer.breakdown[3].value} ?: 'null'"][/]}
+[/]
+[# th:block th:if="${props.loanOffer.breakdown[4].value != null}"]
+,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[4].displayName} ?: 'null'"][/],
+"value": [# th:block th:text="${props.loanOffer.breakdown[4].value} ?: 'null'"][/]}
+[/]
+]
+[/]
 }
 [/]
 [# th:block th:if="${props.otpValidation != null}"]

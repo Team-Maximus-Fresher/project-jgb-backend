@@ -1,0 +1,2057 @@
+{
+  "incomeDetails": {
+    "uniqueIdentifier": "1e6408b3-42e7-4d50-8907-0469d25402cb",
+    "stepStatus": "FINISHED",
+    "netIncomeAmount": 27245,
+    "unit": "MONTH",
+    "_class": "IncomeDetails"
+  },
+  "selectedMailingAddress": {
+    "uniqueIdentifier": "2bc3e4ae-28b2-4ce3-993c-65aa4e69e5b7",
+    "stepStatus": "FINISHED",
+    "addressLineOne": "Baker Pickett",
+    "addressLineTwo": "Shad Simpson",
+    "addressLineThree": "Porter Duncan",
+    "pinCode": 400005,
+    "city": "mumbai",
+    "state": "",
+    "country": "India",
+    "customerVerified": false,
+    "knownAddress": false,
+    "_class": "SelectedAddress"
+  },
+  "selectedOfficeAddress": {
+    "uniqueIdentifier": "e0966c93-2031-4735-b50c-15ba7ca18417",
+    "stepStatus": "FINISHED",
+    "addressLineOne": "SHEVI EXPORTS",
+    "addressLineTwo": "Kasper Rowe",
+    "addressLineThree": "Mallory Levy",
+    "addressLineFour": "Laith Crosby",
+    "pinCode": 400005,
+    "city": "mumbai",
+    "state": "",
+    "country": "India",
+    "customerVerified": false,
+    "knownAddress": true,
+    "emailId": "kicotofysa@mailinator.com",
+    "_class": "SelectedAddress"
+  },
+  "loanParameters": {
+    "uniqueIdentifier": "0cf1d62f-6973-49f6-92c0-4f3b3b57f40c",
+    "stepStatus": "FINISHED",
+    "tenure": {
+      "min": 12,
+      "max": 60,
+      "step": 3,
+      "unit": "month",
+      "unitShortLabel": "M",
+      "unitFullLabel": "Months",
+      "conversionFactor": "1"
+    },
+    "loanAmount": {
+      "min": "50000",
+      "step": "5000"
+    },
+    "_class": "LoanParameters"
+  },
+  "mailingAddressPincodeMapping": {
+    "uniqueIdentifier": "c0f5756e-e25f-4122-a181-bb67a3bbc38b",
+    "stepStatus": "FINISHED",
+    "cityUniqueId": "20",
+    "finoneCityId": "20",
+    "finoneCityName": "MUMBAI",
+    "tier": "",
+    "cityIdGaadiDotCom": "",
+    "cityNameGaadiDotCom": "",
+    "finoneStateId": "28",
+    "finoneStateName": "MAHARASHTRA",
+    "finoneCountryCode": "1",
+    "finoneCountryName": "INDIA",
+    "finOneASCName": "GOREGAON RAC",
+    "finOneRACCode": "GO647",
+    "finoneBranchId": "70",
+    "finoneStateIdForAppIdCreation": "28",
+    "finoneRegion": "WEST",
+    "finoneRefferCode": "1111",
+    "finoneRefferGroup": "1",
+    "finoneSmCode": "88406",
+    "finoneDSACode": "11183",
+    "finoneDmeCode": "88407",
+    "_class": "PinCodeBasedMappings"
+  },
+  "officeAddressPincodeMapping": {
+    "uniqueIdentifier": "2ca4fdda-a5f5-4a05-9914-88038312e5e1",
+    "stepStatus": "FINISHED",
+    "cityUniqueId": "20",
+    "finoneCityId": "20",
+    "finoneCityName": "MUMBAI",
+    "tier": "",
+    "cityIdGaadiDotCom": "",
+    "cityNameGaadiDotCom": "",
+    "finoneStateId": "28",
+    "finoneStateName": "MAHARASHTRA",
+    "finoneCountryCode": "1",
+    "finoneCountryName": "INDIA",
+    "finOneASCName": "GOREGAON RAC",
+    "finOneRACCode": "GO647",
+    "finoneBranchId": "70",
+    "finoneStateIdForAppIdCreation": "28",
+    "finoneRegion": "WEST",
+    "finoneRefferCode": "1111",
+    "finoneRefferGroup": "1",
+    "finoneSmCode": "88406",
+    "finoneDSACode": "11183",
+    "finoneDmeCode": "88407",
+    "_class": "PinCodeBasedMappings"
+  },
+  "sangamResult": {
+    "uniqueIdentifier": "de26aea5-f079-4345-9d13-c90d7f87b16e",
+    "stepStatus": "FINISHED",
+    "status": "AUTO_APPROVED",
+    "check": "SANGAM",
+    "data": {
+      "decision": "AA",
+      "loanAmount": 50000,
+      "ltv": 70,
+      "validityDate": "2021-04-03T00:00:00.000Z",
+      "tenure": 60,
+      "cibilHit": "Hit",
+      "appScoreBand": 386
+    },
+    "_class": "SangamResult"
+  },
+  "loanOffer": {
+    "uniqueIdentifier": "f389b383-fa0a-4775-af8d-e35c8b4a854f",
+    "stepStatus": "FINISHED",
+    "details": {
+      "loanAmount": 50000,
+      "tenure": 60,
+      "emi": 1137,
+      "interestRate": 12.989999771118164,
+      "tenureLabel": "Months",
+      "plrRate": 11.25
+    },
+    "breakdown": [{
+      "displayName": "Stamp Duty",
+      "name": "stamp_duty",
+      "value": 110
+    },
+      {
+        "displayName": "Processing Fee",
+        "name": "processing_fee",
+        "value": 885
+      },
+      {
+        "date": {
+          "start": "",
+          "end": ""
+        },
+        "loan": {
+          "min": 0,
+          "max": 5000000
+        },
+        "cibilHit": "ANY",
+        "screenReachedPrevious": "",
+        "displayName": "Part Payment Charges",
+        "assetCategory": "",
+        "maxTimeSpentDuringPrevious": "",
+        "channel": "",
+        "appScoreBand": {
+          "min": "",
+          "max": ""
+        },
+        "gst": "",
+        "source": "",
+        "serviceCharge": "",
+        "segment": "ANY",
+        "percentage": "0",
+        "promoId": "ANY",
+        "state": "ANY",
+        "tenure": {
+          "min": 3,
+          "max": 60
+        },
+        "amount": "",
+        "feeType": "Part Payment Charges",
+        "noOfJourneyStarts": "",
+        "mScoreBand": {
+          "min": "",
+          "max": ""
+        },
+        "productCode": "PERSONAL",
+        "name": "part_payment_charges",
+        "category": "ANY",
+        "strategy": "info",
+        "uniqueId": "92",
+        "status": "ANY",
+        "base": ""
+      },
+      {
+        "date": {
+          "start": "",
+          "end": ""
+        },
+        "loan": {
+          "min": 0,
+          "max": 5000000
+        },
+        "cibilHit": "ANY",
+        "screenReachedPrevious": "",
+        "displayName": "Early Closure Charges",
+        "assetCategory": "",
+        "maxTimeSpentDuringPrevious": "",
+        "channel": "",
+        "appScoreBand": {
+          "min": "",
+          "max": ""
+        },
+        "gst": "",
+        "source": "",
+        "serviceCharge": "",
+        "segment": "ANY",
+        "percentage": "0",
+        "promoId": "ANY",
+        "state": "ANY",
+        "tenure": {
+          "min": 3,
+          "max": 60
+        },
+        "amount": "",
+        "feeType": "Early Closure Charges",
+        "noOfJourneyStarts": "",
+        "mScoreBand": {
+          "min": "",
+          "max": ""
+        },
+        "productCode": "PERSONAL",
+        "name": "early_closure_charges",
+        "category": "ANY",
+        "strategy": "info",
+        "uniqueId": "93",
+        "status": "ANY",
+        "base": ""
+      },
+      {
+        "displayName": "Net Disbursal",
+        "name": "netDisbursal",
+        "value": 49005
+      }
+    ],
+    "_class": "LoanOfferModel"
+  },
+  "maxServiceableEMI": {
+    "uniqueIdentifier": "363cb18d-d835-44f1-bf92-6ecba760b670",
+    "stepStatus": "FINISHED",
+    "value": 1137.3977136625915,
+    "_class": "MaxEMI"
+  },
+  "promoId": {
+    "uniqueIdentifier": "4298c7f8-119e-432f-9b86-5e21aa7e228c",
+    "stepStatus": "FINISHED",
+    "value": 1727,
+    "_class": "PromoId"
+  },
+  "insurancePremium": {
+    "uniqueIdentifier": "04f5549d-77e5-4b78-93b9-2bd31d84b660",
+    "stepStatus": "FINISHED",
+    "basicPremium": 3845,
+    "totalPremium": 4538,
+    "_class": "InsurancePremium"
+  },
+  "insuranceDetails": {
+    "uniqueIdentifier": "56d678d9-2082-470d-b073-5a5156cbc408",
+    "stepStatus": "FINISHED",
+    "opted": false,
+    "_class": "InsuranceDetailsResponse"
+  },
+  "accountDetails": {
+    "uniqueIdentifier": "6654f975-e21e-4d56-8914-1322e7db2805",
+    "stepStatus": "FINISHED",
+    "accountType": "SAVINGS",
+    "accountNumber": "1730100009906",
+    "_class": "com.axis.lending.journey.steps.accounts.AccountDetails"
+  },
+  "updatedEmailAddress": {
+    "uniqueIdentifier": "8c338ddf-3e5e-480e-b8dc-95e28fbf97f5",
+    "stepStatus": "FINISHED",
+    "value": "YobdToL44N+ftvv68JuNcKos3KSGBlJxos77D7kNBIU=",
+    "_class": "UpdatedEmailAddress"
+  },
+  "repaymentData": {
+    "uniqueIdentifier": "91080821-ebbb-4693-8796-1722c9eda41f",
+    "stepStatus": "FINISHED",
+    "emiStartDate": "2021-04-05",
+    "_class": "LoanRepaymentData"
+  },
+  "finnoneAppId": {
+    "uniqueIdentifier": "ac4cecf5-e205-40e5-92f0-1e68e21c3d8d",
+    "stepStatus": "FINISHED",
+    "appId": "3116142",
+    "_class": "FinnoneAppId"
+  },
+  "termAndConditionPdf": {
+    "uniqueIdentifier": "22be1a23-0a4a-447a-b942-6d06e2fe5079",
+    "stepStatus": "FINISHED",
+    "documentId": "6041d15646553c2d24da3309",
+    "createdOn": "2021-03-05T06:36:06.688Z",
+    "_class": "TermAndConditionPDF"
+  },
+  "bqsCheckResponse": {
+    "uniqueIdentifier": "218e7b1d-6abb-45e4-a383-eac082893fa2",
+    "stepStatus": "FINISHED",
+    "status": "NO_MATCH",
+    "check": "BQS",
+    "_class": "BQSResult"
+  },
+  "hunterResult": {
+    "uniqueIdentifier": "fe2bbad9-b249-46e1-9c1b-883ea665cb03",
+    "stepStatus": "FINISHED",
+    "status": "NO_MATCH",
+    "check": "HUNTER",
+    "data": {
+      "requestIdentifier": "MUMBAI_MLP_6041D03B26A0F32F22531F73"
+    },
+    "_class": "HunterResult"
+  },
+  "customerKyc": {
+    "uniqueIdentifier": "6796a02e-88c7-4d87-802d-7ee58c6179ad",
+    "stepStatus": "FINISHED",
+    "fatherName": "sheena",
+    "motherName": "moyyh",
+    "maritalStatus": "MARRIED",
+    "disability": "false",
+    "category": "OBC",
+    "community": "MUSLIM",
+    "loanPurpose": "Travel",
+    "submissionDate": "2021-03-05",
+    "_class": "com.axis.lending.personal.journey.ntb.models.CustomerKycResponse"
+  },
+  "opsHumanTaskDetails": {
+    "uniqueIdentifier": "3ee40981-6def-4ccd-a38d-1a4a1cb3532e",
+    "stepStatus": "FINISHED",
+    "finnoneAppId": {
+      "appId": "3116142"
+    },
+    "loanDetails": {
+      "status": "APPROVED",
+      "loanAmount": 50000,
+      "interestRate": 12.99,
+      "processingFees": 885,
+      "stampDuty": 110,
+      "documentationCharges": 0,
+      "prePaymentCharge": 0,
+      "partPaymentCharge": 0,
+      "emi": 1137,
+      "actualLtv": 0,
+      "emiStartDate": "2021-04-01",
+      "emiDueDay": "1",
+      "netDisbursal": 49005,
+      "waiver": {
+        "prePaymentCharge": {
+          "waiverRate": 0,
+          "waiverHeadId": "F"
+        },
+        "partPaymentCharge": {
+          "waiverRate": 0,
+          "waiverHeadId": "A"
+        }
+      },
+      "createdOn": "2021-03-05T06:34:10.020Z",
+      "lastModifiedOn": "2021-03-05T06:36:04.623Z"
+    },
+    "salesMapping": {
+      "status": "APPROVED",
+      "asm": "ASM",
+      "sm": "SM",
+      "tl": "TL",
+      "asl": "ASL",
+      "rac": "GO647",
+      "createdOn": "2021-03-05T06:34:10.030Z",
+      "lastModifiedOn": "2021-03-05T06:36:04.628Z",
+      "employeeName": "SM",
+      "employeeCode": "1234"
+    },
+    "kycVerification": {
+      "details": {
+        "createdOn": "2021-03-05T06:34:10.025Z",
+        "lastModifiedOn": "2021-03-05T06:36:04.626Z",
+        "userDetails": {
+          "addressProof": {
+            "document": "Aadhar Card",
+            "fcuStatus": "Screened Accepted",
+            "received": "yes"
+          },
+          "idProof": {
+            "document": "Aadhar Card",
+            "fcuStatus": "Screened Accepted",
+            "received": "yes"
+          },
+          "documentCollectionDate": "05/03/2021"
+        }
+      },
+      "status": "APPROVED"
+    },
+    "accountDetails": {
+      "status": "APPROVED",
+      "accountHolderName": "RAJESH BAKORBHAI LIMBACHIYA",
+      "accountNumber": "1730100009906",
+      "bank": "Axis Bank, India",
+      "ifsc": "UTIB0000008"
+    },
+    "stepState": "FINISHED",
+    "_class": "OpsDetails"
+  },
+  "customerDedupResponse": {
+    "uniqueIdentifier": "998ed75f-d05e-4174-bf6b-0b39934fcc01",
+    "stepStatus": "FINISHED",
+    "status": "NO_MATCH",
+    "_class": "customerDedupResponse"
+  },
+  "bankStatementAssessmentResult": {
+    "uniqueIdentifier": "3e885e18-10ca-4f5a-9e2b-95d5b2f51553",
+    "stepStatus": "FINISHED",
+    "customerName": "RAJESH BAKORBHAI LIMBACHIYA",
+    "accountNumber": "1730100009906",
+    "bankName": "Axis Bank, India",
+    "statementId": "MLPb6cc649e-8a45-4e4e-a92a-0ff44ae34d93",
+    "statementStatus": "VERIFIED",
+    "incomeDetails": {
+      "netIncomeAmount": 27245,
+      "unit": "MONTH"
+    },
+    "uploadDate": "2021-03-05T00:00:00.000Z",
+    "nameMatchStatus": "MATCH",
+    "nameMatchPercentage": 85,
+    "transactionStatus": "",
+    "vendorTransactionId": "EALK1399956044292",
+    "possibleFraudIndicators": {
+      "SuspiciousATMXns": {
+        "SuspiciousATMXn": []
+      },
+      "SalaryOnHolidayXns": {
+        "SalaryOnHolidayXn": []
+      },
+      "rotationOfMoney": {},
+      "TransactionOnHolidayXns": {
+        "TransactionOnHolidayXn": []
+      },
+      "SuspiciousBankEStatements": {
+        "status": "false"
+      },
+      "SuspiciousRTGSXns": {
+        "SuspiciousRTGSXn": []
+      },
+      "AmountBalanceMismatchXns": {
+        "AmountBalanceMismatchXn": []
+      },
+      "InterestCreditXns": {
+        "InterestCreditXn": [{
+          "date": "2020-01-01",
+          "chqNo": "",
+          "narration": "CREDIT INTEREST CAPITALISED",
+          "amount": "84.00",
+          "category": "Interest",
+          "balance": "61663.89"
+        },
+          {
+            "date": "2020-04-01",
+            "chqNo": "",
+            "narration": "CREDIT INTEREST CAPITALISED",
+            "amount": "126.00",
+            "category": "Interest",
+            "balance": "35549.44"
+          }
+        ]
+      },
+      "lowAccountVintage": {}
+    },
+    "numberOfInwardChequeBounce": "0",
+    "numberOfOutwardChequeBounce": "0",
+    "salaryCreditGapMoreThan40": "NO",
+    "_class": "BankStatementAssessmentResult"
+  },
+  "customerDocuments": {
+    "uniqueIdentifier": "5449970f-0d25-452d-bb71-0721193b2413",
+    "stepStatus": "FINISHED",
+    "loanApplicationDocument": {
+      "documentId": "6041d0e646553c2d24da3308",
+      "documentName": "LoanApplication.pdf"
+    },
+    "loanAgreementDocument": {
+      "documentId": "6041d0de35f149690dfb688e",
+      "documentName": "LoanAgreement.pdf"
+    },
+    "_class": "com.axis.lending.personal.journey.ntb.steps.CustomerDocuments"
+  },
+  "eKycConsent": {
+    "uniqueIdentifier": "b274bb92-ed6a-4649-88d5-170bab0fa2c6",
+    "stepStatus": "FINISHED",
+    "consent": false,
+    "timestamp": "2021-03-05T06:32:47.677956",
+    "_class": "EKycConsent"
+  },
+  "isKtb": false,
+  "ktmEnabled": {
+    "uniqueIdentifier": "17f91edc-4e74-4e3b-a4b1-6f663f0326ef",
+    "stepStatus": "FINISHED",
+    "value": true,
+    "_class": "KtmEnabled"
+  },
+  "customerProfileResponse": {
+    "uniqueIdentifier": "5c3459ed-cc75-4e2c-a8b2-cf5f79fd6a85",
+    "stepStatus": "FINISHED",
+    "_class": "CustomerProfileNotFound"
+  },
+  "endToEndStpToggle": {
+    "uniqueIdentifier": "096f04e4-68dc-473b-99d0-7de2001bb561",
+    "stepStatus": "FINISHED",
+    "value": false,
+    "_class": "com.axis.lending.personal.journey.models.EndToEndStpToggle"
+  },
+  "selectedNtbDetails": {
+    "uniqueIdentifier": "c29cd339-33aa-405f-8d58-ccf69760f180",
+    "stepStatus": "FINISHED",
+    "optedForWhatsApp": true,
+    "_class": "SelectedNtbDetails"
+  },
+  "personalWhatsAppOptIn": {
+    "uniqueIdentifier": "d6f6466e-7040-430f-b256-e1dcd6e0c303",
+    "stepStatus": "FINISHED",
+    "status": "SUCCESS",
+    "_class": "WhatsAppOptInResponse"
+  },
+  "selectedIncomeAssessmentMode": {
+    "uniqueIdentifier": "08ac9189-3c6a-45be-8ae1-f85e6bc60661",
+    "stepStatus": "FINISHED",
+    "incomeAssessmentMode": "STATEMENT_UPLOAD",
+    "_class": "SelectedIncomeAssessmentMode"
+  },
+  "submissionTime": "2021-03-05T06:34:18.630720",
+  "applicationStateLogs": [{
+    "_id": "PersonalNTBPromoIdFetcher",
+    "status": "FINISHED",
+    "output": {
+      "value": 1727,
+      "_class": "PromoId"
+    },
+    "stepExecutionTimeInMillis": "212",
+    "timestamp": "2021-03-05T06:31:24.520927Z"
+  },
+    {
+      "_id": "PersonalNtbLanding",
+      "status": "FINISHED",
+      "input": {
+        "optedForWhatsApp": true
+      },
+      "output": {
+        "optedForWhatsApp": true,
+        "_class": "SelectedNtbDetails"
+      },
+      "stepExecutionTimeInMillis": "8",
+      "timestamp": "2021-03-05T06:32:28.525710Z"
+    },
+    {
+      "_id": "PersonalWhatsAppOptIn",
+      "status": "FINISHED",
+      "output": {
+        "status": "SUCCESS",
+        "_class": "WhatsAppOptInResponse"
+      },
+      "stepExecutionTimeInMillis": "115",
+      "timestamp": "2021-03-05T06:32:28.797254Z"
+    },
+    {
+      "_id": "CustomerEKycConsent",
+      "status": "FINISHED",
+      "input": {
+        "consent": false
+      },
+      "output": {
+        "consent": false,
+        "timestamp": "2021-03-05T06:32:47.677956",
+        "_class": "EKycConsent"
+      },
+      "stepExecutionTimeInMillis": "3",
+      "timestamp": "2021-03-05T06:32:47.678160Z"
+    },
+    {
+      "_id": "FetchKtmToggle",
+      "status": "FINISHED",
+      "output": {
+        "value": true,
+        "_class": "KtmEnabled"
+      },
+      "stepExecutionTimeInMillis": "6",
+      "timestamp": "2021-03-05T06:32:47.791436Z"
+    },
+    {
+      "_id": "FetchCustomerProfile",
+      "status": "FINISHED",
+      "output": {
+        "_class": "CustomerProfileNotFound"
+      },
+      "stepExecutionTimeInMillis": "78",
+      "timestamp": "2021-03-05T06:32:48.082778Z"
+    },
+    {
+      "_id": "CustomerProfileMapper",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-05T06:32:48.300121Z"
+    },
+    {
+      "_id": "NtbDemogDetails",
+      "status": "FINISHED",
+      "input": {
+        "dateOfBirth": "1996-05-29",
+        "gender": "M",
+        "occupation": "SALARIED",
+        "contact": {
+          "email": "ashish.saini110034177@gmail.com"
+        },
+        "name": {
+          "firstName": "SHEENA",
+          "middleName": "RELIEF",
+          "lastName": "FUND"
+        },
+        "indianCitizen": true,
+        "workExperience": "123",
+        "employerDetails": {
+          "name": "SHEVI EXPORTS",
+          "id": "35258",
+          "isKnownEmployer": true
+        },
+        "netIncomeAmount": "50000000",
+        "encryptedDateOfBirth": {
+          "isEncrypted": true,
+          "value": "utb2iIt9ePX9payySquz2g=="
+        }
+      },
+      "output": {
+        "gender": "M",
+        "dateOfBirth": "1996-05-29",
+        "pan": "HFDPG9906X",
+        "name": {
+          "displayName": "SHEENA",
+          "title": "MR",
+          "firstName": "SHEENA",
+          "middleName": "RELIEF",
+          "lastName": "FUND"
+        },
+        "contact": {
+          "email": "ashish.saini110034177@gmail.com",
+          "mobileNumber": "9910009906"
+        },
+        "occupation": "SALARIED",
+        "indianCitizen": true,
+        "workExperience": "123",
+        "encryptedPan": {
+          "isEncrypted": true,
+          "value": "Yel2RJdktf3G1pFqU+x+UQ=="
+        },
+        "employerDetails": {
+          "_id": "35258",
+          "name": "SHEVI EXPORTS",
+          "isKnownEmployer": true,
+          "category": "CATGC"
+        },
+        "netIncomeAmount": 50000000,
+        "_class": "DemogDetails"
+      },
+      "stepExecutionTimeInMillis": "157",
+      "timestamp": "2021-03-05T06:33:04.804719Z"
+    },
+    {
+      "_id": "PlatformApplicationDedupeCheck",
+      "status": "FINISHED",
+      "output": {
+        "_class": "com.axis.lending.framework.models.ApplicationDedupeNoMatch"
+      },
+      "stepExecutionTimeInMillis": "10",
+      "timestamp": "2021-03-05T06:33:04.935555Z"
+    },
+    {
+      "_id": "PlatformApplicationDedupeCheckDecision",
+      "status": "FINISHED",
+      "output": {
+        "_class": "com.axis.lending.framework.models.ApplicationDedupeNoMatch"
+      },
+      "stepExecutionTimeInMillis": "1",
+      "timestamp": "2021-03-05T06:33:05.047871Z"
+    },
+    {
+      "_id": "PanBasedDedupeCheck",
+      "status": "FINISHED",
+      "output": {
+        "status": "New",
+        "_class": "ApplicationStatus"
+      },
+      "stepExecutionTimeInMillis": "268",
+      "timestamp": "2021-03-05T06:33:05.422572Z"
+    },
+    {
+      "_id": "PersonalMailingAddressSelection",
+      "status": "FINISHED",
+      "input": {
+        "addressLineOne": "Baker Pickett",
+        "addressLineTwo": "Shad Simpson",
+        "addressLineThree": "Porter Duncan",
+        "city": "mumbai",
+        "cityUniqueId": "20",
+        "country": "India",
+        "pinCode": "400005",
+        "isNew": true
+      },
+      "output": {
+        "addressLineOne": "Baker Pickett",
+        "addressLineTwo": "Shad Simpson",
+        "addressLineThree": "Porter Duncan",
+        "pinCode": 400005,
+        "city": "mumbai",
+        "state": "",
+        "country": "India",
+        "customerVerified": false,
+        "knownAddress": false,
+        "_class": "SelectedAddress"
+      },
+      "stepExecutionTimeInMillis": "22",
+      "timestamp": "2021-03-05T06:33:12.711916Z"
+    },
+    {
+      "_id": "PersonalOfficeAddressSelection",
+      "status": "FINISHED",
+      "input": {
+        "addressLineOne": "SHEVI EXPORTS",
+        "addressLineTwo": "Kasper Rowe",
+        "addressLineThree": "Mallory Levy",
+        "addressLineFour": "Laith Crosby",
+        "emailId": "kicotofysa@mailinator.com",
+        "city": "mumbai",
+        "cityUniqueId": "20",
+        "country": "India",
+        "pinCode": "400005",
+        "knownAddress": true,
+        "isNew": true
+      },
+      "output": {
+        "addressLineOne": "SHEVI EXPORTS",
+        "addressLineTwo": "Kasper Rowe",
+        "addressLineThree": "Mallory Levy",
+        "addressLineFour": "Laith Crosby",
+        "pinCode": 400005,
+        "city": "mumbai",
+        "state": "",
+        "country": "India",
+        "customerVerified": false,
+        "knownAddress": true,
+        "emailId": "kicotofysa@mailinator.com",
+        "_class": "SelectedAddress"
+      },
+      "stepExecutionTimeInMillis": "20",
+      "timestamp": "2021-03-05T06:33:27.486176Z"
+    },
+    {
+      "_id": "PersonalMailingAddressMapping",
+      "status": "FINISHED",
+      "output": {
+        "cityUniqueId": "20",
+        "finoneCityId": "20",
+        "finoneCityName": "MUMBAI",
+        "tier": "",
+        "cityIdGaadiDotCom": "",
+        "cityNameGaadiDotCom": "",
+        "finoneStateId": "28",
+        "finoneStateName": "MAHARASHTRA",
+        "finoneCountryCode": "1",
+        "finoneCountryName": "INDIA",
+        "finOneASCName": "GOREGAON RAC",
+        "finOneRACCode": "GO647",
+        "finoneBranchId": "70",
+        "finoneStateIdForAppIdCreation": "28",
+        "finoneRegion": "WEST",
+        "finoneRefferCode": "1111",
+        "finoneRefferGroup": "1",
+        "finoneSmCode": "88406",
+        "finoneDSACode": "11183",
+        "finoneDmeCode": "88407",
+        "_class": "PinCodeBasedMappings"
+      },
+      "stepExecutionTimeInMillis": "13",
+      "timestamp": "2021-03-05T06:33:27.590938Z"
+    },
+    {
+      "_id": "PersonalOfficeAddressMapping",
+      "status": "FINISHED",
+      "output": {
+        "cityUniqueId": "20",
+        "finoneCityId": "20",
+        "finoneCityName": "MUMBAI",
+        "tier": "",
+        "cityIdGaadiDotCom": "",
+        "cityNameGaadiDotCom": "",
+        "finoneStateId": "28",
+        "finoneStateName": "MAHARASHTRA",
+        "finoneCountryCode": "1",
+        "finoneCountryName": "INDIA",
+        "finOneASCName": "GOREGAON RAC",
+        "finOneRACCode": "GO647",
+        "finoneBranchId": "70",
+        "finoneStateIdForAppIdCreation": "28",
+        "finoneRegion": "WEST",
+        "finoneRefferCode": "1111",
+        "finoneRefferGroup": "1",
+        "finoneSmCode": "88406",
+        "finoneDSACode": "11183",
+        "finoneDmeCode": "88407",
+        "_class": "PinCodeBasedMappings"
+      },
+      "stepExecutionTimeInMillis": "12",
+      "timestamp": "2021-03-05T06:33:27.696924Z"
+    },
+    {
+      "_id": "EmailAddressFetcher",
+      "status": "FINISHED",
+      "output": {
+        "value": "ashish.saini110034177@gmail.com",
+        "_class": "UpdatedEmailAddress"
+      },
+      "stepExecutionTimeInMillis": "3",
+      "timestamp": "2021-03-05T06:33:27.808310Z"
+    },
+    {
+      "_id": "LoanParameterWithPromoId",
+      "status": "FINISHED",
+      "output": {
+        "tenure": {
+          "min": 12,
+          "max": 60,
+          "step": 3,
+          "unit": "month",
+          "unitShortLabel": "M",
+          "unitFullLabel": "Months",
+          "conversionFactor": "1"
+        },
+        "loanAmount": {
+          "min": "50000",
+          "step": "5000"
+        },
+        "_class": "LoanParameters"
+      },
+      "stepExecutionTimeInMillis": "115",
+      "timestamp": "2021-03-05T06:33:28.098852Z"
+    },
+    {
+      "_id": "MailingAddressToDemogAddressMapper",
+      "status": "FINISHED",
+      "output": {
+        "gender": "M",
+        "dateOfBirth": "1996-05-29",
+        "pan": "HFDPG9906X",
+        "name": {
+          "displayName": "SHEENA",
+          "title": "MR",
+          "firstName": "SHEENA",
+          "middleName": "RELIEF",
+          "lastName": "FUND"
+        },
+        "contact": {
+          "email": "ashish.saini110034177@gmail.com",
+          "mobileNumber": "9910009906"
+        },
+        "address": {
+          "addressLineOne": "Baker Pickett",
+          "addressLineTwo": "Shad Simpson",
+          "addressLineThree": "Porter Duncan",
+          "pinCode": 400005,
+          "city": "mumbai",
+          "country": "India",
+          "state": ""
+        },
+        "occupation": "SALARIED",
+        "indianCitizen": true,
+        "workExperience": "123",
+        "encryptedPan": {
+          "isEncrypted": true,
+          "value": "Yel2RJdktf3G1pFqU+x+UQ=="
+        },
+        "employerDetails": {
+          "_id": "35258",
+          "name": "SHEVI EXPORTS",
+          "isKnownEmployer": true,
+          "category": "CATGC"
+        },
+        "netIncomeAmount": 50000000,
+        "_class": "DemogDetails"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-05T06:33:28.217473Z"
+    },
+    {
+      "_id": "BankStatementIncomeAssessmentSource",
+      "status": "FINISHED",
+      "input": {
+        "incomeAssessmentMode": "STATEMENT_UPLOAD"
+      },
+      "output": {
+        "incomeAssessmentMode": "STATEMENT_UPLOAD",
+        "_class": "SelectedIncomeAssessmentMode"
+      },
+      "stepExecutionTimeInMillis": "10",
+      "timestamp": "2021-03-05T06:33:37.185967Z"
+    },
+    {
+      "_id": "BankStatementUploadComplete",
+      "status": "TRIGGERED",
+      "output": {
+        "validityTime": 1614926917,
+        "uploadDate": "2021-03-05T00:00:00.000Z",
+        "transactionStatus": "",
+        "_class": "BankStatementAssessmentResult"
+      },
+      "stepExecutionTimeInMillis": "1",
+      "timestamp": "2021-03-05T06:33:37.293969Z"
+    },
+    {
+      "_id": "BankStatementProcessing",
+      "status": "FINISHED",
+      "output": {
+        "terminationStepId": "BankStatementProcessing",
+        "_class": "com.axis.lending.framework.abstractions.AsyncTerminateProcess"
+      },
+      "stepExecutionTimeInMillis": "1",
+      "timestamp": "2021-03-05T06:33:37.407397Z"
+    },
+    {
+      "_id": "BankStatementUploadComplete",
+      "status": "FINISHED",
+      "input": {
+        "statementId": "MLPb6cc649e-8a45-4e4e-a92a-0ff44ae34d93",
+        "transactionStatus": "SUCCESS"
+      },
+      "output": {
+        "statementId": "MLPb6cc649e-8a45-4e4e-a92a-0ff44ae34d93",
+        "uploadDate": "2021-03-05T00:00:00.000Z",
+        "transactionStatus": "SUCCESS",
+        "_class": "BankStatementAssessmentResult"
+      },
+      "stepExecutionTimeInMillis": "4",
+      "timestamp": "2021-03-05T06:33:40.559742Z"
+    },
+    {
+      "_id": "BankStatementAssessment",
+      "status": "FINISHED",
+      "output": {
+        "customerName": "RAJESH BAKORBHAI LIMBACHIYA",
+        "accountNumber": "1730100009906",
+        "bankName": "Axis Bank, India",
+        "statementId": "MLPb6cc649e-8a45-4e4e-a92a-0ff44ae34d93",
+        "statementStatus": "VERIFIED",
+        "incomeDetails": {
+          "netIncomeAmount": 27245,
+          "unit": "MONTH"
+        },
+        "uploadDate": "2021-03-05T00:00:00.000Z",
+        "transactionStatus": "",
+        "vendorTransactionId": "EALK1399956044292",
+        "possibleFraudIndicators": {
+          "SuspiciousATMXns": {
+            "SuspiciousATMXn": []
+          },
+          "SalaryOnHolidayXns": {
+            "SalaryOnHolidayXn": []
+          },
+          "rotationOfMoney": {},
+          "TransactionOnHolidayXns": {
+            "TransactionOnHolidayXn": []
+          },
+          "SuspiciousBankEStatements": {
+            "status": "false"
+          },
+          "SuspiciousRTGSXns": {
+            "SuspiciousRTGSXn": []
+          },
+          "AmountBalanceMismatchXns": {
+            "AmountBalanceMismatchXn": []
+          },
+          "InterestCreditXns": {
+            "InterestCreditXn": [{
+              "date": "2020-01-01",
+              "chqNo": "",
+              "narration": "CREDIT INTEREST CAPITALISED",
+              "amount": "84.00",
+              "category": "Interest",
+              "balance": "61663.89"
+            },
+              {
+                "date": "2020-04-01",
+                "chqNo": "",
+                "narration": "CREDIT INTEREST CAPITALISED",
+                "amount": "126.00",
+                "category": "Interest",
+                "balance": "35549.44"
+              }
+            ]
+          },
+          "lowAccountVintage": {}
+        },
+        "numberOfInwardChequeBounce": "0",
+        "numberOfOutwardChequeBounce": "0",
+        "salaryCreditGapMoreThan40": "NO",
+        "_class": "BankStatementAssessmentResult"
+      },
+      "stepExecutionTimeInMillis": "2364",
+      "timestamp": "2021-03-05T06:33:43.046532Z"
+    },
+    {
+      "_id": "BankStatementAssessmentResultValidator",
+      "status": "FINISHED",
+      "output": {
+        "customerName": "RAJESH BAKORBHAI LIMBACHIYA",
+        "accountNumber": "1730100009906",
+        "bankName": "Axis Bank, India",
+        "statementId": "MLPb6cc649e-8a45-4e4e-a92a-0ff44ae34d93",
+        "statementStatus": "VERIFIED",
+        "incomeDetails": {
+          "netIncomeAmount": 27245,
+          "unit": "MONTH"
+        },
+        "uploadDate": "2021-03-05T00:00:00.000Z",
+        "nameMatchStatus": "MATCH",
+        "nameMatchPercentage": 85,
+        "transactionStatus": "",
+        "vendorTransactionId": "EALK1399956044292",
+        "possibleFraudIndicators": {
+          "SuspiciousATMXns": {
+            "SuspiciousATMXn": []
+          },
+          "SalaryOnHolidayXns": {
+            "SalaryOnHolidayXn": []
+          },
+          "rotationOfMoney": {},
+          "TransactionOnHolidayXns": {
+            "TransactionOnHolidayXn": []
+          },
+          "SuspiciousBankEStatements": {
+            "status": "false"
+          },
+          "SuspiciousRTGSXns": {
+            "SuspiciousRTGSXn": []
+          },
+          "AmountBalanceMismatchXns": {
+            "AmountBalanceMismatchXn": []
+          },
+          "InterestCreditXns": {
+            "InterestCreditXn": [{
+              "date": "2020-01-01",
+              "chqNo": "",
+              "narration": "CREDIT INTEREST CAPITALISED",
+              "amount": "84.00",
+              "category": "Interest",
+              "balance": "61663.89"
+            },
+              {
+                "date": "2020-04-01",
+                "chqNo": "",
+                "narration": "CREDIT INTEREST CAPITALISED",
+                "amount": "126.00",
+                "category": "Interest",
+                "balance": "35549.44"
+              }
+            ]
+          },
+          "lowAccountVintage": {}
+        },
+        "numberOfInwardChequeBounce": "0",
+        "numberOfOutwardChequeBounce": "0",
+        "salaryCreditGapMoreThan40": "NO",
+        "_class": "BankStatementAssessmentResult"
+      },
+      "stepExecutionTimeInMillis": "106",
+      "timestamp": "2021-03-05T06:33:43.227390Z"
+    },
+    {
+      "_id": "IncomeDetailsExtractor",
+      "status": "FINISHED",
+      "output": {
+        "netIncomeAmount": 27245,
+        "unit": "MONTH",
+        "_class": "IncomeDetails"
+      },
+      "stepExecutionTimeInMillis": "0",
+      "timestamp": "2021-03-05T06:33:42.618509Z"
+    },
+    {
+      "_id": "AccountDetailsFetcher",
+      "status": "FINISHED",
+      "output": {
+        "accountType": "SAVINGS",
+        "accountNumber": "1730100009906",
+        "_class": "com.axis.lending.journey.steps.accounts.AccountDetails"
+      },
+      "stepExecutionTimeInMillis": "0",
+      "timestamp": "2021-03-05T06:33:42.618827Z"
+    },
+    {
+      "_id": "PersonalNtbSangamCheck",
+      "status": "FINISHED",
+      "output": {
+        "status": "AUTO_APPROVED",
+        "check": "SANGAM",
+        "data": {
+          "decision": "AA",
+          "loanAmount": 50000,
+          "ltv": 70,
+          "validityDate": "2021-04-03T00:00:00.000Z",
+          "tenure": 60,
+          "cibilHit": "Hit",
+          "appScoreBand": 386
+        },
+        "_class": "SangamResult"
+      },
+      "stepExecutionTimeInMillis": "109",
+      "timestamp": "2021-03-05T06:33:42.727998Z"
+    },
+    {
+      "_id": "CustomerDedupCheckTrigger",
+      "status": "FINISHED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "0",
+      "timestamp": "2021-03-05T06:33:42.728258Z"
+    },
+    {
+      "_id": "PersonalMaxServiceableEMI",
+      "status": "FINISHED",
+      "output": {
+        "value": 1137.3977136625915,
+        "_class": "MaxEMI"
+      },
+      "stepExecutionTimeInMillis": "0",
+      "timestamp": "2021-03-05T06:33:42.728475Z"
+    },
+    {
+      "_id": "PersonalLoanOfferRequest",
+      "status": "FINISHED",
+      "input": {
+        "details": {
+          "loanAmount": 50000,
+          "tenure": 60,
+          "emi": 1137,
+          "interestRate": 12.99,
+          "tenureLabel": "Months"
+        },
+        "breakdown": [{
+          "name": "stamp_duty",
+          "displayName": "Stamp Duty",
+          "value": 110
+        },
+          {
+            "name": "processing_fee",
+            "displayName": "Processing Fee",
+            "value": 885
+          },
+          {
+            "name": "part_payment_charges",
+            "displayName": "Part Payment Charges",
+            "date": {
+              "start": "",
+              "end": ""
+            },
+            "loan": {
+              "min": 0,
+              "max": 5000000
+            },
+            "cibilHit": "ANY",
+            "screenReachedPrevious": "",
+            "assetCategory": "",
+            "maxTimeSpentDuringPrevious": "",
+            "channel": "",
+            "appScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "gst": "",
+            "source": "",
+            "serviceCharge": "",
+            "segment": "ANY",
+            "percentage": "0",
+            "promoId": "ANY",
+            "state": "ANY",
+            "tenure": {
+              "min": 3,
+              "max": 60
+            },
+            "amount": "",
+            "feeType": "Part Payment Charges",
+            "noOfJourneyStarts": "",
+            "mScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "productCode": "PERSONAL",
+            "category": "ANY",
+            "uniqueId": "92",
+            "status": "ANY",
+            "base": "",
+            "strategy": "info"
+          },
+          {
+            "name": "early_closure_charges",
+            "displayName": "Early Closure Charges",
+            "date": {
+              "start": "",
+              "end": ""
+            },
+            "loan": {
+              "min": 0,
+              "max": 5000000
+            },
+            "cibilHit": "ANY",
+            "screenReachedPrevious": "",
+            "assetCategory": "",
+            "maxTimeSpentDuringPrevious": "",
+            "channel": "",
+            "appScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "gst": "",
+            "source": "",
+            "serviceCharge": "",
+            "segment": "ANY",
+            "percentage": "0",
+            "promoId": "ANY",
+            "state": "ANY",
+            "tenure": {
+              "min": 3,
+              "max": 60
+            },
+            "amount": "",
+            "feeType": "Early Closure Charges",
+            "noOfJourneyStarts": "",
+            "mScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "productCode": "PERSONAL",
+            "category": "ANY",
+            "uniqueId": "93",
+            "status": "ANY",
+            "base": "",
+            "strategy": "info"
+          },
+          {
+            "name": "netDisbursal",
+            "displayName": "Net Disbursal",
+            "value": 49005
+          }
+        ]
+      },
+      "output": {
+        "details": {
+          "loanAmount": 50000,
+          "tenure": 60,
+          "emi": 1137,
+          "interestRate": 12.989999771118164,
+          "tenureLabel": "Months",
+          "plrRate": 11.25
+        },
+        "breakdown": [{
+          "displayName": "Stamp Duty",
+          "name": "stamp_duty",
+          "value": 110
+        },
+          {
+            "displayName": "Processing Fee",
+            "name": "processing_fee",
+            "value": 885
+          },
+          {
+            "date": {
+              "start": "",
+              "end": ""
+            },
+            "loan": {
+              "min": 0,
+              "max": 5000000
+            },
+            "cibilHit": "ANY",
+            "screenReachedPrevious": "",
+            "displayName": "Part Payment Charges",
+            "assetCategory": "",
+            "maxTimeSpentDuringPrevious": "",
+            "channel": "",
+            "appScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "gst": "",
+            "source": "",
+            "serviceCharge": "",
+            "segment": "ANY",
+            "percentage": "0",
+            "promoId": "ANY",
+            "state": "ANY",
+            "tenure": {
+              "min": 3,
+              "max": 60
+            },
+            "amount": "",
+            "feeType": "Part Payment Charges",
+            "noOfJourneyStarts": "",
+            "mScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "productCode": "PERSONAL",
+            "name": "part_payment_charges",
+            "category": "ANY",
+            "strategy": "info",
+            "uniqueId": "92",
+            "status": "ANY",
+            "base": ""
+          },
+          {
+            "date": {
+              "start": "",
+              "end": ""
+            },
+            "loan": {
+              "min": 0,
+              "max": 5000000
+            },
+            "cibilHit": "ANY",
+            "screenReachedPrevious": "",
+            "displayName": "Early Closure Charges",
+            "assetCategory": "",
+            "maxTimeSpentDuringPrevious": "",
+            "channel": "",
+            "appScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "gst": "",
+            "source": "",
+            "serviceCharge": "",
+            "segment": "ANY",
+            "percentage": "0",
+            "promoId": "ANY",
+            "state": "ANY",
+            "tenure": {
+              "min": 3,
+              "max": 60
+            },
+            "amount": "",
+            "feeType": "Early Closure Charges",
+            "noOfJourneyStarts": "",
+            "mScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "productCode": "PERSONAL",
+            "name": "early_closure_charges",
+            "category": "ANY",
+            "strategy": "info",
+            "uniqueId": "93",
+            "status": "ANY",
+            "base": ""
+          },
+          {
+            "displayName": "Net Disbursal",
+            "name": "netDisbursal",
+            "value": 49005
+          }
+        ],
+        "_class": "LoanOfferModel"
+      },
+      "stepExecutionTimeInMillis": "2236",
+      "timestamp": "2021-03-05T06:33:48.929483Z"
+    },
+    {
+      "_id": "FetchInsurancePremium",
+      "status": "FINISHED",
+      "output": {
+        "basicPremium": 3845,
+        "totalPremium": 4538,
+        "_class": "InsurancePremium"
+      },
+      "stepExecutionTimeInMillis": "187",
+      "timestamp": "2021-03-05T06:33:49.201955Z"
+    },
+    {
+      "_id": "InsuranceDetails",
+      "status": "FINISHED",
+      "input": {
+        "opted": false,
+        "nominee": null
+      },
+      "output": {
+        "opted": false,
+        "_class": "InsuranceDetailsResponse"
+      },
+      "stepExecutionTimeInMillis": "5",
+      "timestamp": "2021-03-05T06:33:55.872247Z"
+    },
+    {
+      "_id": "ValidateInsuranceDetails",
+      "status": "FINISHED",
+      "output": {
+        "opted": false,
+        "_class": "InsuranceDetailsResponse"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-05T06:33:55.982338Z"
+    },
+    {
+      "_id": "UpdateNTBLoanOfferWithInsurance",
+      "status": "FINISHED",
+      "output": {
+        "details": {
+          "loanAmount": 50000,
+          "tenure": 60,
+          "emi": 1137,
+          "interestRate": 12.989999771118164,
+          "tenureLabel": "Months",
+          "plrRate": 11.25
+        },
+        "breakdown": [{
+          "displayName": "Stamp Duty",
+          "name": "stamp_duty",
+          "value": 110
+        },
+          {
+            "displayName": "Processing Fee",
+            "name": "processing_fee",
+            "value": 885
+          },
+          {
+            "date": {
+              "start": "",
+              "end": ""
+            },
+            "loan": {
+              "min": 0,
+              "max": 5000000
+            },
+            "cibilHit": "ANY",
+            "screenReachedPrevious": "",
+            "displayName": "Part Payment Charges",
+            "assetCategory": "",
+            "maxTimeSpentDuringPrevious": "",
+            "channel": "",
+            "appScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "gst": "",
+            "source": "",
+            "serviceCharge": "",
+            "segment": "ANY",
+            "percentage": "0",
+            "promoId": "ANY",
+            "state": "ANY",
+            "tenure": {
+              "min": 3,
+              "max": 60
+            },
+            "amount": "",
+            "feeType": "Part Payment Charges",
+            "noOfJourneyStarts": "",
+            "mScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "productCode": "PERSONAL",
+            "name": "part_payment_charges",
+            "category": "ANY",
+            "strategy": "info",
+            "uniqueId": "92",
+            "status": "ANY",
+            "base": ""
+          },
+          {
+            "date": {
+              "start": "",
+              "end": ""
+            },
+            "loan": {
+              "min": 0,
+              "max": 5000000
+            },
+            "cibilHit": "ANY",
+            "screenReachedPrevious": "",
+            "displayName": "Early Closure Charges",
+            "assetCategory": "",
+            "maxTimeSpentDuringPrevious": "",
+            "channel": "",
+            "appScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "gst": "",
+            "source": "",
+            "serviceCharge": "",
+            "segment": "ANY",
+            "percentage": "0",
+            "promoId": "ANY",
+            "state": "ANY",
+            "tenure": {
+              "min": 3,
+              "max": 60
+            },
+            "amount": "",
+            "feeType": "Early Closure Charges",
+            "noOfJourneyStarts": "",
+            "mScoreBand": {
+              "min": "",
+              "max": ""
+            },
+            "productCode": "PERSONAL",
+            "name": "early_closure_charges",
+            "category": "ANY",
+            "strategy": "info",
+            "uniqueId": "93",
+            "status": "ANY",
+            "base": ""
+          },
+          {
+            "displayName": "Net Disbursal",
+            "name": "netDisbursal",
+            "value": 49005
+          }
+        ],
+        "_class": "LoanOfferModel"
+      },
+      "stepExecutionTimeInMillis": "223",
+      "timestamp": "2021-03-05T06:33:56.311369Z"
+    },
+    {
+      "_id": "Sanction",
+      "status": "FINISHED",
+      "input": {},
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-05T06:33:59.064976Z"
+    },
+    {
+      "_id": "PreFetchEndToEndStpToggle",
+      "status": "FINISHED",
+      "output": {
+        "value": false,
+        "_class": "com.axis.lending.personal.journey.models.EndToEndStpToggle"
+      },
+      "stepExecutionTimeInMillis": "6",
+      "timestamp": "2021-03-05T06:33:59.222764Z"
+    },
+    {
+      "_id": "BQSCheck",
+      "status": "FINISHED",
+      "output": {
+        "status": "NO_MATCH",
+        "check": "BQS",
+        "_class": "BQSResult"
+      },
+      "stepExecutionTimeInMillis": "124",
+      "timestamp": "2021-03-05T06:33:59.423950Z"
+    },
+    {
+      "_id": "PreHunterPanBasedDedupeCheck",
+      "status": "FINISHED",
+      "output": {
+        "status": "New",
+        "_class": "ApplicationStatus"
+      },
+      "stepExecutionTimeInMillis": "162",
+      "timestamp": "2021-03-05T06:33:59.675658Z"
+    },
+    {
+      "_id": "NtbHunterCheck",
+      "status": "FINISHED",
+      "output": {
+        "status": "NO_MATCH",
+        "check": "HUNTER",
+        "data": {
+          "requestIdentifier": "MUMBAI_MLP_6041D03B26A0F32F22531F73"
+        },
+        "_class": "HunterResult"
+      },
+      "stepExecutionTimeInMillis": "10190",
+      "timestamp": "2021-03-05T06:34:09.976891Z"
+    },
+    {
+      "_id": "NtbCustomerKyc",
+      "status": "FINISHED",
+      "input": {
+        "fatherName": "sheena",
+        "motherName": "moyyh",
+        "disability": false,
+        "maritalStatus": "MARRIED",
+        "community": "MUSLIM",
+        "category": "OBC",
+        "loanPurpose": "Travel"
+      },
+      "output": {
+        "fatherName": "sheena",
+        "motherName": "moyyh",
+        "maritalStatus": "MARRIED",
+        "disability": "false",
+        "category": "OBC",
+        "community": "MUSLIM",
+        "loanPurpose": "Travel",
+        "submissionDate": "2021-03-05",
+        "_class": "com.axis.lending.personal.journey.ntb.models.CustomerKycResponse"
+      },
+      "stepExecutionTimeInMillis": "6",
+      "timestamp": "2021-03-05T06:34:18.630691Z"
+    },
+    {
+      "_id": "CustomerDedupCheck",
+      "status": "TRIGGERED",
+      "stepExecutionTimeInMillis": "1",
+      "timestamp": "2021-03-05T06:34:18.711820Z"
+    },
+    {
+      "_id": "FetchEndToEndStpToggle",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-05T06:34:19.015237Z"
+    },
+    {
+      "_id": "CustomerDedupCheck",
+      "status": "FINISHED",
+      "input": {
+        "status": "NO_MATCH"
+      },
+      "output": {
+        "status": "NO_MATCH",
+        "_class": "customerDedupResponse"
+      },
+      "stepExecutionTimeInMillis": "0",
+      "timestamp": "2021-03-05T06:34:41.041138Z"
+    },
+    {
+      "_id": "InstantDisbursalEligibility",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-05T06:34:19.416074Z"
+    },
+    {
+      "_id": "InitiateRiskCheckDecisionForNstp",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-05T06:34:19.733165Z"
+    },
+    {
+      "_id": "NtbHunterCheckForNstp",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-05T06:34:20.113413Z"
+    },
+    {
+      "_id": "CustomerDocumentsGenerator",
+      "status": "FINISHED",
+      "output": {
+        "loanApplicationDocument": {
+          "documentId": "6041d0e646553c2d24da3308",
+          "documentName": "LoanApplication.pdf"
+        },
+        "loanAgreementDocument": {
+          "documentId": "6041d0de35f149690dfb688e",
+          "documentName": "LoanAgreement.pdf"
+        },
+        "_class": "com.axis.lending.personal.journey.ntb.steps.CustomerDocuments"
+      },
+      "stepExecutionTimeInMillis": "0",
+      "timestamp": "2021-03-05T06:34:41.046971Z"
+    },
+    {
+      "_id": "NtbOpsHumanTask",
+      "status": "TRIGGERED",
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-05T06:34:21.630119Z"
+    },
+    {
+      "_id": "NtbOpsHumanTaskPending",
+      "status": "FINISHED",
+      "output": {
+        "terminationStepId": "NtbOpsHumanTaskPending",
+        "_class": "com.axis.lending.framework.abstractions.AsyncTerminateProcess"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-05T06:34:21.811438Z"
+    },
+    {
+      "_id": "NtbOpsHumanTask",
+      "status": "FINISHED",
+      "input": {
+        "applicationId": "6041d03b26a0f32f22531f73",
+        "decision": "APPROVED",
+        "tasks": {
+          "LOAN_DETAILS_CONFIRMATION": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "loanAmount": 50000,
+                "interestRate": 12.99,
+                "processingFees": 885,
+                "stampDuty": 110,
+                "documentationCharges": 0,
+                "prePaymentCharge": "0",
+                "partPaymentCharge": "0",
+                "emiDueDay": "1",
+                "netDisbursal": 49005,
+                "actualLtv": null,
+                "emi": 1137,
+                "emiStartDate": "2021-04-01",
+                "waiver": {
+                  "prePaymentCharge": {
+                    "lwdWaiverHeadId": "F",
+                    "lwdWaiverRate": 0
+                  },
+                  "partPaymentCharge": {
+                    "lwdWaiverHeadId": "A",
+                    "lwdWaiverRate": 0
+                  }
+                }
+              },
+              "lastModifiedOn": "2021-03-05T06:36:04.623Z",
+              "lastModifiedByUser": {
+                "userId": "15645",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "2730bbb7-f6ae-42c7-8fc9-1c577bbbc4c5",
+              "createdTime": "2021-03-05T06:36:04.701136Z",
+              "createdOn": "2021-03-05T06:34:10.020Z"
+            }
+          },
+          "KYC_VERIFICATION": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "documentCollectionDate": "05/03/2021",
+                "idProof": {
+                  "received": "yes",
+                  "document": "Aadhar Card",
+                  "fcuStatus": "Screened Accepted"
+                },
+                "addressProof": {
+                  "received": "yes",
+                  "document": "Aadhar Card",
+                  "fcuStatus": "Screened Accepted"
+                }
+              },
+              "lastModifiedOn": "2021-03-05T06:36:04.626Z",
+              "lastModifiedByUser": {
+                "userId": "15645",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "6b37348b-28c4-475a-9034-7c80787247f2",
+              "createdTime": "2021-03-05T06:36:04.701136Z",
+              "createdOn": "2021-03-05T06:34:10.025Z"
+            }
+          },
+          "SALES_MAPPING": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "rac": "GO647",
+                "racCodeFlag": true,
+                "asm": "ASM",
+                "sm": "SM",
+                "tl": "TL",
+                "asl": "ASL",
+                "employeeName": "SM",
+                "employeeCode": "1234"
+              },
+              "lastModifiedOn": "2021-03-05T06:36:04.628Z",
+              "lastModifiedByUser": {
+                "userId": "15645",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "2ead0705-5994-47f9-a3ac-94ad843c347b",
+              "createdTime": "2021-03-05T06:36:04.701136Z",
+              "createdOn": "2021-03-05T06:34:10.030Z"
+            }
+          },
+          "FINNONE_ID_CREATION": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "appId": "3116142"
+              },
+              "lastModifiedOn": "2021-03-05T06:36:04.635Z",
+              "lastModifiedByUser": {
+                "userId": "15645",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "4acf8c00-03ac-45fb-bb79-42754e56b361",
+              "createdTime": "2021-03-05T06:36:04.701136Z",
+              "createdOn": "2021-03-05T06:34:10.035Z"
+            }
+          },
+          "ACCOUNT_DETAILS_CONFIRMATION": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "accountHolderName": "RAJESH BAKORBHAI LIMBACHIYA",
+                "accountNumber": "1730100009906",
+                "bank": "Axis Bank, India",
+                "ifsc": "UTIB0000008"
+              },
+              "lastModifiedOn": "2021-03-05T06:36:04.637Z",
+              "lastModifiedByUser": {
+                "userId": "15645",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "274b1190-5ff1-4c16-bea4-c9d52dd32831",
+              "createdTime": "2021-03-05T06:36:04.701136Z",
+              "createdOn": "2021-03-05T06:34:10.039Z"
+            }
+          }
+        }
+      },
+      "output": {
+        "finnoneAppId": {
+          "appId": "3116142"
+        },
+        "loanDetails": {
+          "status": "APPROVED",
+          "loanAmount": 50000,
+          "interestRate": 12.99,
+          "processingFees": 885,
+          "stampDuty": 110,
+          "documentationCharges": 0,
+          "prePaymentCharge": 0,
+          "partPaymentCharge": 0,
+          "emi": 1137,
+          "actualLtv": 0,
+          "emiStartDate": "2021-04-01",
+          "emiDueDay": "1",
+          "netDisbursal": 49005,
+          "waiver": {
+            "prePaymentCharge": {
+              "waiverRate": 0,
+              "waiverHeadId": "F"
+            },
+            "partPaymentCharge": {
+              "waiverRate": 0,
+              "waiverHeadId": "A"
+            }
+          },
+          "createdOn": "2021-03-05T06:34:10.020Z",
+          "lastModifiedOn": "2021-03-05T06:36:04.623Z"
+        },
+        "salesMapping": {
+          "status": "APPROVED",
+          "asm": "ASM",
+          "sm": "SM",
+          "tl": "TL",
+          "asl": "ASL",
+          "rac": "GO647",
+          "createdOn": "2021-03-05T06:34:10.030Z",
+          "lastModifiedOn": "2021-03-05T06:36:04.628Z",
+          "employeeName": "SM",
+          "employeeCode": "1234"
+        },
+        "kycVerification": {
+          "details": {
+            "createdOn": "2021-03-05T06:34:10.025Z",
+            "lastModifiedOn": "2021-03-05T06:36:04.626Z",
+            "userDetails": {
+              "addressProof": {
+                "document": "Aadhar Card",
+                "fcuStatus": "Screened Accepted",
+                "received": "yes"
+              },
+              "idProof": {
+                "document": "Aadhar Card",
+                "fcuStatus": "Screened Accepted",
+                "received": "yes"
+              },
+              "documentCollectionDate": "05/03/2021"
+            }
+          },
+          "status": "APPROVED"
+        },
+        "accountDetails": {
+          "status": "APPROVED",
+          "accountHolderName": "RAJESH BAKORBHAI LIMBACHIYA",
+          "accountNumber": "1730100009906",
+          "bank": "Axis Bank, India",
+          "ifsc": "UTIB0000008"
+        },
+        "stepState": "FINISHED",
+        "_class": "OpsDetails"
+      },
+      "stepExecutionTimeInMillis": "21",
+      "timestamp": "2021-03-05T06:36:15.184731Z"
+    },
+    {
+      "_id": "EmiStartDateCalculatorForOpsHumanTask",
+      "status": "FINISHED",
+      "output": {
+        "emiStartDate": "2021-04-05",
+        "_class": "LoanRepaymentData"
+      },
+      "stepExecutionTimeInMillis": "3",
+      "timestamp": "2021-03-05T06:36:15.583349Z"
+    },
+    {
+      "_id": "StageApplicationTrigger",
+      "status": "FINISHED",
+      "output": {
+        "appId": "3116142",
+        "_class": "FinnoneAppId"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-05T06:36:15.877771Z"
+    },
+    {
+      "_id": "GenerateTermAndConditionAfterStageApplication",
+      "status": "FINISHED",
+      "output": {
+        "documentId": "6041d15646553c2d24da3309",
+        "createdOn": "2021-03-05T06:36:06.688Z",
+        "_class": "TermAndConditionPDF"
+      },
+      "stepExecutionTimeInMillis": "987",
+      "timestamp": "2021-03-05T06:36:17.079782Z"
+    },
+    {
+      "_id": "PolicyIssuanceTask",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-05T06:36:17.497570Z"
+    }
+  ],
+  "channelAttribution": {
+    "channel": "SELF_INITIATED",
+    "employeeCode": "",
+    "lastUpdatedTimestamp": "2021-03-05T06:31:23.443735Z",
+    "frozen": false
+  },
+  "source": {
+    "initial": "WEB",
+    "latest": "WEB"
+  },
+  "demogDetails": {
+    "uniqueIdentifier": "0aac8371-78e1-4da5-ab69-ed569b382ef7",
+    "stepStatus": "FINISHED",
+    "gender": "M",
+    "dateOfBirth": "1996-05-29",
+    "pan": "HFDPG9906X",
+    "name": {
+      "displayName": "SHEENA",
+      "title": "MR",
+      "firstName": "SHEENA",
+      "middleName": "RELIEF",
+      "lastName": "FUND"
+    },
+    "contact": {
+      "email": "YobdToL44N+ftvv68JuNcKos3KSGBlJxos77D7kNBIU=",
+      "mobileNumber": "0CZsQda8qUwUSY4C2qjN0Q=="
+    },
+    "address": {
+      "addressLineOne": "Baker Pickett",
+      "addressLineTwo": "Shad Simpson",
+      "addressLineThree": "Porter Duncan",
+      "pinCode": 400005,
+      "city": "mumbai",
+      "country": "India",
+      "state": ""
+    },
+    "occupation": "SALARIED",
+    "indianCitizen": true,
+    "workExperience": "123",
+    "encryptedPan": {
+      "isEncrypted": true,
+      "value": "Yel2RJdktf3G1pFqU+x+UQ=="
+    },
+    "employerDetails": {
+      "_id": "35258",
+      "name": "SHEVI EXPORTS",
+      "isKnownEmployer": true,
+      "category": "CATGC"
+    },
+    "netIncomeAmount": 50000000,
+    "_class": "DemogDetails"
+  },
+  "customerEditable": {
+    "status": true
+  },
+  "platformDedupeCheckStatus": {
+    "uniqueIdentifier": "791c3ba7-784b-4bf0-b0e8-4869565e65c3",
+    "stepStatus": "FINISHED",
+    "_class": "com.axis.lending.framework.models.ApplicationDedupeNoMatch"
+  },
+  "applicationReferenceId": "MLP000000007567",
+  "customerId": "NA",
+  "customerType": "NTB",
+  "productCode": "PERSONAL",
+  "journeyCode": "PERSONAL_NTB",
+  "offerType": "NON_PA",
+  "applicationDate": "2021-03-05",
+  "state": "COMPLETE",
+  "metaData": {
+    "demogData": {
+      "pan": "HFDPG9906X",
+      "encryptedPan": "Yel2RJdktf3G1pFqU+x+UQ=="
+    },
+    "loginMethod": "MOBILE",
+    "remoteAddress": "192.168.121.56"
+  },
+  "utmParams": {},
+  "gtmParams": {
+    "alreadyDisbursed": false
+  },
+  "mlpCustomerIdentifier": {
+    "mobileNumber": "9910009906"
+  },
+  "_class": "PERSONAL_NTB"
+}

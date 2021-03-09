@@ -2,7 +2,7 @@ package com.axis.jgbbackend.service
 
 import com.axis.jgbbackend.exception.ApplicationNotFoundException
 import com.axis.jgbbackend.model.PersonalApplication
-import com.axis.jgbbackend.repository.ApplicationRepo
+import com.axis.jgbbackend.repository.PersonalApplicationRepo
 import com.axis.jgbbackend.service.impl.ApplicationServiceImpl
 import com.axis.jgbbackend.util.MappingTemplate
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -20,17 +20,25 @@ import java.nio.file.Files
 
 class ApplicationServiceImplTest {
 
-    val plCompleteFile: File = ResourceUtils.getFile("src/main/resources/test-files/pl-complete.json")
+    val plCompleteFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-personal.json")
     val plCompleteContent = String(Files.readAllBytes(plCompleteFile.toPath()))
     val mapper: ObjectMapper = ObjectMapper()
     val personalApplication: PersonalApplication = mapper.readValue(plCompleteContent, PersonalApplication::class.java)
 
-    val plCompleteOutputFile: File = ResourceUtils.getFile("src/main/resources/test-files/pl-complete-output.json")
+    val plCompleteOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-output.json")
     val plCompleteOutputContent = String(Files.readAllBytes(plCompleteOutputFile.toPath()))
 
-    private val applicationRepo = mockk<ApplicationRepo> {
+    val plCompleteMobileLoginFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-complete-mobile.json")
+    val plCompleteMobileLoginContent = String(Files.readAllBytes(plCompleteMobileLoginFile.toPath()))
+    val personalApplication1: PersonalApplication = mapper.readValue(plCompleteMobileLoginContent, PersonalApplication::class.java)
+
+    val plCompleteMobileLoginOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-mobile-output.json")
+    val plCompleteMobileLoginOutputContent = String(Files.readAllBytes(plCompleteMobileLoginOutputFile.toPath()))
+
+    private val applicationRepo = mockk<PersonalApplicationRepo> {
         every { findByProductCodeAndCustomerId(any(), any())} returns Flux.just(personalApplication)
         every{ findByApplicationIdAndProductCode(any(), any())} returns Mono.just(personalApplication)
+        every { findByProductCodeAndMobileNumber(any(), any())} returns Flux.just(personalApplication1)
     }
 
     private val mappingTemplate = mockk<MappingTemplate> {
@@ -38,6 +46,11 @@ class ApplicationServiceImplTest {
     }
 
     private val applicationService = ApplicationServiceImpl(applicationRepo, mappingTemplate)
+
+    private val mappingTemplate1 = mockk<MappingTemplate> {
+        every { filterData(personalApplication1)} returns Json(plCompleteMobileLoginOutputContent)
+    }
+    private val applicationService1 = ApplicationServiceImpl(applicationRepo, mappingTemplate1)
 
     @Test
     fun testGetApplicationOfByProductCodeAndCustomerId() {
@@ -99,5 +112,20 @@ class ApplicationServiceImplTest {
             .create(applications)
             .expectError(ApplicationNotFoundException::class.java)
             .verify()
+    }
+
+    @Test
+    fun testGetApplicationOfByProductCodeAndMobileNumber() {
+        applicationService1.getApplicationOfByProductCodeAndMobileNumber(
+            productCode = "PERSONAL",
+            mobileNumber = "9910009906"
+        ).block()
+
+        verify {
+            applicationRepo.findByProductCodeAndMobileNumber(
+                productCode = personalApplication1.productCode.toString(),
+                mobileNumber = personalApplication1.mlpCustomerIdentifier?.getValue("mobileNumber").toString()
+            )
+        }
     }
 }

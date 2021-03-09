@@ -14,12 +14,12 @@ import java.nio.file.Files
 
 class MappingTemplateTest {
 
-    val plCompleteFile: File = ResourceUtils.getFile("src/main/resources/test-files/pl-complete.json")
+    val plCompleteFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-personal.json")
     val plCompleteContent = String(Files.readAllBytes(plCompleteFile.toPath()))
     val mapper: ObjectMapper = ObjectMapper()
     val personalApplication: PersonalApplication = mapper.readValue(plCompleteContent, PersonalApplication::class.java)
 
-    val plCompleteOutputFile: File = ResourceUtils.getFile("src/main/resources/test-files/pl-complete-output.json")
+    val plCompleteOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-output.json")
     val plCompleteOutputContent = String(Files.readAllBytes(plCompleteOutputFile.toPath()))
 
 
