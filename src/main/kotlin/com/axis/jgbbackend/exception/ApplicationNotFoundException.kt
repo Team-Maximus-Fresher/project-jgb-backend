@@ -5,13 +5,8 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.context.request.WebRequest
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
-import java.lang.RuntimeException
 import java.time.LocalDateTime
-import java.util.LinkedHashMap
-import kotlin.Any
-import kotlin.NoSuchElementException
-import kotlin.String
+import java.util.*
 
 @ControllerAdvice
 public class ApplicationNotFoundException : RuntimeException() {
@@ -22,6 +17,6 @@ public class ApplicationNotFoundException : RuntimeException() {
         val body: MutableMap<String, Any> = LinkedHashMap()
         body["timestamp"] = LocalDateTime.now()
         body["message"] = "Application(s) not found."
-        return ResponseEntity(body, HttpStatus.OK)
+        return ResponseEntity(body, HttpStatus.NO_CONTENT)
     }
 }

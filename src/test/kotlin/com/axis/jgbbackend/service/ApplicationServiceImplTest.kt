@@ -1,7 +1,9 @@
 package com.axis.jgbbackend.service
 
 import com.axis.jgbbackend.exception.ApplicationNotFoundException
+import com.axis.jgbbackend.model.AutoApplication
 import com.axis.jgbbackend.model.PersonalApplication
+import com.axis.jgbbackend.repository.AutoApplicationRepo
 import com.axis.jgbbackend.repository.PersonalApplicationRepo
 import com.axis.jgbbackend.service.impl.ApplicationServiceImpl
 import com.axis.jgbbackend.util.MappingTemplate
@@ -20,7 +22,7 @@ import java.nio.file.Files
 
 class ApplicationServiceImplTest {
 
-    val plCompleteFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-personal.json")
+    val plCompleteFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-complete.json")
     val plCompleteContent = String(Files.readAllBytes(plCompleteFile.toPath()))
     val mapper: ObjectMapper = ObjectMapper()
     val personalApplication: PersonalApplication = mapper.readValue(plCompleteContent, PersonalApplication::class.java)
@@ -28,29 +30,36 @@ class ApplicationServiceImplTest {
     val plCompleteOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-output.json")
     val plCompleteOutputContent = String(Files.readAllBytes(plCompleteOutputFile.toPath()))
 
-    val plCompleteMobileLoginFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-complete-mobile.json")
-    val plCompleteMobileLoginContent = String(Files.readAllBytes(plCompleteMobileLoginFile.toPath()))
-    val personalApplication1: PersonalApplication = mapper.readValue(plCompleteMobileLoginContent, PersonalApplication::class.java)
+    val autoCompleteFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/auto-complete.json")
+    val autoCompleteContent = String(Files.readAllBytes(autoCompleteFile.toPath()))
+    val autoMapper1: ObjectMapper = ObjectMapper()
+    val autoApplication: AutoApplication = autoMapper1.readValue(autoCompleteContent, AutoApplication::class.java)
 
-    val plCompleteMobileLoginOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-mobile-output.json")
-    val plCompleteMobileLoginOutputContent = String(Files.readAllBytes(plCompleteMobileLoginOutputFile.toPath()))
+    val autoCompleteOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-output.json")
+    val autoCompleteOutputContent = String(Files.readAllBytes(autoCompleteOutputFile.toPath()))
 
-    private val applicationRepo = mockk<PersonalApplicationRepo> {
+    private val personalApplicationRepo = mockk<PersonalApplicationRepo> {
         every { findByProductCodeAndCustomerId(any(), any())} returns Flux.just(personalApplication)
         every{ findByApplicationIdAndProductCode(any(), any())} returns Mono.just(personalApplication)
-        every { findByProductCodeAndMobileNumber(any(), any())} returns Flux.just(personalApplication1)
+        every { findByProductCodeAndMobileNumber(any(), any())} returns Flux.just(personalApplication)
+    }
+
+    private val autoApplicationRepo = mockk<AutoApplicationRepo> {
+        every { findByProductCodeAndCustomerId(any(), any())} returns Flux.just(autoApplication)
+        every{ findByApplicationIdAndProductCode(any(), any())} returns Mono.just(autoApplication)
+        every { findByProductCodeAndMobileNumber(any(), any())} returns Flux.just(autoApplication)
     }
 
     private val mappingTemplate = mockk<MappingTemplate> {
         every { filterData(personalApplication)} returns Json(plCompleteOutputContent)
     }
 
-    private val applicationService = ApplicationServiceImpl(applicationRepo, mappingTemplate)
+    private val applicationService = ApplicationServiceImpl(personalApplicationRepo, autoApplicationRepo, mappingTemplate)
 
-    private val mappingTemplate1 = mockk<MappingTemplate> {
-        every { filterData(personalApplication1)} returns Json(plCompleteMobileLoginOutputContent)
+    private val autoMappingTemplate1 = mockk<MappingTemplate> {
+        every { filterData(autoApplication)} returns Json(autoCompleteOutputContent)
     }
-    private val applicationService1 = ApplicationServiceImpl(applicationRepo, mappingTemplate1)
+    private val autoApplicationService1 = ApplicationServiceImpl(personalApplicationRepo, autoApplicationRepo, autoMappingTemplate1)
 
     @Test
     fun testGetApplicationOfByProductCodeAndCustomerId() {
@@ -60,9 +69,24 @@ class ApplicationServiceImplTest {
         ).block()
 
         verify {
-            applicationRepo.findByProductCodeAndCustomerId(
+            personalApplicationRepo.findByProductCodeAndCustomerId(
                 productCode = personalApplication.productCode.toString(),
                 customerId = personalApplication.customerId.toString()
+            )
+        }
+    }
+
+    @Test
+    fun testGetApplicationOfByProductCodeAndCustomerIdForAutoApplication() {
+        autoApplicationService1.getApplicationOfByProductCodeAndCustomerId(
+            productCode = "FOUR_WHEELER_PERSONAL",
+            customerId = "840001793"
+        ).block()
+
+        verify {
+            autoApplicationRepo.findByProductCodeAndCustomerId(
+                productCode = autoApplication.productCode.toString(),
+                customerId = autoApplication.customerId.toString()
             )
         }
 
@@ -76,7 +100,7 @@ class ApplicationServiceImplTest {
         ).block()
 
         verify {
-            applicationRepo.findByApplicationIdAndProductCode(
+            personalApplicationRepo.findByApplicationIdAndProductCode(
                 productCode = personalApplication.productCode.toString(),
                 applicationReferenceId = personalApplication.applicationReferenceId.toString()
             )
@@ -85,8 +109,54 @@ class ApplicationServiceImplTest {
     }
 
     @Test
+    fun testGetApplicationByApplicationReferenceIdAndProductCodeForAutoApplication() {
+        autoApplicationService1.getApplicationByApplicationReferenceIdAndProductCode(
+            productCode = "FOUR_WHEELER_PERSONAL",
+            applicationReferenceId = "MLP000000001116"
+        ).block()
+
+        verify {
+            autoApplicationRepo.findByApplicationIdAndProductCode(
+                productCode = autoApplication.productCode.toString(),
+                applicationReferenceId = autoApplication.applicationReferenceId.toString()
+            )
+        }
+
+    }
+
+    @Test
+    fun testGetApplicationOfByProductCodeAndMobileNumber() {
+        applicationService.getApplicationOfByProductCodeAndMobileNumber(
+            productCode = "PERSONAL",
+            mobileNumber = "9910009906"
+        ).block()
+
+        verify {
+            personalApplicationRepo.findByProductCodeAndMobileNumber(
+                productCode = personalApplication.productCode.toString(),
+                mobileNumber = personalApplication.mlpCustomerIdentifier?.getValue("mobileNumber").toString()
+            )
+        }
+    }
+
+    @Test
+    fun testGetApplicationOfByProductCodeAndMobileNumberForAutoApplication() {
+        autoApplicationService1.getApplicationOfByProductCodeAndMobileNumber(
+            productCode = "FOUR_WHEELER_PERSONAL",
+            mobileNumber = "9876543210"
+        ).block()
+
+        verify {
+            autoApplicationRepo.findByProductCodeAndMobileNumber(
+                productCode = autoApplication.productCode.toString(),
+                mobileNumber = autoApplication.mlpCustomerIdentifier?.getValue("mobileNumber").toString()
+            )
+        }
+    }
+
+    @Test
     fun testGetApplicationOfByProductCodeAndCustomerIdNotFound() {
-        every { applicationRepo.findByProductCodeAndCustomerId("PERSONAL", "84000001")} returns Flux.empty()
+        every { personalApplicationRepo.findByProductCodeAndCustomerId("PERSONAL", "84000001")} returns Flux.empty()
 
         val applications = applicationService.getApplicationOfByProductCodeAndCustomerId(
             productCode = "PERSONAL",
@@ -101,7 +171,7 @@ class ApplicationServiceImplTest {
 
     @Test
     fun testGetApplicationByApplicationReferenceIdAndProductCodeNotFound() {
-        every { applicationRepo.findByApplicationIdAndProductCode("PERSONAL", "MLP0001")} returns Mono.empty()
+        every { personalApplicationRepo.findByApplicationIdAndProductCode("PERSONAL", "MLP0001")} returns Mono.empty()
 
         val applications = applicationService.getApplicationByApplicationReferenceIdAndProductCode(
             productCode = "PERSONAL",
@@ -112,20 +182,5 @@ class ApplicationServiceImplTest {
             .create(applications)
             .expectError(ApplicationNotFoundException::class.java)
             .verify()
-    }
-
-    @Test
-    fun testGetApplicationOfByProductCodeAndMobileNumber() {
-        applicationService1.getApplicationOfByProductCodeAndMobileNumber(
-            productCode = "PERSONAL",
-            mobileNumber = "9910009906"
-        ).block()
-
-        verify {
-            applicationRepo.findByProductCodeAndMobileNumber(
-                productCode = personalApplication1.productCode.toString(),
-                mobileNumber = personalApplication1.mlpCustomerIdentifier?.getValue("mobileNumber").toString()
-            )
-        }
     }
 }

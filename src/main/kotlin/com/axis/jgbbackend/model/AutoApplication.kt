@@ -18,7 +18,7 @@ class AutoApplication(
     customerType: String? = null,
     demogDetails: MutableMap<*, *>? = null,
     gtmParams: MutableMap<*, *>? = null,
-    hunterResult: MutableMap<*, *>? = null,
+    hunterResult: HunterResult? = null,
     insuranceDetails: MutableMap<*, *>? = null,
     insurancePremium: MutableMap<*, *>? = null,
     journeyCode: String? = null,

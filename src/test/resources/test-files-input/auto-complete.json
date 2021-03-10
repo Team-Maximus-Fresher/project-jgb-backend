@@ -1,0 +1,1774 @@
+{
+  "preApprovedOffer": {
+    "uniqueIdentifier": "505647a1-cede-4577-89c1-4df881e1ac10",
+    "stepStatus": "FINISHED",
+    "preApprovedAmount": 1020000,
+    "accountNumber": "1730100001793",
+    "knockoffFlag": false,
+    "validDate": "2029-10-12T00:00:00.000Z",
+    "ltvType": "on-Road",
+    "ltv": 85,
+    "solID": "449",
+    "schemeCode": "SBEZY",
+    "accountType": "SAVINGS",
+    "cpv": "AS PER BLAZE",
+    "occupation": "N078 Salaried",
+    "salaryInput": 69369,
+    "branchName": "Asarwa",
+    "ascMapped": "AHMEDABAD",
+    "bankName": "Axis Bank Ltd",
+    "custID": "003045606",
+    "customerCategory": "Salaried",
+    "fundingFlag": 1,
+    "isKycRequired": true,
+    "ltvUsedCar": "100% of car valuation",
+    "priorityCustomer": false,
+    "_class": "BIUAutoLoanOfferDetails"
+  },
+  "selectedLocationAndPan": {
+    "uniqueIdentifier": "a48fab0e-5b1a-46e9-a77e-d2ab15ea5b6f",
+    "stepStatus": "FINISHED",
+    "displayName": "MUMBAI",
+    "uniqueId": "20",
+    "satelliteCities": [
+      "122",
+      "123",
+      "1344",
+      "1840",
+      "20",
+      "504",
+      "532",
+      "566",
+      "618",
+      "66",
+      "75"
+    ],
+    "satelliteToggle": false,
+    "_class": "SelectedLocationAndPan"
+  },
+  "assetPriceBreakupsVariationLimit": {
+    "uniqueIdentifier": "966f45c7-5b0d-497b-b4b4-6694530d9b54",
+    "stepStatus": "FINISHED",
+    "rto": 100,
+    "exShowroom": 100,
+    "insurance": 300,
+    "_class": "AssetPriceBreakupsVariationLimit"
+  },
+  "selectedAsset": {
+    "uniqueIdentifier": "2f744fc4-2474-4991-95a5-4770e0cf12dc",
+    "stepStatus": "FINISHED",
+    "finnoneMappings": {
+      "assetCategory": "7",
+      "manufacturer": "13",
+      "assetMake": "HYUNDAI CAT C",
+      "assetModel": "18028",
+      "assetType": "NEW",
+      "assetLtv": "85",
+      "assetLtvType": "on-Road"
+    },
+    "type": "FOUR_WHEELER_PERSONAL",
+    "subType": "variant",
+    "uniqueId": "7234",
+    "parentId": "3128",
+    "details": {
+      "finnoneModelNo": "Hyundai Aura",
+      "images": [{
+        "url": "https://res.cloudinary.com/axis-bank/image/upload/v1586325516/APRIL/10/Aura_3128.jpg"
+      }],
+      "finnoneModelId": "18028",
+      "finnoneManufacturerId": "13",
+      "fullName": "Aura",
+      "finnoneManufacturerDescription": "HYUNDAI",
+      "lmmlcmFinnoneCategoryId": "7",
+      "engineCapacity": "82 cc",
+      "ltv": "85",
+      "ltvType": "on-road",
+      "transmission": "Manual",
+      "fuelType": "Petrol",
+      "finnoneMake": "HYUNDAI CAT C",
+      "segment": "Sedans",
+      "shortName": "E",
+      "category": "CATEGORY C"
+    },
+    "priceBreakups": [{
+      "displayName": "Ex-Showroom Price",
+      "name": "exShowroom",
+      "type": "required",
+      "value": 579900
+    },
+      {
+        "displayName": "RTO Charges",
+        "name": "rto",
+        "description": "(Indicative)",
+        "type": "required",
+        "value": 66115
+      },
+      {
+        "displayName": "Insurance",
+        "name": "insurance",
+        "description": "(Indicative)",
+        "type": "optional",
+        "value": 30099
+      }
+    ],
+    "brand": {
+      "name": "Hyundai",
+      "uniqueId": "10"
+    },
+    "product": {
+      "name": "Aura",
+      "uniqueId": "3128"
+    },
+    "_class": "Asset"
+  },
+  "selectedMailingAddress": {
+    "uniqueIdentifier": "3b001c08-2333-41b2-bd58-721315e52633",
+    "stepStatus": "FINISHED",
+    "addressLineOne": "1st Floor",
+    "addressLineTwo": "M 123",
+    "addressLineThree": "Housing Board",
+    "addressLineFour": "Sastrinagar",
+    "addressLineFive": "Yarwada",
+    "pinCode": 400003,
+    "city": "MUMBAI",
+    "state": "MAHARASHTRA",
+    "country": "India",
+    "kycNeeded": false,
+    "customerVerified": false,
+    "knownAddress": false,
+    "_class": "SelectedAddress"
+  },
+  "sangamResult": {
+    "uniqueIdentifier": "2c2232b8-d385-47fd-918e-5ff04c7b0033",
+    "stepStatus": "FINISHED",
+    "status": "AUTO_APPROVED",
+    "check": "SANGAM",
+    "data": {
+      "decision": "AA",
+      "loanAmount": 574696,
+      "ltv": 70,
+      "validityDate": "2021-04-07T00:00:00.000Z",
+      "tenure": 84,
+      "cibilHit": "Hit",
+      "appScoreBand": 386
+    },
+    "_class": "SangamResult"
+  },
+  "hunterResult": {
+    "uniqueIdentifier": "d48e502c-c6c4-48af-9bc0-abb943904eaf",
+    "stepStatus": "FINISHED",
+    "status": "NO_MATCH",
+    "check": "HUNTER",
+    "data": {
+      "requestIdentifier": "MUMBAI_MLP_604702564409892BFB130E65"
+    },
+    "_class": "HunterResult"
+  },
+  "loanOffer": {
+    "uniqueIdentifier": "5b41e421-2faa-4517-a8ff-95ad85df1b7c",
+    "stepStatus": "FINISHED",
+    "details": {
+      "loanAmount": 574696,
+      "tenure": 84,
+      "emi": 9101,
+      "interestRate": 8.5,
+      "tenureLabel": "Years"
+    },
+    "breakdown": [{
+      "displayName": "Downpayment",
+      "name": "downPayment",
+      "value": 106017
+    },
+      {
+        "displayName": "Processing Fee",
+        "name": "processing_fee",
+        "value": 2750
+      },
+      {
+        "displayName": "Stamp Duty",
+        "name": "stamp_duty",
+        "value": 1149
+      },
+      {
+        "displayName": "Documentation Charges",
+        "name": "documentation_charges",
+        "type": "value",
+        "value": 700
+      },
+      {
+        "displayName": "Early Closure Charges",
+        "percentage": 5,
+        "name": "early_closure_charges",
+        "type": "info",
+        "base": 5
+      },
+      {
+        "displayName": "Part Payment Charges",
+        "percentage": 5,
+        "name": "part_payment_charges",
+        "type": "info",
+        "base": 5
+      },
+      {
+        "displayName": "Net Disbursal",
+        "name": "netDisbursal",
+        "value": 570097
+      }
+    ],
+    "_class": "LoanOfferModel"
+  },
+  "loanOfferRequest": {
+    "uniqueIdentifier": "b0bf93c5-233d-45f1-8bc5-adf68b3a1c6c",
+    "stepStatus": "FINISHED",
+    "details": {
+      "loanAmount": 574696,
+      "tenure": 84,
+      "emi": 9101,
+      "interestRate": 8.5,
+      "tenureLabel": "Years"
+    },
+    "breakdown": [{
+      "displayName": "Downpayment",
+      "name": "downPayment",
+      "value": 106017
+    },
+      {
+        "displayName": "Processing Fee",
+        "name": "processing_fee",
+        "value": 2750
+      },
+      {
+        "displayName": "Stamp Duty",
+        "name": "stamp_duty",
+        "value": 1149
+      },
+      {
+        "displayName": "Documentation Charges",
+        "name": "documentation_charges",
+        "type": "value",
+        "value": 700
+      },
+      {
+        "displayName": "Early Closure Charges",
+        "percentage": 5,
+        "name": "early_closure_charges",
+        "type": "info",
+        "base": 5
+      },
+      {
+        "displayName": "Part Payment Charges",
+        "percentage": 5,
+        "name": "part_payment_charges",
+        "type": "info",
+        "base": 5
+      },
+      {
+        "displayName": "Net Disbursal",
+        "name": "netDisbursal",
+        "value": 570097
+      }
+    ],
+    "_class": "LoanOfferModel"
+  },
+  "offerSanctionLetter": {
+    "uniqueIdentifier": "26394186-722f-4699-b6fe-d52b6fed8688",
+    "stepStatus": "FINISHED",
+    "documentId": "6047032350aa7921872c1df7",
+    "createdOn": "2021-03-09T05:09:55.612Z",
+    "expiryDate": "2021-04-07T00:00:00.000Z",
+    "_class": "OfferSanction"
+  },
+  "loanParameters": {
+    "uniqueIdentifier": "c78ba550-ec6e-48f9-9d94-f55b29b6ef9b",
+    "stepStatus": "FINISHED",
+    "tenure": {
+      "min": 12,
+      "max": 84,
+      "step": 12,
+      "unit": "year",
+      "unitShortLabel": "Y",
+      "unitFullLabel": "Years",
+      "conversionFactor": "0.083333333333"
+    },
+    "loanAmount": {
+      "min": "200000",
+      "step": "10000"
+    },
+    "_class": "LoanParameters"
+  },
+  "maxServiceableEMI": {
+    "uniqueIdentifier": "549c6dcf-3523-4332-ba76-5e4a1bacd059",
+    "stepStatus": "FINISHED",
+    "value": 0,
+    "_class": "MaxEMI"
+  },
+  "loanRequest": {
+    "uniqueIdentifier": "ec03ad8c-f483-4239-b01f-d6c52e41181b",
+    "stepStatus": "FINISHED",
+    "offerableAmount": 574696,
+    "_class": "LoanRequest"
+  },
+  "knockOff": {
+    "uniqueIdentifier": "a40afb4a-0d26-4e7a-931f-fe3d664e2987",
+    "stepStatus": "FINISHED",
+    "status": "Success",
+    "_class": "KnockOffResponse"
+  },
+  "selectedMerchant": {
+    "uniqueIdentifier": "013d9c90-7b0c-4063-9dce-2c2c1e21040a",
+    "stepStatus": "FINISHED",
+    "type": "dealer",
+    "uniqueId": "6754",
+    "rank": 3651,
+    "details": {
+      "name": "EXCEL INVESTMENT AND FINANCIAL SERV",
+      "displayName": "EXCEL INVESTMENT AND FINANCIAL SERV",
+      "brand": [
+        "10",
+        "21",
+        "22",
+        "19",
+        "40",
+        "13",
+        "11"
+      ],
+      "isPrime": false,
+      "images": {
+        "iconUrl": ""
+      },
+      "address": {
+        "addressLineOne": "NASHIK",
+        "addressLineTwo": "",
+        "locality": "NASHIK",
+        "cityUniqueId": "66",
+        "cityDisplayName": "NASHIK",
+        "state": "MAHARASHTRA",
+        "pinCode": ""
+      }
+    },
+    "_class": "Merchant"
+  },
+  "mailingAddressPincodeMapping": {
+    "uniqueIdentifier": "e8e114aa-8fb6-4693-ad3b-ba424470e0c1",
+    "stepStatus": "FINISHED",
+    "cityUniqueId": "20",
+    "finoneCityId": "20",
+    "finoneCityName": "MUMBAI",
+    "tier": "",
+    "cityIdGaadiDotCom": "",
+    "cityNameGaadiDotCom": "",
+    "finoneStateId": "28",
+    "finoneStateName": "MAHARASHTRA",
+    "finoneCountryCode": "1",
+    "finoneCountryName": "INDIA",
+    "finOneASCName": "GOREGAON RAC",
+    "finOneRACCode": "GO647",
+    "finoneBranchId": "70",
+    "finoneStateIdForAppIdCreation": "28",
+    "finoneRegion": "WEST",
+    "finoneRefferCode": "1111",
+    "finoneRefferGroup": "1",
+    "finoneSmCode": "88406",
+    "finoneDSACode": "11183",
+    "finoneDmeCode": "88407",
+    "_class": "PinCodeBasedMappings"
+  },
+  "opsHumanTaskDetails": {
+    "uniqueIdentifier": "f4e58671-056b-4135-9018-42ed9bd90447",
+    "stepStatus": "FINISHED",
+    "finnoneAppId": {
+      "appId": "3116142"
+    },
+    "beneficiary": {
+      "_id": "6754",
+      "status": "APPROVED",
+      "name": "EXCEL INVESTMENT AND FINANCIAL SERV",
+      "bankAccountNumber": "50200007331919",
+      "bankName": "HDFC BANK LTD",
+      "branchName": "NASHIK",
+      "ifsc": "HDFC0000878",
+      "ifscBankId": "240",
+      "createdOn": "2021-03-09T05:14:03.130Z",
+      "lastModifiedOn": "2021-03-09T05:16:49.144Z",
+      "type": "A2O",
+      "addressDetails": {
+        "addressLineOne": "NASHIK",
+        "addressLineTwo": "",
+        "locality": "NASHIK"
+      }
+    },
+    "loanDetails": {
+      "status": "APPROVED",
+      "loanAmount": 574696,
+      "interestRate": 8.5,
+      "processingFees": 2750,
+      "stampDuty": 1149,
+      "documentationCharges": 700,
+      "prePaymentCharge": 5,
+      "partPaymentCharge": 5,
+      "emi": 9101,
+      "actualLtv": 85,
+      "emiStartDate": "2021-04-01",
+      "emiDueDay": "1",
+      "netDisbursal": 570097,
+      "waiver": {
+        "prePaymentCharge": {
+          "waiverRate": 0,
+          "waiverHeadId": "F"
+        },
+        "partPaymentCharge": {
+          "waiverRate": 0,
+          "waiverHeadId": "A"
+        }
+      },
+      "createdOn": "2021-03-09T05:14:03.145Z",
+      "lastModifiedOn": "2021-03-09T05:16:49.155Z"
+    },
+    "salesMapping": {
+      "status": "APPROVED",
+      "asm": "asm",
+      "sm": "sm",
+      "tl": "tl",
+      "asl": "asl",
+      "rac": "GO647",
+      "createdOn": "2021-03-09T05:14:03.139Z",
+      "lastModifiedOn": "2021-03-09T05:16:49.151Z"
+    },
+    "assetDetails": {
+      "exShowroomPrice": "579900",
+      "insuranceCharges": "30099",
+      "rtoCharges": "66115",
+      "createdOn": "2021-03-09T05:14:03.135Z",
+      "lastModifiedOn": "2021-03-09T05:16:49.148Z"
+    },
+    "stepState": "FINISHED",
+    "_class": "OpsDetails"
+  },
+  "crmLeadDetails": {
+    "crmLeadId": "140905"
+  },
+  "kycResponse": {
+    "uniqueIdentifier": "2aa6af08-4c64-45ff-af3e-1f79fe459958",
+    "stepStatus": "FINISHED",
+    "kycNeeded": false,
+    "_class": "KycResponse"
+  },
+  "finnoneAppId": {
+    "uniqueIdentifier": "4cf56f45-9063-4c9d-926f-ccb09db748a8",
+    "stepStatus": "FINISHED",
+    "appId": "3116142",
+    "_class": "FinnoneAppId"
+  },
+  "insurancePremium": {
+    "uniqueIdentifier": "55684f57-ff90-4997-ad9c-cbb626595852",
+    "stepStatus": "FINISHED",
+    "basicPremium": 3845,
+    "totalPremium": 4538,
+    "_class": "InsurancePremium"
+  },
+  "insuranceDetails": {
+    "uniqueIdentifier": "b42e6630-d7d1-4a4e-b01b-8e7b61eb8d5b",
+    "stepStatus": "FINISHED",
+    "opted": false,
+    "_class": "InsuranceDetailsResponse"
+  },
+  "parallelRiskToggle": {
+    "uniqueIdentifier": "d92a75af-8d6f-4245-8830-88418d45082d",
+    "stepStatus": "FINISHED",
+    "value": false,
+    "_class": "com.axis.lending.auto.journey.fourwheeler.steps.ParallelRiskToggle"
+  },
+  "updatedEmailAddress": {
+    "uniqueIdentifier": "dfc8b85b-c016-42ac-bbd3-0013030f746e",
+    "stepStatus": "FINISHED",
+    "value": "6pNWTCtMTMSxsGWt32lJh6Kb7KFRjgvJJDolhodhYKw=",
+    "_class": "UpdatedEmailAddress"
+  },
+  "submissionTime": "2021-03-09T05:16:26.059575",
+  "applicationStateLogs": [{
+    "_id": "DedupeCheck",
+    "status": "FINISHED",
+    "output": {
+      "status": "New",
+      "_class": "ApplicationStatus"
+    },
+    "stepExecutionTimeInMillis": "89",
+    "timestamp": "2021-03-09T05:06:30.876857Z"
+  },
+    {
+      "_id": "PreApprovedOfferFetcher",
+      "status": "FINISHED",
+      "output": {
+        "preApprovedAmount": 1020000,
+        "accountNumber": "1730100001793",
+        "knockoffFlag": false,
+        "validDate": "2029-10-12T00:00:00.000Z",
+        "ltvType": "on-Road",
+        "ltv": 85,
+        "solID": "449",
+        "schemeCode": "SBEZY",
+        "accountType": "SAVINGS",
+        "cpv": "AS PER BLAZE",
+        "occupation": "N078 Salaried",
+        "salaryInput": 69369,
+        "branchName": "Asarwa",
+        "ascMapped": "AHMEDABAD",
+        "bankName": "Axis Bank Ltd",
+        "custID": "003045606",
+        "customerCategory": "Salaried",
+        "fundingFlag": 1,
+        "isKycRequired": true,
+        "ltvUsedCar": "100% of car valuation",
+        "priorityCustomer": false,
+        "_class": "BIUAutoLoanOfferDetails"
+      },
+      "stepExecutionTimeInMillis": "250",
+      "timestamp": "2021-03-09T05:06:30.876915Z"
+    },
+    {
+      "_id": "DemogFetcher",
+      "status": "FINISHED",
+      "output": {
+        "custId": "840001793",
+        "gender": "M",
+        "dateOfBirth": "1977-11-28",
+        "pan": "HFDPG1793X",
+        "name": {
+          "displayName": "Rajdeep",
+          "title": "MR",
+          "firstName": "Rajdeep",
+          "middleName": "Kumar",
+          "lastName": "Bist"
+        },
+        "contact": {
+          "email": "user840001793@test.com",
+          "mobileNumber": "9910001793"
+        },
+        "address": {
+          "addressLineOne": "1st Floor",
+          "addressLineTwo": "M 123",
+          "addressLineThree": "Housing Board",
+          "addressLineFour": "Sastrinagar",
+          "addressLineFive": "Yarwada",
+          "pinCode": 400003,
+          "city": "MUMBAI",
+          "country": "India",
+          "state": "MAHARASHTRA"
+        },
+        "city": {
+          "uniqueId": "20",
+          "displayName": "MUMBAI"
+        },
+        "noOfDependent": 2,
+        "educationQualification": "BE CSE",
+        "health": "HC01",
+        "fatherName": "Raj",
+        "mothersMaidenName": "Simran",
+        "maritalStatus": "Y",
+        "nationality": "Indian",
+        "schemeType": "SBA",
+        "caste": "caste",
+        "deleteFlag": "N",
+        "creditLimit": "2398409",
+        "debitLimit": "342098",
+        "passportNo": "F0000000",
+        "accounts": [{
+          "accountNumber": "003000000400004",
+          "accountStatus": "ACTIVE",
+          "accountFreezeType": "",
+          "crmRiskScore": "2",
+          "cmgRiskProfileScore": "2",
+          "branchName": "CHARNI ROAD MUM MH",
+          "accType": "SAPPR",
+          "solId": "2939",
+          "accountOwnership": "M",
+          "accountOpeningDate": "2016-01-04 00:00:00"
+        },
+          {
+            "accountNumber": "914010003839667",
+            "accountStatus": "ACTIVE",
+            "accountFreezeType": "",
+            "crmRiskScore": "2",
+            "cmgRiskProfileScore": "2",
+            "branchName": "CHARNI ROAD MUM MH",
+            "accType": "SAPPR",
+            "solId": "2939",
+            "accountOwnership": "M",
+            "accountOpeningDate": "2017-08-04 00:00:00"
+          }
+        ],
+        "encryptedPan": {
+          "isEncrypted": true,
+          "value": "8nx379SnEn9SuBozq36QuA=="
+        },
+        "cmgRiskProfileScore": "1",
+        "constitutionDescription": "RESIDENT INDIAN",
+        "_class": "DemogDetails"
+      },
+      "stepExecutionTimeInMillis": "325",
+      "timestamp": "2021-03-09T05:06:30.876940Z"
+    },
+    {
+      "_id": "EmailAddressFetcher",
+      "status": "FINISHED",
+      "output": {
+        "value": "user840001793@test.com",
+        "_class": "UpdatedEmailAddress"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:06:30.911906Z"
+    },
+    {
+      "_id": "OfferLanding",
+      "status": "FINISHED",
+      "input": {
+        "displayName": "MUMBAI",
+        "uniqueId": "20"
+      },
+      "output": {
+        "displayName": "MUMBAI",
+        "uniqueId": "20",
+        "satelliteCities": [
+          "122",
+          "123",
+          "1344",
+          "1840",
+          "20",
+          "504",
+          "532",
+          "566",
+          "618",
+          "66",
+          "75"
+        ],
+        "satelliteToggle": false,
+        "_class": "SelectedLocationAndPan"
+      },
+      "stepExecutionTimeInMillis": "27",
+      "timestamp": "2021-03-09T05:06:08.983646Z"
+    },
+    {
+      "_id": "UpdatePanInDemog",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-09T05:06:09.028589Z"
+    },
+    {
+      "_id": "AssetPriceBreakupsVariationLimitStep",
+      "status": "FINISHED",
+      "output": {
+        "rto": 100,
+        "exShowroom": 100,
+        "insurance": 300,
+        "_class": "AssetPriceBreakupsVariationLimit"
+      },
+      "stepExecutionTimeInMillis": "15",
+      "timestamp": "2021-03-09T05:06:09.104732Z"
+    },
+    {
+      "_id": "AssetSelection",
+      "status": "FINISHED",
+      "input": {
+        "type": "FOUR_WHEELER_PERSONAL",
+        "parentId": "3128",
+        "details": {
+          "transmission": "Manual",
+          "engineCapacity": "82 cc",
+          "fullName": "Aura",
+          "shortName": "E",
+          "fuelType": "Petrol",
+          "segment": "Sedans",
+          "finnoneModelId": "18028",
+          "finnoneModelNo": "Hyundai Aura",
+          "finnoneMake": "HYUNDAI CAT C",
+          "finnoneManufacturerId": "13",
+          "finnoneManufacturerDescription": "HYUNDAI",
+          "lmmlcmFinnoneCategoryId": "7",
+          "category": "CATEGORY C",
+          "ltv": "85",
+          "ltvType": "on-road",
+          "images": [{
+            "url": "https://res.cloudinary.com/axis-bank/image/upload/v1586325516/APRIL/10/Aura_3128.jpg"
+          }]
+        },
+        "priceBreakups": [{
+          "name": "exShowroom",
+          "displayName": "Ex-Showroom Price",
+          "type": "required",
+          "value": 579900
+        },
+          {
+            "name": "rto",
+            "displayName": "RTO Charges",
+            "type": "required",
+            "value": 66115,
+            "description": "(Indicative)"
+          },
+          {
+            "name": "insurance",
+            "displayName": "Insurance",
+            "type": "optional",
+            "value": 30099,
+            "description": "(Indicative)"
+          }
+        ],
+        "subType": "variant",
+        "uniqueId": "7234",
+        "brand": {
+          "uniqueId": "10",
+          "name": "Hyundai"
+        },
+        "product": {
+          "uniqueId": "3128",
+          "name": "Aura"
+        }
+      },
+      "output": {
+        "finnoneMappings": {
+          "assetCategory": "7",
+          "manufacturer": "13",
+          "assetMake": "HYUNDAI CAT C",
+          "assetModel": "18028",
+          "assetType": "NEW",
+          "assetLtv": "85",
+          "assetLtvType": "on-Road"
+        },
+        "type": "FOUR_WHEELER_PERSONAL",
+        "subType": "variant",
+        "uniqueId": "7234",
+        "parentId": "3128",
+        "details": {
+          "finnoneModelNo": "Hyundai Aura",
+          "images": [{
+            "url": "https://res.cloudinary.com/axis-bank/image/upload/v1586325516/APRIL/10/Aura_3128.jpg"
+          }],
+          "finnoneModelId": "18028",
+          "finnoneManufacturerId": "13",
+          "fullName": "Aura",
+          "finnoneManufacturerDescription": "HYUNDAI",
+          "lmmlcmFinnoneCategoryId": "7",
+          "engineCapacity": "82 cc",
+          "ltv": "85",
+          "ltvType": "on-road",
+          "transmission": "Manual",
+          "fuelType": "Petrol",
+          "finnoneMake": "HYUNDAI CAT C",
+          "segment": "Sedans",
+          "shortName": "E",
+          "category": "CATEGORY C"
+        },
+        "priceBreakups": [{
+          "displayName": "Ex-Showroom Price",
+          "name": "exShowroom",
+          "type": "required",
+          "value": 579900
+        },
+          {
+            "displayName": "RTO Charges",
+            "name": "rto",
+            "description": "(Indicative)",
+            "type": "required",
+            "value": 66115
+          },
+          {
+            "displayName": "Insurance",
+            "name": "insurance",
+            "description": "(Indicative)",
+            "type": "optional",
+            "value": 30099
+          }
+        ],
+        "brand": {
+          "name": "Hyundai",
+          "uniqueId": "10"
+        },
+        "product": {
+          "name": "Aura",
+          "uniqueId": "3128"
+        },
+        "_class": "Asset"
+      },
+      "stepExecutionTimeInMillis": "20",
+      "timestamp": "2021-03-09T05:06:41.970817Z"
+    },
+    {
+      "_id": "AssetLtvTypeUpdater",
+      "status": "FINISHED",
+      "output": {
+        "finnoneMappings": {
+          "assetCategory": "7",
+          "manufacturer": "13",
+          "assetMake": "HYUNDAI CAT C",
+          "assetModel": "18028",
+          "assetType": "NEW",
+          "assetLtv": "85",
+          "assetLtvType": "on-Road"
+        },
+        "type": "FOUR_WHEELER_PERSONAL",
+        "subType": "variant",
+        "uniqueId": "7234",
+        "parentId": "3128",
+        "details": {
+          "finnoneModelNo": "Hyundai Aura",
+          "images": [{
+            "url": "https://res.cloudinary.com/axis-bank/image/upload/v1586325516/APRIL/10/Aura_3128.jpg"
+          }],
+          "finnoneModelId": "18028",
+          "finnoneManufacturerId": "13",
+          "fullName": "Aura",
+          "finnoneManufacturerDescription": "HYUNDAI",
+          "lmmlcmFinnoneCategoryId": "7",
+          "engineCapacity": "82 cc",
+          "ltv": "85",
+          "ltvType": "on-road",
+          "transmission": "Manual",
+          "fuelType": "Petrol",
+          "finnoneMake": "HYUNDAI CAT C",
+          "segment": "Sedans",
+          "shortName": "E",
+          "category": "CATEGORY C"
+        },
+        "priceBreakups": [{
+          "displayName": "Ex-Showroom Price",
+          "name": "exShowroom",
+          "type": "required",
+          "value": 579900
+        },
+          {
+            "displayName": "RTO Charges",
+            "name": "rto",
+            "description": "(Indicative)",
+            "type": "required",
+            "value": 66115
+          },
+          {
+            "displayName": "Insurance",
+            "name": "insurance",
+            "description": "(Indicative)",
+            "type": "optional",
+            "value": 30099
+          }
+        ],
+        "brand": {
+          "name": "Hyundai",
+          "uniqueId": "10"
+        },
+        "product": {
+          "name": "Aura",
+          "uniqueId": "3128"
+        },
+        "_class": "Asset"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:06:42.015241Z"
+    },
+    {
+      "_id": "GenerateLoanRequest",
+      "status": "FINISHED",
+      "output": {
+        "offerableAmount": 574696,
+        "_class": "LoanRequest"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:06:42.038552Z"
+    },
+    {
+      "_id": "LoanParameter",
+      "status": "FINISHED",
+      "output": {
+        "tenure": {
+          "min": 12,
+          "max": 84,
+          "step": 12,
+          "unit": "year",
+          "unitShortLabel": "Y",
+          "unitFullLabel": "Years",
+          "conversionFactor": "0.083333333333"
+        },
+        "loanAmount": {
+          "min": "200000",
+          "step": "10000"
+        },
+        "_class": "LoanParameters"
+      },
+      "stepExecutionTimeInMillis": "13",
+      "timestamp": "2021-03-09T05:06:42.117597Z"
+    },
+    {
+      "_id": "MaxServiceableEMI",
+      "status": "FINISHED",
+      "output": {
+        "value": 0,
+        "_class": "MaxEMI"
+      },
+      "stepExecutionTimeInMillis": "13",
+      "timestamp": "2021-03-09T05:06:42.209104Z"
+    },
+    {
+      "_id": "KycCheck",
+      "status": "FINISHED",
+      "output": {
+        "kycNeeded": false,
+        "_class": "KycResponse"
+      },
+      "stepExecutionTimeInMillis": "81",
+      "timestamp": "2021-03-09T05:06:42.375201Z"
+    },
+    {
+      "_id": "DemogAddressSelection",
+      "status": "FINISHED",
+      "output": {
+        "addressLineOne": "1st Floor",
+        "addressLineTwo": "M 123",
+        "addressLineThree": "Housing Board",
+        "addressLineFour": "Sastrinagar",
+        "addressLineFive": "Yarwada",
+        "pinCode": 400003,
+        "city": "MUMBAI",
+        "state": "MAHARASHTRA",
+        "country": "India",
+        "kycNeeded": false,
+        "customerVerified": false,
+        "knownAddress": false,
+        "_class": "SelectedAddress"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:06:42.437903Z"
+    },
+    {
+      "_id": "MailingAddressPincodeMapping",
+      "status": "FINISHED",
+      "output": {
+        "cityUniqueId": "20",
+        "finoneCityId": "20",
+        "finoneCityName": "MUMBAI",
+        "tier": "",
+        "cityIdGaadiDotCom": "",
+        "cityNameGaadiDotCom": "",
+        "finoneStateId": "28",
+        "finoneStateName": "MAHARASHTRA",
+        "finoneCountryCode": "1",
+        "finoneCountryName": "INDIA",
+        "finOneASCName": "GOREGAON RAC",
+        "finOneRACCode": "GO647",
+        "finoneBranchId": "70",
+        "finoneStateIdForAppIdCreation": "28",
+        "finoneRegion": "WEST",
+        "finoneRefferCode": "1111",
+        "finoneRefferGroup": "1",
+        "finoneSmCode": "88406",
+        "finoneDSACode": "11183",
+        "finoneDmeCode": "88407",
+        "_class": "PinCodeBasedMappings"
+      },
+      "stepExecutionTimeInMillis": "12",
+      "timestamp": "2021-03-09T05:06:42.520584Z"
+    },
+    {
+      "_id": "SangamCheck",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-09T05:06:42.544770Z"
+    },
+    {
+      "_id": "SangamCheckAsyncStep",
+      "status": "TRIGGERED",
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:06:42.569506Z"
+    },
+    {
+      "_id": "SangamCheckAsyncStep",
+      "status": "FINISHED",
+      "input": {
+        "status": "AUTO_APPROVED",
+        "check": "SANGAM",
+        "data": {
+          "decision": "AA",
+          "validityDate": "2021-04-07",
+          "cibilHit": "Hit",
+          "appScoreBand": 386,
+          "loanAmount": 574696,
+          "ltv": 70,
+          "tenure": 84
+        }
+      },
+      "output": {
+        "status": "AUTO_APPROVED",
+        "check": "SANGAM",
+        "data": {
+          "decision": "AA",
+          "loanAmount": 574696,
+          "ltv": 70,
+          "validityDate": "2021-04-07T00:00:00.000Z",
+          "tenure": 84,
+          "cibilHit": "Hit",
+          "appScoreBand": 386
+        },
+        "_class": "SangamResult"
+      },
+      "stepExecutionTimeInMillis": "9",
+      "timestamp": "2021-03-09T05:06:17.479121Z"
+    },
+    {
+      "_id": "LoanOfferRequest",
+      "status": "FINISHED",
+      "input": {
+        "details": {
+          "loanAmount": 574696,
+          "tenure": 84,
+          "emi": 9101,
+          "interestRate": 8.5,
+          "tenureLabel": "Years"
+        },
+        "breakdown": [{
+          "name": "downPayment",
+          "displayName": "Downpayment",
+          "value": 106017
+        },
+          {
+            "name": "processing_fee",
+            "displayName": "Processing Fee",
+            "value": 2750
+          },
+          {
+            "name": "stamp_duty",
+            "displayName": "Stamp Duty",
+            "value": 1149
+          },
+          {
+            "name": "documentation_charges",
+            "displayName": "Documentation Charges",
+            "type": "value",
+            "value": 700
+          },
+          {
+            "name": "early_closure_charges",
+            "displayName": "Early Closure Charges",
+            "percentage": 5,
+            "type": "info",
+            "base": 5
+          },
+          {
+            "name": "part_payment_charges",
+            "displayName": "Part Payment Charges",
+            "percentage": 5,
+            "type": "info",
+            "base": 5
+          },
+          {
+            "name": "netDisbursal",
+            "displayName": "Net Disbursal",
+            "value": 570097
+          }
+        ]
+      },
+      "output": {
+        "details": {
+          "loanAmount": 574696,
+          "tenure": 84,
+          "emi": 9101,
+          "interestRate": 8.5,
+          "tenureLabel": "Years"
+        },
+        "breakdown": [{
+          "displayName": "Downpayment",
+          "name": "downPayment",
+          "value": 106017
+        },
+          {
+            "displayName": "Processing Fee",
+            "name": "processing_fee",
+            "value": 2750
+          },
+          {
+            "displayName": "Stamp Duty",
+            "name": "stamp_duty",
+            "value": 1149
+          },
+          {
+            "displayName": "Documentation Charges",
+            "name": "documentation_charges",
+            "type": "value",
+            "value": 700
+          },
+          {
+            "displayName": "Early Closure Charges",
+            "percentage": 5,
+            "name": "early_closure_charges",
+            "type": "info",
+            "base": 5
+          },
+          {
+            "displayName": "Part Payment Charges",
+            "percentage": 5,
+            "name": "part_payment_charges",
+            "type": "info",
+            "base": 5
+          },
+          {
+            "displayName": "Net Disbursal",
+            "name": "netDisbursal",
+            "value": 570097
+          }
+        ],
+        "_class": "LoanOfferModel"
+      },
+      "stepExecutionTimeInMillis": "59",
+      "timestamp": "2021-03-09T05:08:44.005051Z"
+    },
+    {
+      "_id": "LoanOffer",
+      "status": "FINISHED",
+      "output": {
+        "details": {
+          "loanAmount": 574696,
+          "tenure": 84,
+          "emi": 9101,
+          "interestRate": 8.5,
+          "tenureLabel": "Years"
+        },
+        "breakdown": [{
+          "displayName": "Downpayment",
+          "name": "downPayment",
+          "value": 106017
+        },
+          {
+            "displayName": "Processing Fee",
+            "name": "processing_fee",
+            "value": 2750
+          },
+          {
+            "displayName": "Stamp Duty",
+            "name": "stamp_duty",
+            "value": 1149
+          },
+          {
+            "displayName": "Documentation Charges",
+            "name": "documentation_charges",
+            "type": "value",
+            "value": 700
+          },
+          {
+            "displayName": "Early Closure Charges",
+            "percentage": 5,
+            "name": "early_closure_charges",
+            "type": "info",
+            "base": 5
+          },
+          {
+            "displayName": "Part Payment Charges",
+            "percentage": 5,
+            "name": "part_payment_charges",
+            "type": "info",
+            "base": 5
+          },
+          {
+            "displayName": "Net Disbursal",
+            "name": "netDisbursal",
+            "value": 570097
+          }
+        ],
+        "_class": "LoanOfferModel"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:08:44.032824Z"
+    },
+    {
+      "_id": "FetchInsurancePremium",
+      "status": "FINISHED",
+      "output": {
+        "basicPremium": 3845,
+        "totalPremium": 4538,
+        "_class": "InsurancePremium"
+      },
+      "stepExecutionTimeInMillis": "99",
+      "timestamp": "2021-03-09T05:08:44.154726Z"
+    },
+    {
+      "_id": "InsuranceDetails",
+      "status": "FINISHED",
+      "input": {
+        "opted": false,
+        "nominee": null
+      },
+      "output": {
+        "opted": false,
+        "_class": "InsuranceDetailsResponse"
+      },
+      "stepExecutionTimeInMillis": "6",
+      "timestamp": "2021-03-09T05:10:06.390153Z"
+    },
+    {
+      "_id": "ValidateInsuranceDetails",
+      "status": "FINISHED",
+      "output": {
+        "opted": false,
+        "_class": "InsuranceDetailsResponse"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:10:06.412598Z"
+    },
+    {
+      "_id": "UpdateLoanOfferWithInsurance",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-09T05:10:06.432558Z"
+    },
+    {
+      "_id": "SangamCheckWithInsurance",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-09T05:10:06.460780Z"
+    },
+    {
+      "_id": "SangamAsyncCheckWithInsurance",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-09T05:10:06.545206Z"
+    },
+    {
+      "_id": "UpdateLoanOffer",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-09T05:10:06.577929Z"
+    },
+    {
+      "_id": "AutoLoanReview",
+      "status": "FINISHED",
+      "input": {},
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:10:10.637379Z"
+    },
+    {
+      "_id": "FetchParallelToggle",
+      "status": "FINISHED",
+      "output": {
+        "value": false,
+        "_class": "com.axis.lending.auto.journey.fourwheeler.steps.ParallelRiskToggle"
+      },
+      "stepExecutionTimeInMillis": "6",
+      "timestamp": "2021-03-09T05:10:10.665037Z"
+    },
+    {
+      "_id": "HunterCheck",
+      "status": "FINISHED",
+      "output": {
+        "status": "NO_MATCH",
+        "check": "HUNTER",
+        "data": {
+          "requestIdentifier": "MUMBAI_MLP_604702564409892BFB130E65"
+        },
+        "_class": "HunterResult"
+      },
+      "stepExecutionTimeInMillis": "10164",
+      "timestamp": "2021-03-09T05:10:20.855071Z"
+    },
+    {
+      "_id": "AutoExecutableStep",
+      "status": "FINISHED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.AutoExecutableStep$execute$1"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:10:20.890792Z"
+    },
+    {
+      "_id": "GenerateSanctionLetter",
+      "status": "FINISHED",
+      "output": {
+        "documentId": "6047032350aa7921872c1df7",
+        "createdOn": "2021-03-09T05:09:55.612Z",
+        "expiryDate": "2021-04-07T00:00:00.000Z",
+        "_class": "OfferSanction"
+      },
+      "stepExecutionTimeInMillis": "78",
+      "timestamp": "2021-03-09T05:10:21.000375Z"
+    },
+    {
+      "_id": "FreezeChannelAttribution",
+      "status": "FINISHED",
+      "output": {
+        "channel": "SELF_INITIATED",
+        "employeeCode": "",
+        "lastUpdatedTimestamp": "2021-03-09T05:06:30.489636Z",
+        "frozen": true,
+        "_class": "com.axis.lending.models.ChannelAttribution"
+      },
+      "stepExecutionTimeInMillis": "3",
+      "timestamp": "2021-03-09T05:10:21.023019Z"
+    },
+    {
+      "_id": "Sanction",
+      "status": "FINISHED",
+      "input": {},
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "3",
+      "timestamp": "2021-03-09T05:10:00.163413Z"
+    },
+    {
+      "_id": "MerchantSelection",
+      "status": "FINISHED",
+      "input": {
+        "uniqueId": "6754",
+        "rank": 3651
+      },
+      "output": {
+        "type": "dealer",
+        "uniqueId": "6754",
+        "rank": 3651,
+        "details": {
+          "name": "EXCEL INVESTMENT AND FINANCIAL SERV",
+          "displayName": "EXCEL INVESTMENT AND FINANCIAL SERV",
+          "brand": [
+            "10",
+            "21",
+            "22",
+            "19",
+            "40",
+            "13",
+            "11"
+          ],
+          "isPrime": false,
+          "images": {
+            "iconUrl": ""
+          },
+          "address": {
+            "addressLineOne": "NASHIK",
+            "addressLineTwo": "",
+            "locality": "NASHIK",
+            "cityUniqueId": "66",
+            "cityDisplayName": "NASHIK",
+            "state": "MAHARASHTRA",
+            "pinCode": ""
+          }
+        },
+        "_class": "Merchant"
+      },
+      "stepExecutionTimeInMillis": "0",
+      "timestamp": "2021-03-09T05:16:26.059563Z"
+    },
+    {
+      "_id": "OpsHumanTask",
+      "status": "TRIGGERED",
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:14:10.825902Z"
+    },
+    {
+      "_id": "OpsHumanTaskPending",
+      "status": "TERMINATED",
+      "output": {
+        "terminationStepId": "OpsHumanTaskPending",
+        "_class": "com.axis.lending.framework.abstractions.AsyncTerminateProcess"
+      },
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:14:10.865651Z"
+    },
+    {
+      "_id": "OpsHumanTask",
+      "status": "FINISHED",
+      "input": {
+        "applicationId": "604702564409892bfb130e65",
+        "decision": "APPROVED",
+        "tasks": {
+          "BENEFICIARY_DETAILS_CONFIRMATION": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "merchantId": "6754",
+                "rank": 3651,
+                "merchantName": "EXCEL INVESTMENT AND FINANCIAL SERV",
+                "beneficiaryAddressDetails": {
+                  "addressLineOne": "NASHIK",
+                  "addressLineTwo": "",
+                  "locality": "NASHIK"
+                },
+                "bankDetails": {
+                  "accountNumber": "50200007331919",
+                  "ifsc": "HDFC0000878",
+                  "ifscBankId": "240",
+                  "bankName": "HDFC BANK LTD",
+                  "branchName": "NASHIK"
+                }
+              },
+              "lastModifiedOn": "2021-03-09T05:16:49.144Z",
+              "lastModifiedByUser": {
+                "userId": "18776",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "0198c0a9-b997-4151-a85f-fd389acdcef1",
+              "createdTime": "2021-03-09T05:16:49.160593Z",
+              "createdOn": "2021-03-09T05:14:03.130Z"
+            }
+          },
+          "ASSET_VERIFICATION": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "onRoadPrice": 676114,
+                "exShowroomPrice": 579900,
+                "insuranceCharges": 30099,
+                "rtoCharges": 66115
+              },
+              "lastModifiedOn": "2021-03-09T05:16:49.148Z",
+              "lastModifiedByUser": {
+                "userId": "18776",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "c4b5befd-3979-4190-a084-a6a069f3955e",
+              "createdTime": "2021-03-09T05:16:49.160593Z",
+              "createdOn": "2021-03-09T05:14:03.135Z"
+            }
+          },
+          "SALES_MAPPING": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "rac": "GO647",
+                "racCodeFlag": true,
+                "asm": "asm",
+                "sm": "sm",
+                "tl": "tl",
+                "asl": "asl",
+                "employeeName": "namee",
+                "employeeCode": "3333"
+              },
+              "lastModifiedOn": "2021-03-09T05:16:49.151Z",
+              "lastModifiedByUser": {
+                "userId": "18776",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "a4c96ef2-d0e7-4372-b6c7-99ff2b5b3a65",
+              "createdTime": "2021-03-09T05:16:49.160593Z",
+              "createdOn": "2021-03-09T05:14:03.139Z"
+            }
+          },
+          "FINNONE_ID_CREATION": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "appId": "3116142"
+              },
+              "lastModifiedOn": "2021-03-09T05:16:49.153Z",
+              "lastModifiedByUser": {
+                "userId": "18776",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "91f2fc5e-0d47-4967-81b3-75c255edc17d",
+              "createdTime": "2021-03-09T05:16:49.160593Z",
+              "createdOn": "2021-03-09T05:14:03.142Z"
+            }
+          },
+          "LOAN_DETAILS_CONFIRMATION": {
+            "status": "APPROVED",
+            "details": {
+              "userDetails": {
+                "loanAmount": 574696,
+                "interestRate": 8.5,
+                "processingFees": 2750,
+                "stampDuty": 1149,
+                "documentationCharges": 700,
+                "prePaymentCharge": 5,
+                "partPaymentCharge": 5,
+                "emiDueDay": "1",
+                "netDisbursal": 570097,
+                "actualLtv": 85,
+                "emi": 9101,
+                "emiStartDate": "2021-04-01",
+                "waiver": {
+                  "prePaymentCharge": {
+                    "lwdWaiverHeadId": "F",
+                    "lwdWaiverRate": 0
+                  },
+                  "partPaymentCharge": {
+                    "lwdWaiverHeadId": "A",
+                    "lwdWaiverRate": 0
+                  }
+                }
+              },
+              "lastModifiedOn": "2021-03-09T05:16:49.155Z",
+              "lastModifiedByUser": {
+                "userId": "18776",
+                "userName": "",
+                "userRoles": [{
+                  "role": "OPS_CHECKER",
+                  "level": "",
+                  "grade": ""
+                }]
+              },
+              "uniqueIdentifier": "e1c4789b-ac3b-4548-95ea-d4ce4590df56",
+              "createdTime": "2021-03-09T05:16:49.160593Z",
+              "createdOn": "2021-03-09T05:14:03.145Z"
+            }
+          }
+        }
+      },
+      "output": {
+        "finnoneAppId": {
+          "appId": "3116142"
+        },
+        "beneficiary": {
+          "_id": "6754",
+          "status": "APPROVED",
+          "name": "EXCEL INVESTMENT AND FINANCIAL SERV",
+          "bankAccountNumber": "50200007331919",
+          "bankName": "HDFC BANK LTD",
+          "branchName": "NASHIK",
+          "ifsc": "HDFC0000878",
+          "ifscBankId": "240",
+          "createdOn": "2021-03-09T05:14:03.130Z",
+          "lastModifiedOn": "2021-03-09T05:16:49.144Z",
+          "type": "A2O",
+          "addressDetails": {
+            "addressLineOne": "NASHIK",
+            "addressLineTwo": "",
+            "locality": "NASHIK"
+          }
+        },
+        "loanDetails": {
+          "status": "APPROVED",
+          "loanAmount": 574696,
+          "interestRate": 8.5,
+          "processingFees": 2750,
+          "stampDuty": 1149,
+          "documentationCharges": 700,
+          "prePaymentCharge": 5,
+          "partPaymentCharge": 5,
+          "emi": 9101,
+          "actualLtv": 85,
+          "emiStartDate": "2021-04-01",
+          "emiDueDay": "1",
+          "netDisbursal": 570097,
+          "waiver": {
+            "prePaymentCharge": {
+              "waiverRate": 0,
+              "waiverHeadId": "F"
+            },
+            "partPaymentCharge": {
+              "waiverRate": 0,
+              "waiverHeadId": "A"
+            }
+          },
+          "createdOn": "2021-03-09T05:14:03.145Z",
+          "lastModifiedOn": "2021-03-09T05:16:49.155Z"
+        },
+        "salesMapping": {
+          "status": "APPROVED",
+          "asm": "asm",
+          "sm": "sm",
+          "tl": "tl",
+          "asl": "asl",
+          "rac": "GO647",
+          "createdOn": "2021-03-09T05:14:03.139Z",
+          "lastModifiedOn": "2021-03-09T05:16:49.151Z"
+        },
+        "assetDetails": {
+          "exShowroomPrice": "579900",
+          "insuranceCharges": "30099",
+          "rtoCharges": "66115",
+          "createdOn": "2021-03-09T05:14:03.135Z",
+          "lastModifiedOn": "2021-03-09T05:16:49.148Z"
+        },
+        "stepState": "FINISHED",
+        "_class": "OpsDetails"
+      },
+      "stepExecutionTimeInMillis": "15",
+      "timestamp": "2021-03-09T05:16:31.659516Z"
+    },
+    {
+      "_id": "FinnoneStagingTaskForApproval",
+      "status": "TRIGGERED",
+      "stepExecutionTimeInMillis": "2",
+      "timestamp": "2021-03-09T05:16:31.727420Z"
+    },
+    {
+      "_id": "FinnoneAppIdSaved",
+      "status": "FINISHED",
+      "output": {
+        "appId": "3116142",
+        "_class": "FinnoneAppId"
+      },
+      "stepExecutionTimeInMillis": "3",
+      "timestamp": "2021-03-09T05:16:31.761346Z"
+    },
+    {
+      "_id": "KnockOff",
+      "status": "FINISHED",
+      "output": {
+        "status": "Success",
+        "_class": "KnockOffResponse"
+      },
+      "stepExecutionTimeInMillis": "115",
+      "timestamp": "2021-03-09T05:16:32.048711Z"
+    },
+    {
+      "_id": "PolicyIssuanceTask",
+      "status": "SKIPPED",
+      "output": {
+        "_class": "com.axis.lending.framework.abstractions.NullObject"
+      },
+      "stepExecutionTimeInMillis": "Undefined",
+      "timestamp": "2021-03-09T05:16:32.131078Z"
+    }
+  ],
+  "channelAttribution": {
+    "channel": "SELF_INITIATED",
+    "employeeCode": "",
+    "lastUpdatedTimestamp": "2021-03-09T05:06:30.489636Z",
+    "frozen": true
+  },
+  "source": {
+    "initial": "WEB",
+    "latest": "WEB"
+  },
+  "cibilCheckConsent": {
+    "capturedDate": "2021-03-09",
+    "consentExpiryDate": "2021-04-08"
+  },
+  "demogDetails": {
+    "uniqueIdentifier": "b4bc4d82-1971-4580-9850-d6e3144790da",
+    "stepStatus": "FINISHED",
+    "custId": "840001793",
+    "gender": "M",
+    "dateOfBirth": "1977-11-28",
+    "pan": "HFDPG1793X",
+    "name": {
+      "displayName": "Rajdeep",
+      "title": "MR",
+      "firstName": "Rajdeep",
+      "middleName": "Kumar",
+      "lastName": "Bist"
+    },
+    "contact": {
+      "email": "6pNWTCtMTMSxsGWt32lJh6Kb7KFRjgvJJDolhodhYKw=",
+      "mobileNumber": "2kP3qJMMJfvpguIUkcO8Qw=="
+    },
+    "address": {
+      "addressLineOne": "1st Floor",
+      "addressLineTwo": "M 123",
+      "addressLineThree": "Housing Board",
+      "addressLineFour": "Sastrinagar",
+      "addressLineFive": "Yarwada",
+      "pinCode": 400003,
+      "city": "MUMBAI",
+      "country": "India",
+      "state": "MAHARASHTRA"
+    },
+    "city": {
+      "uniqueId": "20",
+      "displayName": "MUMBAI"
+    },
+    "noOfDependent": 2,
+    "educationQualification": "BE CSE",
+    "health": "HC01",
+    "fatherName": "Raj",
+    "mothersMaidenName": "Simran",
+    "maritalStatus": "Y",
+    "nationality": "Indian",
+    "schemeType": "SBA",
+    "caste": "caste",
+    "deleteFlag": "N",
+    "creditLimit": "2398409",
+    "debitLimit": "342098",
+    "passportNo": "F0000000",
+    "accounts": [{
+      "accountNumber": "003000000400004",
+      "accountStatus": "ACTIVE",
+      "accountFreezeType": "",
+      "crmRiskScore": "2",
+      "cmgRiskProfileScore": "2",
+      "branchName": "CHARNI ROAD MUM MH",
+      "accType": "SAPPR",
+      "solId": "2939",
+      "accountOwnership": "M",
+      "accountOpeningDate": "2016-01-04 00:00:00"
+    },
+      {
+        "accountNumber": "914010003839667",
+        "accountStatus": "ACTIVE",
+        "accountFreezeType": "",
+        "crmRiskScore": "2",
+        "cmgRiskProfileScore": "2",
+        "branchName": "CHARNI ROAD MUM MH",
+        "accType": "SAPPR",
+        "solId": "2939",
+        "accountOwnership": "M",
+        "accountOpeningDate": "2017-08-04 00:00:00"
+      }
+    ],
+    "encryptedPan": {
+      "isEncrypted": true,
+      "value": "8nx379SnEn9SuBozq36QuA=="
+    },
+    "cmgRiskProfileScore": "1",
+    "constitutionDescription": "RESIDENT INDIAN",
+    "_class": "DemogDetails"
+  },
+  "customerEditable": {
+    "status": false
+  },
+  "applicationReferenceId": "MLP000000001116",
+  "customerId": "840001793",
+  "customerType": "ETB",
+  "productCode": "FOUR_WHEELER_PERSONAL",
+  "journeyCode": "FOUR_WHEELER_PERSONAL_ETB_PA",
+  "offerType": "PA",
+  "applicationDate": "2021-03-09",
+  "state": "COMPLETE",
+  "metaData": {
+    "demogData": {},
+    "loginMethod": "CUSTOMER_ID",
+    "remoteAddress": "192.168.121.55"
+  },
+  "utmParams": {},
+  "gtmParams": {
+    "alreadyDisbursed": false
+  },
+  "mlpCustomerIdentifier": {
+    "customerId": "840001793",
+    "mobileNumber": "9876543210"
+  },
+  "_class": "FOUR_WHEELER_ETB_PA"
+}

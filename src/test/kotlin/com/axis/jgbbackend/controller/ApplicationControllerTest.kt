@@ -21,7 +21,7 @@ import java.nio.file.Files
 @WebFluxTest(ApplicationController::class)
 class ApplicationControllerTest {
 
-    val plCompleteFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-personal.json")
+    val plCompleteFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-complete.json")
     val plCompleteContent = String(Files.readAllBytes(plCompleteFile.toPath()))
     val mapper: ObjectMapper = ObjectMapper()
     val personalApplication: PersonalApplication = mapper.readValue(plCompleteContent, PersonalApplication::class.java)

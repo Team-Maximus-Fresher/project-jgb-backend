@@ -1516,6 +1516,7 @@
     "alreadyDisbursed" : true
   },
   "mlpCustomerIdentifier" : {
-    "customerId" : "840000016"
+    "customerId" : "840000016",
+    "mobileNumber": "9910009906"
   }
 }

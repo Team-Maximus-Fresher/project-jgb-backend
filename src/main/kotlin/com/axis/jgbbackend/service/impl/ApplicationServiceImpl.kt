@@ -1,8 +1,6 @@
 package com.axis.jgbbackend.service.impl
 
 import com.axis.jgbbackend.exception.ApplicationNotFoundException
-import com.axis.jgbbackend.model.AutoApplication
-import com.axis.jgbbackend.model.PersonalApplication
 import com.axis.jgbbackend.repository.AutoApplicationRepo
 import com.axis.jgbbackend.repository.PersonalApplicationRepo
 import com.axis.jgbbackend.service.ApplicationService

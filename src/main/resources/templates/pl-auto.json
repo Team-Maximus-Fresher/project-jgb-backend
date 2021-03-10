@@ -13,7 +13,7 @@
 [# th:block th:if="${props.preApprovedOffer != null}"]
 {
 "id": "PreApprovedOfferFetcher",
-"status": [# th:block th:text="${props.preApprovedOffer.stepStatus} ?: 'null'"][/],
+"stepStatus": [# th:block th:text="${props.preApprovedOffer.stepStatus} ?: 'null'"][/],
 "preApprovedAmount": [# th:block th:text="${props.preApprovedOffer.preApprovedAmount} ?: 'null'"][/]
 }
 [/]
@@ -21,61 +21,43 @@
 [# th:block th:if="${props.preApprovedOffer != null}"],[/]
 {
 "id": "SangamCheckAsyncStep",
-"status": [# th:block th:text="${props.sangamResult.status} ?: 'null'"][/],
-"decision": [# th:block th:text="${props.sangamResult.data.decision} ?: 'null'"][/],
-"loanAmount": [# th:block th:text="${props.sangamResult.data.loanAmount} ?: 'null'"][/],
-"validityDate": [# th:block th:text="${props.sangamResult.data.validityDate} ?: 'null'"][/],
-"tenure": [# th:block th:text="${props.sangamResult.data.tenure} ?: 'null'"][/]
+"stepStatus": [# th:block th:text="${props.sangamResult.stepStatus} ?: 'null'"][/]
+[# th:block th:if="${props.sangamResult.stepStatus != 'SUSPENDED'}"]
+  ,"decision": [# th:block th:text="${props.sangamResult.data.decision} ?: 'null'"][/],
+  "loanAmount": [# th:block th:text="${props.sangamResult.data.loanAmount} ?: 'null'"][/],
+  "validityDate": [# th:block th:text="${props.sangamResult.data.validityDate} ?: 'null'"][/],
+  "tenure": [# th:block th:text="${props.sangamResult.data.tenure} ?: 'null'"][/]
+[/]
 }
 [/]
 [# th:block th:if="${props.loanOffer != null}"]
 [# th:block th:if="${props.preApprovedOffer != null || props.sangamResult != null}"],[/]
 {
-"id": "LoanOffer",
-"status": [# th:block th:text="${props.loanOffer.stepStatus} ?: 'null'"][/],
+"id": "LoanOfferRequest",
+"stepStatus": [# th:block th:text="${props.loanOffer.stepStatus} ?: 'null'"][/],
 "loanAmount": [# th:block th:text="${props.loanOffer.details.loanAmount} ?: 'null'"][/],
 "tenure": [# th:block th:text="${props.loanOffer.details.tenure} ?: 'null'"][/],
 "emi": [# th:block th:text="${props.loanOffer.details.emi} ?: 'null'"][/],
-"interestRate": [# th:block th:text="${props.loanOffer.details.interestRate} ?: 'null'"][/]
-[# th:block th:if="${props.loanOffer.breakdown != null}"]
-  ,"breakdown": [
-    [# th:block th:if="${props.loanOffer.breakdown[0].value != null}"]
-        {"displayName": [# th:block th:text="${props.loanOffer.breakdown[0].displayName} ?: 'null'"][/],
-        "value": [# th:block th:text="${props.loanOffer.breakdown[0].value} ?: 'null'"][/]}
+"interestRate": [# th:block th:text="${props.loanOffer.details.interestRate} ?: 'null'"][/],
+"breakdown":[
+  [#th:block th:each="step: ${props.loanOffer.breakdown}"]
+    [# th:block th:if="${step.name == 'downPayment' || step.name == 'processing_fee' || step.name == 'stamp_duty' || step.name == 'documentation_charges'}"]
+      {"displayName": [# th:block th:text="${step.displayName} ?: 'null'"][/],
+      "value": [# th:block th:text="${step.value} ?: 'null'"][/]},
     [/]
-    [# th:block th:if="${props.loanOffer.breakdown[1].value != null}"]
-        ,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[1].displayName} ?: 'null'"][/],
-        "value": [# th:block th:text="${props.loanOffer.breakdown[1].value} ?: 'null'"][/]}
+    [# th:block th:if="${step.name == 'netDisbursal'}"]
+      {"displayName": [# th:block th:text="${step.displayName} ?: 'null'"][/],
+      "value": [# th:block th:text="${step.value} ?: 'null'"][/]}
     [/]
-    [# th:block th:if="${props.loanOffer.breakdown[2].value != null}"]
-        ,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[2].displayName} ?: 'null'"][/],
-        "value": [# th:block th:text="${props.loanOffer.breakdown[2].value} ?: 'null'"][/]}
-    [/]
-    [# th:block th:if="${props.loanOffer.breakdown[3].value != null}"]
-        ,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[3].displayName} ?: 'null'"][/],
-        "value": [# th:block th:text="${props.loanOffer.breakdown[3].value} ?: 'null'"][/]}
-    [/]
-    [# th:block th:if="${props.loanOffer.breakdown[4].value != null}"]
-        ,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[4].displayName} ?: 'null'"][/],
-        "value": [# th:block th:text="${props.loanOffer.breakdown[4].value} ?: 'null'"][/]}
-    [/]
-    [# th:block th:if="${props.loanOffer.breakdown[5].value != null}"]
-        ,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[5].displayName} ?: 'null'"][/],
-        "value": [# th:block th:text="${props.loanOffer.breakdown[5].value} ?: 'null'"][/]}
-    [/]
-    [# th:block th:if="${props.loanOffer.breakdown[6].value != null}"]
-        ,{"displayName": [# th:block th:text="${props.loanOffer.breakdown[6].displayName} ?: 'null'"][/],
-        "value": [# th:block th:text="${props.loanOffer.breakdown[6].value} ?: 'null'"][/]}
-    [/]
+  [/th:block]
 ]
-[/]
-[/]
 }
+[/]
 [# th:block th:if="${props.hunterResult != null}"]
 [# th:block th:if="${props.preApprovedOffer != null || props.sangamresult != null || props.loanOffer != null}"],[/]
 {
 "id": "HunterResult",
-"status":[# th:block th:text="${props.hunterResult.stepStatus} ?: 'null'"][/],
+"stepStatus":[# th:block th:text="${props.hunterResult.stepStatus} ?: 'null'"][/],
 "outputStatus": [# th:block th:text="${props.hunterResult.status} ?: 'null'"][/]
 }
 [/]
@@ -83,7 +65,7 @@
 [# th:block th:if="${props.preApprovedOffer != null || props.sangamresult != null || props.loanOffer != null || props.hunterResult !=null }"],[/]
 {
 "id": "GeneratesanctionLetter",
-"status":[# th:block th:text="${props.offerSanctionLetter.stepStatus} ?: 'null'"][/],
+"stepStatus":[# th:block th:text="${props.offerSanctionLetter.stepStatus} ?: 'null'"][/],
 "documentId": [# th:block th:text="${props.offerSanctionLetter.documentId} ?: 'null'"][/],
 "createdOn": [# th:block th:text="${props.offerSanctionLetter.createdOn} ?: 'null'"][/],
 "expiryDate": [# th:block th:text="${props.offerSanctionLetter.expiryDate} ?: 'null'"][/]
@@ -93,7 +75,7 @@
 [# th:block th:if="${props.preApprovedOffer != null || props.sangamresult != null || props.loanOffer != null || props.hunterResult !=null || props.offerSanctionLetter != null}"],[/]
 {
 "id": "MerchantSelectionStep",
-"status":[# th:block th:text="${props.selectedMerchant.stepStatus} ?: 'null'"][/],
+"stepStatus":[# th:block th:text="${props.selectedMerchant.stepStatus} ?: 'null'"][/],
 "uniqueId": [# th:block th:text="${props.selectedMerchant.uniqueId} ?: 'null'"][/],
 "displayName": [# th:block th:text="${props.selectedMerchant.details.displayName} ?: 'null'"][/],
 "rank": [# th:block th:text="${props.selectedMerchant.rank} ?: 'null'"][/]
@@ -103,7 +85,7 @@
 [# th:block th:if="${props.preApprovedOffer != null || props.sangamresult != null || props.loanOffer != null || props.hunterResult !=null || props.offerSanctionLetter != null || props.selectedMerchant != null}"],[/]
 {
 "id": "opsHumanTask",
-"status": [# th:block th:text="${props.opsHumanTaskDetails.stepStatus} ?: 'null'"][/]
+"stepStatus": [# th:block th:text="${props.opsHumanTaskDetails.stepStatus} ?: 'null'"][/]
 [# th:block th:if="${props.opsHumanTaskDetails.stepStatus == 'FINISHED'}"]
 ,"finOneAppId": [# th:block th:text="${props.opsHumanTaskDetails.finnoneAppId.appId} ?: 'null'"][/]
 [/]
@@ -113,7 +95,7 @@
 [# th:block th:if="${props.preApprovedOffer != null || props.sangamresult != null || props.loanOffer != null || props.hunterResult !=null || props.offerSanctionLetter != null || props.selectedMerchant != null  || props.opsHumanTaskDetails != null}"],[/]
 {
 "id": "KnockOff",
-"status": [# th:block th:text="${props.knockOff.stepStatus} ?: 'null'"][/],
+"stepStatus": [# th:block th:text="${props.knockOff.stepStatus} ?: 'null'"][/],
 "outputStatus": [# th:block th:text="${props.knockOff.status} ?: 'null'"][/]
 }
 [/]

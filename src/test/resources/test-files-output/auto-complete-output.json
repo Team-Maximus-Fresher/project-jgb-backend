@@ -1,0 +1,82 @@
+{
+  "applicationReferenceId": "MLP000000001116",
+  "customerId": "840001793",
+  "productCode": "FOUR_WHEELER_PERSONAL",
+  "journeyCode": "FOUR_WHEELER_PERSONAL_ETB_PA",
+  "applicationDate": "2021-03-09",
+  "applicationStateLogs": [
+    {
+      "id": "PreApprovedOfferFetcher",
+      "status": "FINISHED",
+      "preApprovedAmount": 1020000
+    },
+    {
+      "id": "SangamCheckAsyncStep",
+      "status": "AUTO_APPROVED",
+      "decision": "AA",
+      "loanAmount": 574696,
+      "validityDate": "2021-04-07T00:00:00.000Z",
+      "tenure": 84
+    },
+    {
+      "id": "LoanOffer",
+      "status": "FINISHED",
+      "loanAmount": 574696,
+      "tenure": 84,
+      "emi": 9101,
+      "interestRate": 8.5,
+      "breakdown": [
+        {
+          "displayName": "Downpayment",
+          "value": 106017
+        },
+        {
+          "displayName": "Processing Fee",
+          "value": 2750
+        },
+        {
+          "displayName": "Stamp Duty",
+          "value": 1149
+        },
+        {
+          "displayName": "Documentation Charges",
+          "value": 700
+        },
+        {
+          "displayName": "Net Disbursal",
+          "value": 570097
+        }
+      ]
+    },
+    {
+      "id": "HunterResult",
+      "status": "FINISHED",
+      "outputStatus": "NO_MATCH"
+    },
+    {
+      "id": "GeneratesanctionLetter",
+      "status": "FINISHED",
+      "documentId": "6047032350aa7921872c1df7",
+      "createdOn": "2021-03-09T05:09:55.612Z",
+      "expiryDate": "2021-04-07T00:00:00.000Z"
+    },
+    {
+      "id": "MerchantSelectionStep",
+      "status": "FINISHED",
+      "uniqueId": "6754",
+      "displayName": "EXCEL INVESTMENT AND FINANCIAL SERV",
+      "rank": 3651
+    },
+    {
+      "id": "opsHumanTask",
+      "status": "FINISHED",
+      "finOneAppId": "3116142"
+    },
+    {
+      "id": "KnockOff",
+      "status": "FINISHED",
+      "outputStatus": "Success"
+    }
+  ],
+  "state": "COMPLETE"
+}

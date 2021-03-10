@@ -11,7 +11,7 @@ open class CustomerApplication (
     val customerType: String? = null,
     val demogDetails: MutableMap<*,*>? = null,
     val gtmParams: MutableMap<*,*>? = null,
-    val hunterResult: MutableMap<*,*>? = null,
+    val hunterResult: HunterResult? = null,
     val insuranceDetails: MutableMap<*,*>? = null,
     val insurancePremium: MutableMap<*,*>? = null,
     val journeyCode: String? = null,
