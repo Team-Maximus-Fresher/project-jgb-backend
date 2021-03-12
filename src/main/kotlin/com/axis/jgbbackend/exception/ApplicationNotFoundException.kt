@@ -17,6 +17,6 @@ public class ApplicationNotFoundException : RuntimeException() {
         val body: MutableMap<String, Any> = LinkedHashMap()
         body["timestamp"] = LocalDateTime.now()
         body["message"] = "Application(s) not found."
-        return ResponseEntity(body, HttpStatus.NO_CONTENT)
+        return ResponseEntity(body, HttpStatus.OK)
     }
 }

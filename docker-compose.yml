@@ -1,0 +1,25 @@
+version: "3"
+services:
+ mymongodb:
+   image: mongo:latest
+   container_name: "mymongodb"
+   ports:
+     - 27017:27017
+   volumes:
+      - my-datavolume:/var/lib/mongo
+ jgb-backend:
+   image: jgb-backend:1.0
+   container_name: jgb-backend
+   ports:
+     - 9001:9001
+   links:
+     - mymongodb
+ jgb-frontend:
+   image: jgb-frontend:1.0
+   container_name: jgb-frontend
+   ports:
+     - 3000:3000
+   links:
+     - jgb-backend
+volumes:
+  my-datavolume:

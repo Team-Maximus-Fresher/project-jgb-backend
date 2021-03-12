@@ -62,8 +62,8 @@ class ApplicationServiceImplTest {
     private val autoApplicationService1 = ApplicationServiceImpl(personalApplicationRepo, autoApplicationRepo, autoMappingTemplate1)
 
     @Test
-    fun testGetApplicationOfByProductCodeAndCustomerId() {
-        applicationService.getApplicationOfByProductCodeAndCustomerId(
+    fun testGetApplicationByProductCodeAndCustomerId() {
+        applicationService.getApplicationByProductCodeAndCustomerId(
             productCode = "PERSONAL",
             customerId = "840000016"
         ).block()
@@ -77,8 +77,8 @@ class ApplicationServiceImplTest {
     }
 
     @Test
-    fun testGetApplicationOfByProductCodeAndCustomerIdForAutoApplication() {
-        autoApplicationService1.getApplicationOfByProductCodeAndCustomerId(
+    fun testGetApplicationByProductCodeAndCustomerIdForAutoApplication() {
+        autoApplicationService1.getApplicationByProductCodeAndCustomerId(
             productCode = "FOUR_WHEELER_PERSONAL",
             customerId = "840001793"
         ).block()
@@ -125,8 +125,8 @@ class ApplicationServiceImplTest {
     }
 
     @Test
-    fun testGetApplicationOfByProductCodeAndMobileNumber() {
-        applicationService.getApplicationOfByProductCodeAndMobileNumber(
+    fun testGetApplicationByProductCodeAndMobileNumber() {
+        applicationService.getApplicationByProductCodeAndMobileNumber(
             productCode = "PERSONAL",
             mobileNumber = "9910009906"
         ).block()
@@ -140,8 +140,8 @@ class ApplicationServiceImplTest {
     }
 
     @Test
-    fun testGetApplicationOfByProductCodeAndMobileNumberForAutoApplication() {
-        autoApplicationService1.getApplicationOfByProductCodeAndMobileNumber(
+    fun testGetApplicationByProductCodeAndMobileNumberForAutoApplication() {
+        autoApplicationService1.getApplicationByProductCodeAndMobileNumber(
             productCode = "FOUR_WHEELER_PERSONAL",
             mobileNumber = "9876543210"
         ).block()
@@ -155,10 +155,10 @@ class ApplicationServiceImplTest {
     }
 
     @Test
-    fun testGetApplicationOfByProductCodeAndCustomerIdNotFound() {
+    fun testGetApplicationByProductCodeAndCustomerIdNotFound() {
         every { personalApplicationRepo.findByProductCodeAndCustomerId("PERSONAL", "84000001")} returns Flux.empty()
 
-        val applications = applicationService.getApplicationOfByProductCodeAndCustomerId(
+        val applications = applicationService.getApplicationByProductCodeAndCustomerId(
             productCode = "PERSONAL",
             customerId = "84000001"
         )

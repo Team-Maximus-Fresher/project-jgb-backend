@@ -17,13 +17,13 @@ class ApplicationController(
     @ApiOperation(value = "Get applications of a particular customer by product code and customer id")
     @GetMapping("/products/{productCode}/customers/{customerId}/applications")
     fun getApplicationOfByProductCodeAndCustomerId(@PathVariable productCode: String, @PathVariable customerId: String): Mono<MutableList<Json>> {
-        return applicationService.getApplicationOfByProductCodeAndCustomerId(productCode, customerId)
+        return applicationService.getApplicationByProductCodeAndCustomerId(productCode, customerId)
     }
 
     @ApiOperation(value = "Get applications of a particular customer by product code and mobile number")
     @GetMapping("/products/{productCode}/customers/mobileNumber/{mobileNumber}/applications")
     fun getApplicationOfByProductCodeAndMobileNumber(@PathVariable productCode: String, @PathVariable mobileNumber: String): Mono<MutableList<Json>> {
-        return applicationService.getApplicationOfByProductCodeAndMobileNumber(productCode, mobileNumber)
+        return applicationService.getApplicationByProductCodeAndMobileNumber(productCode, mobileNumber)
     }
 
     @ApiOperation(value = "Get applications of a particular customer by application reference id and product code")

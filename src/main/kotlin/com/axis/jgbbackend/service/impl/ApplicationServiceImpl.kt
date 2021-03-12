@@ -23,13 +23,13 @@ class ApplicationServiceImpl(
     private val mappingTemplate: MappingTemplate
 ) : ApplicationService {
 
-    override fun getApplicationOfByProductCodeAndCustomerId(
+    override fun getApplicationByProductCodeAndCustomerId(
         productCode: String,
         customerId: String
     ): Mono<MutableList<Json>> {
         if(productCode == "PERSONAL") {
             return personalApplicationRepo.findByProductCodeAndCustomerId(productCode, customerId)
-                .map { mappingTemplate.filterData(it) }
+                .map { mappingTemplate.filterData(it) } //.map{application -> mappingTemplate.filterData(application)}
                 .switchIfEmpty(Flux.error(ApplicationNotFoundException())).collectList()
         }
         return autoApplicationRepo.findByProductCodeAndCustomerId(productCode, customerId)
@@ -37,7 +37,7 @@ class ApplicationServiceImpl(
             .switchIfEmpty(Flux.error(ApplicationNotFoundException())).collectList()
     }
 
-    override fun getApplicationOfByProductCodeAndMobileNumber(
+    override fun getApplicationByProductCodeAndMobileNumber(
         productCode: String,
         mobileNumber: String
     ): Mono<MutableList<Json>> {

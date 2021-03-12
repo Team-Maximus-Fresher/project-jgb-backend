@@ -29,13 +29,6 @@ class ApplicationControllerTest {
     val plCompleteOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-output.json")
     val plCompleteOutputContent = String(Files.readAllBytes(plCompleteOutputFile.toPath()))
 
-    val plCompleteMobileLoginFile: File = ResourceUtils.getFile("src/test/resources/test-files-input/pl-complete-mobile.json")
-    val plCompleteMobileLoginContent = String(Files.readAllBytes(plCompleteMobileLoginFile.toPath()))
-    val personalApplication1: PersonalApplication = mapper.readValue(plCompleteMobileLoginContent, PersonalApplication::class.java)
-
-    val plCompleteMobileLoginOutputFile: File = ResourceUtils.getFile("src/test/resources/test-files-output/pl-complete-mobile-output.json")
-    val plCompleteMobileLoginOutputContent = String(Files.readAllBytes(plCompleteMobileLoginOutputFile.toPath()))
-
     @Autowired
     lateinit var client: WebTestClient
 
@@ -43,9 +36,9 @@ class ApplicationControllerTest {
     lateinit var service: ApplicationService
 
     @Test
-    fun testGetApplicationOfByProductCodeAndCustomerId() {
+    fun testGetApplicationByProductCodeAndCustomerId() {
         val expectedProduct: PersonalApplication = personalApplication
-        Mockito.`when`(service.getApplicationOfByProductCodeAndCustomerId(expectedProduct.productCode.toString(),
+        Mockito.`when`(service.getApplicationByProductCodeAndCustomerId(expectedProduct.productCode.toString(),
             expectedProduct.customerId.toString()
         )).thenReturn(Mono.just(mutableListOf(Json(plCompleteOutputContent))))
         client.get()
@@ -56,7 +49,7 @@ class ApplicationControllerTest {
             .expectBodyList(JSONObject::class.java)
             .hasSize(1)
 
-        Mockito.verify(service, times(1)).getApplicationOfByProductCodeAndCustomerId(expectedProduct.productCode.toString(), expectedProduct.customerId.toString())
+        Mockito.verify(service, times(1)).getApplicationByProductCodeAndCustomerId(expectedProduct.productCode.toString(), expectedProduct.customerId.toString())
     }
 
     @Test
@@ -75,10 +68,10 @@ class ApplicationControllerTest {
         //.json(jacksonObjectMapper().writeValueAsString(output))
     }
 
-    @Test
-    fun testGetApplicationOfByProductCodeAndMobileNumber() {
+    /*@Test
+    fun testGetApplicationByProductCodeAndMobileNumber() {
         val expectedProduct: PersonalApplication = personalApplication1
-        Mockito.`when`(service.getApplicationOfByProductCodeAndMobileNumber(expectedProduct.productCode.toString(),
+        Mockito.`when`(service.getApplicationByProductCodeAndMobileNumber(expectedProduct.productCode.toString(),
             expectedProduct.mlpCustomerIdentifier?.get("mobileNumber").toString()
         )).thenReturn(Mono.just(mutableListOf(Json(plCompleteMobileLoginOutputContent))))
         client.get()
@@ -89,6 +82,6 @@ class ApplicationControllerTest {
             .expectBodyList(JSONObject::class.java)
             .hasSize(1)
 
-        Mockito.verify(service, times(1)).getApplicationOfByProductCodeAndMobileNumber(expectedProduct.productCode.toString(), expectedProduct.mlpCustomerIdentifier?.getValue("mobileNumber").toString())
-    }
+        Mockito.verify(service, times(1)).getApplicationByProductCodeAndMobileNumber(expectedProduct.productCode.toString(), expectedProduct.mlpCustomerIdentifier?.getValue("mobileNumber").toString())
+    }*/
 }
